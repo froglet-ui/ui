@@ -1,0 +1,39 @@
+:root {
+  --button-background-color: #007bff;
+  --button-text-color: #ffffff;
+  --button-border-color: #007bff;
+  --button-padding: 8px 16px;
+  --button-font-size: 16px;
+  --button-border-radius: 4px;
+  --button-hover-background-color: #0056b3;
+  --button-hover-text-color: #ffffff;
+  --button-disabled-background-color: #d6d6d6;
+  --button-disabled-text-color: #a1a1a1;
+}
+
+/* Button Styles */
+button {
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  border: 2px solid var(--button-border-color);
+  padding: var(--button-padding);
+  font-size: var(--button-font-size);
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+  background-color: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  background-color: var(--button-disabled-background-color);
+  color: var(--button-disabled-text-color);
+  cursor: not-allowed;
+}
