@@ -1,20 +1,54 @@
 "use client";
 
-import { ReactNode } from "react";
+// Library Imports
+import { ReactNode, ButtonHTMLAttributes } from "react";
+import classNames from "classnames";
+// Local Imports
 import "./button.css";
 
-interface ButtonProps {
-  children: ReactNode;
+/**
+ * An interface describing the Button props.
+ */
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  /**
+   * Button label or nested elements.
+   * Supports text, icons, and other React nodes.
+   */
+  children?: ReactNode;
+
+  /**
+   * Additional CSS Classes.
+   */
   className?: string;
-  appName: string;
 }
 
-export const Button = ({ children, className, appName }: ButtonProps) => {
+/**
+ * The Button Component
+ *
+ * @param props - All standard button attributes, plus children and className.
+ *
+ * __CSS Custom Properties__
+ *
+ * ```css
+ * --button-background-color
+ * --button-text-color
+ * --button-hover-background-color
+ * --button-hover-text-color
+ * --button-disabled-background-color
+ * --button-disabled-text-color
+ * --button-border-width
+ * --button-border-color
+ * --button-border-radius
+ * --button-disabled-border-color
+ * --button-padding
+ * --button-font-size
+ * ```
+ *
+ * @returns A button element with CSS Custom Property styling.
+ */
+export const Button = ({ children, className, ...props }: ButtonProps) => {
   return (
-    <button
-      className={`${className}`}
-      onClick={() => alert(`Hello from your ${appName} app!`)}
-    >
+    <button className={classNames("button", className)} {...props}>
       {children}
     </button>
   );
