@@ -1,0 +1,53 @@
+/*
+--------------------------------------------------------------------------------
+    Button CSS File
+    This file serves as the Storybook button specific CSS.
+--------------------------------------------------------------------------------
+*/
+
+/* Primary Button Demo */
+.button--primary {
+  /* Base Colors */
+  --button-background-color: #2e8b57;
+  --button-text-color: #ffffff;
+  --button-border-color: #276c46;
+
+  /* Border and Border Radius */
+  --button-border-width: 2px;
+  --button-border-radius: 8px;
+
+  /* Padding & Font Size */
+  --button-padding: 12px 24px;
+  --button-font-size: 1.2rem;
+
+  /* Hover State */
+  --button-hover-background-color: #3ba66b;
+  --button-hover-text-color: #ffffff;
+
+  /* Disabled State */
+  --button-disabled-background-color: #d3e9d7;
+  --button-disabled-text-color: #7a9a7d;
+}
+
+/* Secondary Button Demo */
+.button--secondary {
+  /* Base Colors */
+  --button-background-color: #9b4dca;
+  --button-text-color: #ffffff;
+  --button-border-color: #7a36a4;
+
+  /* Border and Border Radius */
+  --button-border-radius: 50px;
+
+  /* Padding & Font Size */
+  --button-padding: 12px 24px;
+  --button-font-size: 1.2rem;
+
+  /* Hover State */
+  --button-hover-background-color: #b13fd6;
+  --button-hover-text-color: #ffffff;
+
+  /* Disabled State */
+  --button-disabled-background-color: #f5f5f5;
+  --button-disabled-text-color: #b0b0b0;
+}
