@@ -1,36 +1,31 @@
 "use client";
 
 // Library Imports
-import { ReactNode } from "react";
+import { ReactNode, ButtonHTMLAttributes } from "react";
 import classNames from "classnames";
 // Local Imports
 import "./button.css";
 
 /**
  * An interface describing the Button props.
- *
  */
-interface ButtonProps {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   /**
-   * Inner Button content.
+   * Button label or nested elements.
+   * Supports text, icons, and other React nodes.
    */
-  children: ReactNode;
+  children?: ReactNode;
 
   /**
    * Additional CSS Classes.
    */
   className?: string;
-
-  /**
-   * Button Click Handler.
-   */
-  onClick?: () => void;
 }
 
 /**
  * The Button Component
  *
- * @param props - The button props: children, className, and onClick.
+ * @param props - All standard button attributes, plus children and className.
  *
  * __CSS Custom Properties__
  *
@@ -48,11 +43,10 @@ interface ButtonProps {
  *```
  *
  * @returns A button element with CSS Custom Property styling.
- *
  */
-export const Button = ({ children, className, onClick }: ButtonProps) => {
+export const Button = ({ children, className, ...props }: ButtonProps) => {
   return (
-    <button className={classNames("button", className)} onClick={onClick}>
+    <button className={classNames("button", className)} {...props}>
       {children}
     </button>
   );
