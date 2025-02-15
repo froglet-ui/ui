@@ -37,5 +37,6 @@ jobs:
       - name: Deploy to gh-pages
         uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
         with:
+          build_command: npm run build
           path: apps/storybook/dist
           checkout: false
