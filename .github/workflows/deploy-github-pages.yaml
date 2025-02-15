@@ -33,9 +33,9 @@ jobs:
       - name: Install Node Dependencies
         run: npm ci --cache .npm --prefer-offline
       - name: Prepare to Deploy GH-Pages
-        run: npm run build-storybook
+        run: npm run build
       - name: Deploy to gh-pages
         uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
         with:
-          path: apps/storybook/storybook-static
+          path: apps/storybook/dist
           checkout: false
