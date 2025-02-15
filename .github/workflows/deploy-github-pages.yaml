@@ -1,0 +1,29 @@
+# Workflow
+name: Storybook to GitHub Pages
+
+on:
+  push:
+    branches:
+      - "main"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    name: Deploy Storybook
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.13.1
+      - name: Push to GitHub Pages
+        uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
+        with:
+          checkout: false
+          path: apps/storybook/storybook-static
