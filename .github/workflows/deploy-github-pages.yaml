@@ -27,4 +27,3 @@ jobs:
         with:
           checkout: false
           path: apps/storybook/storybook-static
-          checkout: false
