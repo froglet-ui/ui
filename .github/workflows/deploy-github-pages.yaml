@@ -1,5 +1,5 @@
 # Workflow
-name: Storybook Publish
+name: Storybook to GitHub Pages
 
 on:
   pull_request:
@@ -12,7 +12,7 @@ permissions:
   id-token: write
 
 jobs:
-  storybook:
+  deploy:
     name: Deploy Storybook
     runs-on: ubuntu-latest
     steps:
@@ -22,21 +22,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22.13.1
-          registry-url: https://npm.pkg.github.com/
-      - name: Cache Node modules
-        uses: actions/cache@v4
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-npm
-      - name: Install Node Dependencies
-        run: npm ci --cache .npm --prefer-offline
-      - name: Prepare to Deploy GH-Pages
-        run: npm run build
-      - name: Deploy to gh-pages
+      - name: Push to GitHub Pages
         uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
         with:
-          build_command: npm run build
-          path: apps/storybook/dist
+          checkout: false
+          path: apps/storybook/storybook-static
           checkout: false

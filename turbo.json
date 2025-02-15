@@ -9,7 +9,12 @@
         ".next/**",
         "!.next/cache/**",
         "apps/storybook/dist/**"
-        ]
+      ]
+    },
+    "build-storybook": {
+      "dependsOn": ["^build-storybook"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": ["apps/storybook/dist/**"]
     },
     "lint": {
       "dependsOn": ["^lint"]
