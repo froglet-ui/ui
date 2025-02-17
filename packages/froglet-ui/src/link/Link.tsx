@@ -31,6 +31,7 @@ interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
  *
  *```css
  * --link-text-color
+ * --link-font-family
  * --link-font-size
  * --link-font-weight
  * --link-text-decoration

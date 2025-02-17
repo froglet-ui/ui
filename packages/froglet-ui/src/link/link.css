@@ -7,6 +7,7 @@
 
 .link {
   color: var(--link-text-color, #007bff);
+  font-family: var(--link-font-family, 'Helvetica', sans-serif);
   font-size: var(--link-font-size, inherit);
   font-weight: var(--link-font-weight, inherit);
   text-decoration: var(--link-text-decoration, underline);
