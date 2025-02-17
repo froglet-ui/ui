@@ -15,7 +15,7 @@
     "build-storybook": {
       "dependsOn": ["^build-storybook"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": ["apps/storybook/dist/**"]
+      "outputs": ["apps/storybook/storybook-static/**"]
     },
     "lint": {
       "dependsOn": ["^lint"]
