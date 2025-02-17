@@ -1,9 +1,8 @@
 import { create } from "@storybook/theming";
 
 export default create({
-  base: "light",
+  base: "dark",
   brandTitle: "Froglet UI",
   brandUrl: "https://froglet.io",
-  brandImage: "/froglet.png",
   brandTarget: "_self",
 });

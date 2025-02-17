@@ -32,16 +32,16 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
  * ```css
  * --button-background-color
  * --button-text-color
- * --button-hover-background-color
- * --button-hover-text-color
+ * --button-font-size
+ * --button-padding
+ * --button-border-color
+ * --button-border-width
+ * --button-border-radius
  * --button-disabled-background-color
  * --button-disabled-text-color
- * --button-border-width
- * --button-border-color
- * --button-border-radius
  * --button-disabled-border-color
- * --button-padding
- * --button-font-size
+ * --button-hover-background-color
+ * --button-hover-text-color
  * ```
  *
  * @returns A button element with CSS Custom Property styling.

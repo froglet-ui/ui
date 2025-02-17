@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "typeRoots": ["./node_modules/@types"],
+    "lib": ["dom", "esnext"],
     "outDir": "dist",
     "jsx": "react-jsx"
   },

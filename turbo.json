@@ -8,6 +8,7 @@
       "outputs": [
         ".next/**",
         "!.next/cache/**",
+        "packages/froglet-ui/dist/**",
         "apps/storybook/dist/**"
       ]
     },
