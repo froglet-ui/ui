@@ -7,14 +7,12 @@
   },
   "scripts": {
     "build": "tsc -b",
-    "clean": "rm -rf .turbo dist node_modules",
     "check-types": "tsc --noEmit",
+    "clean": "rm -rf .turbo dist node_modules",
     "lint": "eslint . --max-warnings 0"
   },
   "dependencies": {
-    "classnames": "^2.5.1",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "classnames": "^2.5.1"
   },
   "devDependencies": {
     "@types/node": "^22.13.0",
@@ -22,5 +20,9 @@
     "@types/react-dom": "19.0.3",
     "eslint": "^9.20.0",
     "typescript": "5.7.3"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   }
 }
