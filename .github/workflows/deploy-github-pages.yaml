@@ -21,7 +21,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22.13.1
+          node-version-file: '.nvmrc'
       - name: Push to GitHub Pages
         uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
         with:

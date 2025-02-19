@@ -17,8 +17,8 @@
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": ["apps/storybook/storybook-static/**"]
     },
-    "lint": {
-      "dependsOn": ["^lint"]
+    "clean": {
+      "dependsOn": ["^clean"]
     },
     "check-types": {
       "dependsOn": ["^check-types"]
@@ -26,6 +26,9 @@
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
     }
   }
 }
