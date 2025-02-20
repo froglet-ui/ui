@@ -1,48 +1,49 @@
 # @froglet/ui
 
-A minimal, accessible UI component library for React, optimized for WCAG AAA compliance and modern design.
+A minimal, accessible React component library prioritizing WCAG AAA compliance and modern design principles.
+
+## Features
+
+- Modern, minimal design focused on usability
+- WCAG AAA accessibility compliance
+- Customizable theming via CSS custom properties
+- Built with React and TypeScript
 
 ## Installation
 
 ```bash
 npm install @froglet/ui
-# or
+
+# or with yarn
 yarn add @froglet/ui
 ```
 
-## Usage
+## Quick Start
 
 ```tsx
 import { Button } from "@froglet/ui";
 
-<Button onClick={() => console.log("Clicked!")}>Click me</Button>;
+function App() {
+  return <Button onClick={() => console.log("Clicked!")}>Click me</Button>;
+}
 ```
 
-Use the provided CSS Custom Properties to easily adjust the component's styling.
-See [CSS Naming](./../../docs/css-composition.md) for details.
+## Customization
+
+Components can be styled using CSS Custom Properties. For naming conventions and available properties, see our [CSS Composition Guide](./../../docs/css-composition.md).
 
 ## Development
 
-This is a monorepo, which means it contains multiple packages.
-See full details at [froglet-ui/ui](https://github.com/froglet-ui/ui.git).
+This package is part of the [froglet-ui monorepo](https://github.com/froglet-ui/ui.git). To contribute:
 
-To get started with development:
+1. Clone and install dependencies:
 
-1. Clone the repository:
+```bash
+git clone https://github.com/froglet-ui/ui.git
+npm install
+```
 
-   ```bash
-   git clone https://github.com/froglet-ui/ui.git
-   npm install
-   ```
-
-   You can format and lint from the root.
-
-   ```bash
-   npm run lint
-   npm run format
-   ```
-
-2. Run Storybook (from project root):
+2. Start Storybook:
 
 ```bash
 cd apps/storybook
@@ -50,20 +51,22 @@ npm install
 npm run storybook
 ```
 
-3. Create or update components (from project root)
+3. Work on components:
 
 ```bash
 cd packages/froglet-ui
 npm install
 ```
 
-## Features
+### Code Quality
 
-- **Minimal design** with a focus on usability
-- **Customizable** using CSS custom properties
-- **WCAG AAA accessibility** where possible
-- Built with **React** and **TypeScript**
+Run from the project root:
+
+```bash
+npm run lint    # Run ESLint
+npm run format  # Run Prettier
+```
 
 ## License
 
-MIT License. See [LICENSE](../../LICENSE) for details.
+[MIT License](../../LICENSE)
