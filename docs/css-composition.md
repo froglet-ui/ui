@@ -30,3 +30,15 @@ button is defined as:
 ```
 
 This structure allows for easy customization of components in different states.
+
+### Exceptions
+
+Following general community concensus, we use `--text-color` for the CSS color
+property. For example:
+
+```css
+.button {
+  --button-text-color: blue;
+  color: var(--button-text-color);
+}
+```

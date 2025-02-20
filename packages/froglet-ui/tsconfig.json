@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "strict": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
     "typeRoots": ["./node_modules/@types"],
     "lib": ["dom", "esnext"],
     "outDir": "dist",
