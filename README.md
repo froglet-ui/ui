@@ -1,112 +1,96 @@
-## Froglet UI Monorepo
+# Froglet UI Monorepo
 
-Welcome to the Froglet UI monorepo! This repository contains the code for the Froglet UI component library,
-as well as related tools and services. The monorepo structure allows for centralized development of the UI
-components and related applications like Storybook, ensuring consistency and ease of updates across all packages.
+A comprehensive React component library built with TypeScript, focusing on accessibility and customization.
 
-## Structure
+## Overview
 
-This monorepo includes multiple packages and apps. Here’s a quick overview of the structure:
+This monorepo contains:
+- Core UI component library
+- Storybook documentation
+- Related tools and services
 
-- `packages/froglet-ui`: The core UI component library, built with React and TypeScript.
-- `apps/storybook`: The Storybook app for viewing and interacting with the components in isolation.
-- `docs/`: Documentation for the UI library, including guidelines for usage and customization.
+## Repository Structure
 
-## Installation
+```
+ui/
+├── packages/
+│   └── froglet-ui/     # Core UI component library
+├── apps/
+│   └── storybook/      # Component visualization
+└── docs/               # Usage documentation
+```
 
-To get started with the monorepo, follow the steps below.
-Clone the Repository
+## Getting Started
 
+### Prerequisites
+
+- Node.js (version specified in `.nvmrc`)
+
+### Installation
+
+1. Clone the repository:
 ```bash
 git clone https://github.com/froglet-ui/ui.git
 npm install
 ```
 
-Install Dependencies for Specific Packages
+2. Install package-specific dependencies:
 
-You can install dependencies for individual packages, for example:
-
-Install dependencies for the core UI package
-
+For the core UI library:
 ```bash
 cd packages/froglet-ui
 npm install
 ```
 
-Install dependencies for Storybook
-
+For Storybook:
 ```bash
 cd apps/storybook
 npm install
 ```
 
-## Running Storybook
+## Development
 
-Once dependencies are installed, you can run Storybook to view the components:
-
-From the project root, navigate to the Storybook app
+### Running Storybook
 
 ```bash
 cd apps/storybook
 npm run storybook
 ```
 
-Storybook will launch, and you can interact with the components in isolation.
+### Building the Library
 
-## Running the Project
-
-You can also build and test the core library using the following command from the root:
-
-To build the production version of the UI library, run the following command from the root:
-
+From the project root:
 ```bash
 npm run build
 ```
 
-## Development
+### Code Quality
 
-Make sure you are using Node.jsspecified in the `.nvmrc` file for optimal compatibility.
-
-### Linting and Formatting
-
-We use ESLint for linting and Prettier for formatting. To lint and format your code, run:
-
-From the root of the project
-
+Run from the project root:
 ```bash
-npm run lint
-npm run format
+npm run lint    # Run ESLint
+npm run format  # Run Prettier
 ```
 
-## Running Tests
+## Core Package: @froglet/ui
 
-We are working on integrating automated tests into the project. Stay tuned for future updates on this section.
+The main UI component library features:
+- Minimal, user-focused design
+- WCAG AAA accessibility compliance
+- CSS custom property customization
+- React and TypeScript foundation
+
+For detailed documentation, see [@froglet/ui README](./packages/froglet-ui/README.md).
 
 ## Contributing
 
-We welcome contributions to Froglet UI! Here’s how you can get started:
+1. Clone the repository
+2. Create a feature branch
+3. Make your changes and add tests
+4. Submit a detailed pull request
 
-- Fork the repository.
-- Create a feature branch.
-- Make your changes and write tests.
-- Submit a pull request with a detailed description of your changes.
-
-## Packages
-
-### @froglet/ui
-
-This is the core package containing the UI components. It is designed to be minimal, accessible, and
-customizable using CSS custom properties.
-
-See the [@froglet/ui README](./packages/froglet-ui/README.md) for more details on usage, customization, and contributing.
-
-### Features
-
-- Minimal design with a focus on usability.
-- Customizable using CSS custom properties.
-- WCAG AAA accessibility where possible.
-- Built with React and TypeScript.
+Note: Test integration is in progress. Updates will be provided soon.
 
 ## License
 
-MIT License. See [LICENSE](LICENSE) for details.
+[MIT License](LICENSE)

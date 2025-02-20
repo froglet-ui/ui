@@ -1,40 +1,31 @@
 # CSS Composition
 
-This guide outlines how components in Froglet UI expose a **CSS Custom  
-Property API**, allowing users to customize styles without modifying  
-component code. Our approach follows Brad Frost’s principles from  
-[The Many Faces of Themeable Design Systems](https://bradfrost.com/blog/post/the-many-faces-of-themeable-design-systems/).
+A guide to customizing Froglet UI components using CSS Custom Properties, inspired by Brad Frost's [The Many Faces of Themeable Design Systems](https://bradfrost.com/blog/post/the-many-faces-of-themeable-design-systems/).
 
 ## Naming Convention
 
-Each component defines its styles using a structured custom property  
-naming pattern: --{component}-{CSS-property}
+Components use a structured naming pattern for custom properties:
 
-For example, a button’s background color is exposed as:
+```css
+--{component}-{CSS-property}
+```
 
+Example:
 ```css
 --button-background-color
 ```
 
-This approach ensures consistency and flexibility, enabling easy  
-overrides for theming and customization.
-
 ### Component States
 
-States like "disabled" are prefixed to the relevant CSS property to ensure  
-clear, distinct overrides. For example, the background color for a disabled  
-button is defined as:
+State-specific properties use a state prefix:
 
 ```css
 --button-disabled-background-color
 ```
 
-This structure allows for easy customization of components in different states.
+### Naming Exception
 
-### Exceptions
-
-Following general community concensus, we use `--text-color` for the CSS color
-property. For example:
+While most properties follow our standard naming pattern, the CSS `color` property has a community-standard exception. We use `--text-color` instead of `--color`:
 
 ```css
 .button {
@@ -42,3 +33,5 @@ property. For example:
   color: var(--button-text-color);
 }
 ```
+
+This is the only deviation from our standard naming convention.
