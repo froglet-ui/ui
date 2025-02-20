@@ -24,11 +24,7 @@ yarn add @froglet/ui
 import { Button } from "@froglet/ui";
 
 function App() {
-  return (
-    <Button onClick={() => console.log("Clicked!")}>
-      Click me
-    </Button>
-  );
+  return <Button onClick={() => console.log("Clicked!")}>Click me</Button>;
 }
 ```
 
@@ -41,12 +37,14 @@ Components can be styled using CSS Custom Properties. For naming conventions and
 This package is part of the [froglet-ui monorepo](https://github.com/froglet-ui/ui.git). To contribute:
 
 1. Clone and install dependencies:
+
 ```bash
 git clone https://github.com/froglet-ui/ui.git
 npm install
 ```
 
 2. Start Storybook:
+
 ```bash
 cd apps/storybook
 npm install
@@ -54,6 +52,7 @@ npm run storybook
 ```
 
 3. Work on components:
+
 ```bash
 cd packages/froglet-ui
 npm install
@@ -62,6 +61,7 @@ npm install
 ### Code Quality
 
 Run from the project root:
+
 ```bash
 npm run lint    # Run ESLint
 npm run format  # Run Prettier

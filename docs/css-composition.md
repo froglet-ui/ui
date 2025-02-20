@@ -11,6 +11,7 @@ Components use a structured naming pattern for custom properties:
 ```
 
 Example:
+
 ```css
 --button-background-color
 ```

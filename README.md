@@ -5,6 +5,7 @@ A comprehensive React component library built with TypeScript, focusing on acces
 ## Overview
 
 This monorepo contains:
+
 - Core UI component library
 - Storybook documentation
 - Related tools and services
@@ -29,6 +30,7 @@ ui/
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/froglet-ui/ui.git
 npm install
@@ -37,12 +39,14 @@ npm install
 2. Install package-specific dependencies:
 
 For the core UI library:
+
 ```bash
 cd packages/froglet-ui
 npm install
 ```
 
 For Storybook:
+
 ```bash
 cd apps/storybook
 npm install
@@ -60,6 +64,7 @@ npm run storybook
 ### Building the Library
 
 From the project root:
+
 ```bash
 npm run build
 ```
@@ -67,6 +72,7 @@ npm run build
 ### Code Quality
 
 Run from the project root:
+
 ```bash
 npm run lint    # Run ESLint
 npm run format  # Run Prettier
@@ -75,6 +81,7 @@ npm run format  # Run Prettier
 ## Core Package: @froglet/ui
 
 The main UI component library features:
+
 - Minimal, user-focused design
 - WCAG AAA accessibility compliance
 - CSS custom property customization
