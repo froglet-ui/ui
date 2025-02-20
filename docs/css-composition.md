@@ -1,13 +1,14 @@
 # CSS Composition
 
-A guide to customizing Froglet UI components using CSS Custom Properties, inspired by Brad Frost's [The Many Faces of Themeable Design Systems](https://bradfrost.com/blog/post/the-many-faces-of-themeable-design-systems/).
+A guide to customizing Froglet UI components using CSS Custom Properties, inspired by Brad Frost's [The Many Faces of Themeable Design Systems](https://bradfrost.com/blog/post/the-many-faces-of-themeable-design-systems/). 
+We are taking general naming guidance from [Nathan Curtis](https://medium.com/eightshapes-llc/naming-tokens-in-design-systems-9e86c7444676).
 
 ## Naming Convention
 
 Components use a structured naming pattern for custom properties:
 
 ```css
---{component}-{CSS-property}
+--{component}-{CSS-property}-{modifier}
 ```
 
 Example:
@@ -18,10 +19,10 @@ Example:
 
 ### Component States
 
-State-specific properties use a state prefix:
+State-specific properties act as a modifier and are added as a prefix:
 
 ```css
---button-disabled-background-color
+--button-background-color-disabled
 ```
 
 ### Naming Exception
