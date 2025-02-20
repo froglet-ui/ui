@@ -55,11 +55,11 @@ For example, the following styles could be applied:
   --button-padding: 12px 24px;
   --button-font-size: 1.2rem;
   
-  --button-hover-background-color: #3ba66b;
-  --button-hover-text-color: #ffffff;
+  --button-background-color-hover: #3ba66b;
+  --button-text-color-hover: #ffffff;
   
-  --button-disabled-background-color: #d3e9d7;
-  --button-disabled-text-color: #7a9a7d;
+  --button-background-color-disabled: #d3e9d7;
+  --button-text-color-disabled: #7a9a7d;
 }
 \`\`\`
         `,
@@ -97,11 +97,11 @@ For example, the following styles could be applied:
   --button-padding: 12px 24px;
   --button-font-size: 1.2rem;
   
-  --button-hover-background-color: #b13fd6;
-  --button-hover-text-color: #ffffff;
+  --button-background-color-hover: #b13fd6;
+  --button-text-color-hover: #ffffff;
   
-  --button-disabled-background-color: #f5f5f5;
-  --button-disabled-text-color: #b0b0b0;
+  --button-background-color-disabled: #f5f5f5;
+  --button-text-color-disabled: #b0b0b0;
 }
 \`\`\`
         `,

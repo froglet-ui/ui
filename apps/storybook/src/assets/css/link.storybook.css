@@ -9,34 +9,34 @@
 .link--primary {
   /* Base Colors */
   --link-text-color: #2e8b57;
-  --link-hover-text-color: #3ba66b;
-  --link-visited-text-color: #276c46;
+  --link-text-color-hover: #3ba66b;
+  --link-text-color-visited: #276c46;
 
   /* Text Decoration */
   --link-text-decoration: underline;
-  --link-hover-text-decoration: none;
-  --link-focus-text-decoration: underline;
+  --link-text-decoration-hover: none;
+  --link-text-decoration-focus: underline;
 
   /* Focus/Focus-visible Outline */
-  --link-focus-outline-color: #80bdff;
-  --link-focus-outline-width: 2px;
-  --link-focus-outline-offset: 2px;
+  --link-outline-color-focus: #80bdff;
+  --link-outline-width-focus: 2px;
+  --link-outline-offset-focus: 2px;
 }
 
 /* Secondary Link Demo */
 .link--secondary {
   /* Base Colors */
   --link-text-color: #9b4dca;
-  --link-hover-text-color: #b13fd6;
-  --link-visited-text-color: #7a36a4;
+  --link-text-color-hover: #b13fd6;
+  --link-text-color-visited: #7a36a4;
 
   /* Text Decoration */
   --link-text-decoration: underline;
-  --link-hover-text-decoration: none;
-  --link-focus-text-decoration: underline;
+  --link-text-decoration-hover: none;
+  --link-text-decoration-focus: underline;
 
   /* Focus/Focus-visible Outline */
-  --link-focus-outline-color: #80bdff;
-  --link-focus-outline-width: 2px;
-  --link-focus-outline-offset: 2px;
+  --link-outline-color-focus: #80bdff;
+  --link-outline-width-focus: 2px;
+  --link-outline-offset-focus: 2px;
 }

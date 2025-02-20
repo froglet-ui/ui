@@ -19,8 +19,8 @@
 
 /* Hover State */
 .button:hover {
-  background-color: var(--button-hover-background-color, #0056b3);
-  color: var(--button-hover-text-color, #ffffff);
+  background-color: var(--button-background-color-hover, #0056b3);
+  color: var(--button-text-color-hover, #ffffff);
 }
 
 /* Active State */
@@ -30,8 +30,8 @@
 
 /* Disabled State */
 .button:disabled {
-  background-color: var(--button-disabled-background-color, #d6d6d6);
-  color: var(--button-disabled-text-color, #a1a1a1);
-  border-color: var(--button-disabled-border-color, #d6d6d6);
+  background-color: var(--button-background-color-disabled, #d6d6d6);
+  color: var(--button-text-color-disabled, #a1a1a1);
+  border-color: var(--button-border-color-disabled, #d6d6d6);
   cursor: not-allowed;
 }

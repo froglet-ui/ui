@@ -36,14 +36,14 @@ interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
  * --link-font-weight
  * --link-text-decoration
  * --link-padding
- * --link-active-text-color
- * --link-focus-outline-width
- * --link-focus-outline-color
- * --link-focus-outline-offset
- * --link-focus-text-decoration
- * --link-hover-text-color
- * --link-hover-text-decoration
- * --link-visited-text-color
+ * --link-text-color-active
+ * --link-outline-width-focus
+ * --link-outline-color-focus
+ * --link-outline-offset-focus
+ * --link-text-decoration-focus
+ * --link-text-color-hover
+ * --link-text-decoration-hover
+ * --link-text-color-visited
  *```
  *
  * @returns An anchor element with CSS Custom Property styling.
