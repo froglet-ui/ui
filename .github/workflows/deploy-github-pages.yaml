@@ -2,10 +2,9 @@
 name: Storybook to GitHub Pages
 
 on:
-  pull_request
-  # push:
-  #   branches:
-  #     - "main"
+  push:
+    branches:
+      - "main"
 
 permissions:
   contents: read
