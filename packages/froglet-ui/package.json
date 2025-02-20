@@ -1,24 +1,55 @@
 {
   "name": "@froglet/ui",
   "version": "0.0.0",
-  "exports": {
-    "./Button": "./src/Button/Button.tsx",
-    "./Link": "./src/Link/Link.tsx"
+  "homepage": "https://froglet.io",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/froglet-ui/ui/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/froglet-ui/ui.git"
+  },
+  "sideEffects": [
+    "*.css"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json",
+    "./dist/index.css": "./dist/index.css"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
-    "lint": "eslint . --max-warnings 0",
-    "build": "tsc -b",
-    "check-types": "tsc --noEmit"
+    "build": "tsup",
+    "check-types": "tsc --noEmit",
+    "clean": "rm -rf .turbo dist node_modules",
+    "lint": "eslint . --max-warnings 0"
+  },
+  "dependencies": {
+    "classnames": "^2.5.1"
   },
   "devDependencies": {
     "@types/node": "^22.13.0",
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
+    "autoprefixer": "^10.4.7",
     "eslint": "^9.20.0",
+    "postcss": "^8.4.21",
+    "tsup": "^8.3.6",
     "typescript": "5.7.3"
   },
-  "dependencies": {
-    "classnames": "^2.5.1",
+  "peerDependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   }
