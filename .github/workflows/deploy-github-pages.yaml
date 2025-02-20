@@ -2,9 +2,10 @@
 name: Storybook to GitHub Pages
 
 on:
-  push:
-    branches:
-      - "main"
+  pull_request
+  # push:
+  #   branches:
+  #     - "main"
 
 permissions:
   contents: read
@@ -25,5 +26,6 @@ jobs:
       - name: Push to GitHub Pages
         uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
         with:
+          build_command: npm run build && npm run build-storybook
           checkout: false
           path: apps/storybook/storybook-static
