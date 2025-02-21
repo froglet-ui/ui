@@ -11,7 +11,6 @@
   border: var(--input-border-width, 1px) solid var(--input-border-color, #ccc);
   border-radius: var(--input-border-radius, 4px);
   font-size: var(--input-font-size, 1rem);
-  font-family: var(--link-font-family, 'Helvetica', sans-serif);
   padding: var(--input-padding, 0.5rem);
   transition: background-color 0.3s, border-color 0.3s;
 }
