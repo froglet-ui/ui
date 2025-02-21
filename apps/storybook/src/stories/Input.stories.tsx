@@ -40,7 +40,7 @@ export const Default: Story = {
     docs: {
       description: {
         story:
-          "The default Froglet UI input without additional class modifications. The input will have default styles for accessibility and usability.",
+          "The default Froglet UI input without additional class modifications.",
       },
     },
   },
