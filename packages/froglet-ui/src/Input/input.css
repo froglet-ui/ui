@@ -1,0 +1,39 @@
+/*
+--------------------------------------------------------------------------------
+    Input CSS File
+    Represents CSS Custom Property Style for Input
+--------------------------------------------------------------------------------
+*/
+
+.input {
+  color: var(--input-text-color, #000);
+  background-color: var(--input-background-color, #fff);
+  border: var(--input-border-width, 1px) solid var(--input-border-color, #ccc);
+  border-radius: var(--input-border-radius, 4px);
+  font-size: var(--input-font-size, 1rem);
+  font-family: var(--link-font-family, 'Helvetica', sans-serif);
+  padding: var(--input-padding, 0.5rem);
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.input::placeholder {
+  color: var(--input-text-color-placeholder, #999);
+}
+
+.input:focus,
+.input:focus-visible {
+  outline: var(--input-outline-width-focus, 2px) solid var(--input-outline-color-focus, #007bff);
+  outline-offset: var(--input-outline-offset-focus, 2px);
+  border-color: var(--input-border-color-focus, #007bff);
+}
+
+.input:disabled {
+  background-color: var(--input-background-color-disabled, #f5f5f5);
+  color: var(--input-text-color-disabled, #ccc);
+  border-color: var(--input-border-color-disabled, #ddd);
+}
+
+.input:invalid,
+.input:focus:invalid {
+  border-color: var(--input-border-color-invalid, #e74c3c);
+}
