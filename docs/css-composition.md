@@ -43,6 +43,7 @@ This is the only deviation from our standard naming convention.
 Organizing CSS properties in a logical manner improves readability and maintainability. Below is a structured grouping of CSS properties based on their function and impact.
 
 ### 1. Positioning & Display
+
 - `display`
 - `position`
 - `top`, `right`, `bottom`, `left`
@@ -51,6 +52,7 @@ Organizing CSS properties in a logical manner improves readability and maintaina
 - `overflow`
 
 ### 2. Box Model
+
 - `width`, `min-width`, `max-width`
 - `height`, `min-height`, `max-height`
 - `margin`, `padding`
@@ -59,6 +61,7 @@ Organizing CSS properties in a logical manner improves readability and maintaina
 - `outline`, `outline-width`, `outline-style`, `outline-color`
 
 ### 3. Typography
+
 - `font`, `font-family`, `font-size`, `font-weight`
 - `line-height`, `letter-spacing`, `word-spacing`
 - `color`
@@ -66,6 +69,7 @@ Organizing CSS properties in a logical manner improves readability and maintaina
 - `white-space`, `word-wrap`
 
 ### 4. Visual Styles
+
 - `background`, `background-color`, `background-image`, `background-position`, `background-size`, `background-repeat`
 - `box-shadow`
 - `opacity`
@@ -73,23 +77,28 @@ Organizing CSS properties in a logical manner improves readability and maintaina
 - `clip-path`
 
 ### 5. Flexbox & Grid
+
 #### Flexbox
+
 - `flex`, `flex-grow`, `flex-shrink`, `flex-basis`
 - `justify-content`
 - `align-items`, `align-self`, `align-content`
 - `order`
 
 #### Grid
+
 - `grid`, `grid-template-columns`, `grid-template-rows`
 - `grid-column`, `grid-row`
 - `grid-gap`, `grid-auto-flow`
 
 ### 6. Animation & Transformations
+
 - `transition`, `transition-property`, `transition-duration`, `transition-timing-function`
 - `transform`, `transform-origin`
 - `animation`, `animation-name`, `animation-duration`, `animation-timing-function`, `animation-iteration-count`
 
 ### 7. Miscellaneous
+
 - `cursor`
 - `pointer-events`
 - `user-select`
