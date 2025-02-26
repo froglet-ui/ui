@@ -6,12 +6,12 @@
 */
 
 .input {
-  color: var(--input-text-color, #000);
-  background-color: var(--input-background-color, #fff);
+  padding: var(--input-padding, 0.5rem);
   border: var(--input-border-width, 1px) solid var(--input-border-color, #ccc);
   border-radius: var(--input-border-radius, 4px);
   font-size: var(--input-font-size, 1rem);
-  padding: var(--input-padding, 0.5rem);
+  color: var(--input-text-color, #000);
+  background-color: var(--input-background-color, #fff);
   transition: background-color 0.3s, border-color 0.3s;
 }
 
@@ -21,15 +21,15 @@
 
 .input:focus,
 .input:focus-visible {
+  border-color: var(--input-border-color-focus, #007bff);
   outline: var(--input-outline-width-focus, 2px) solid var(--input-outline-color-focus, #007bff);
   outline-offset: var(--input-outline-offset-focus, 2px);
-  border-color: var(--input-border-color-focus, #007bff);
 }
 
 .input:disabled {
-  background-color: var(--input-background-color-disabled, #f5f5f5);
-  color: var(--input-text-color-disabled, #ccc);
   border-color: var(--input-border-color-disabled, #ddd);
+  color: var(--input-text-color-disabled, #ccc);
+  background-color: var(--input-background-color-disabled, #f5f5f5);
 }
 
 .input:invalid,
