@@ -7,20 +7,20 @@
 
 /* Base Button Styles */
 .button {
-  background-color: var(--button-background-color, #007bff);
-  color: var(--button-text-color, #ffffff);
   padding: var(--button-padding, 8px 16px);
-  font-size: var(--button-font-size, 1rem);
   border: var(--button-border-width, 2px) solid var(--button-border-color, #007bff);
   border-radius: var(--button-border-radius, 4px);
-  cursor: pointer;
+  font-size: var(--button-font-size, 1rem);
+  color: var(--button-text-color, #ffffff);
+  background-color: var(--button-background-color, #007bff);
   transition: background-color 0.3s, transform 0.1s;
+  cursor: pointer;
 }
 
 /* Hover State */
 .button:hover {
-  background-color: var(--button-background-color-hover, #0056b3);
   color: var(--button-text-color-hover, #ffffff);
+  background-color: var(--button-background-color-hover, #0056b3);
 }
 
 /* Active State */
@@ -30,8 +30,8 @@
 
 /* Disabled State */
 .button:disabled {
-  background-color: var(--button-background-color-disabled, #d6d6d6);
-  color: var(--button-text-color-disabled, #a1a1a1);
   border-color: var(--button-border-color-disabled, #d6d6d6);
+  color: var(--button-text-color-disabled, #a1a1a1);
+  background-color: var(--button-background-color-disabled, #d6d6d6);
   cursor: not-allowed;
 }
