@@ -5,6 +5,7 @@
 --------------------------------------------------------------------------------
 */
 
+/* Base Checkbox Styles */
 .input--checkbox {
   /* Positioning & Display */
   display: inline-block;
@@ -16,24 +17,22 @@
   /* Box Model */
   width: var(--checkbox-size, 1rem);
   height: var(--checkbox-size, 1rem);
-  border: var(--checkbox-border-width, 2px) solid var(--checkbox-border-color, #666);
+  border: var(--checkbox-border-width, 2px) solid var(--checkbox-border-color, #007bff);
   border-radius: var(--checkbox-border-radius, 4px);
   outline: none;
 
   /* Typography */
-  color: inherit; /* Ensuring it inherits text color if needed */
+  color: inherit;
 
   /* Visual Styles */
-  background-color: var(--checkbox-background-color, #fff);
-  box-shadow: none;
-  opacity: 1;
-  transition: border-color 0.2s, background-color 0.2s;
+  background-color: var(--checkbox-background-color, #ffffff);
+  transition: background-color 0.3s, border-color 0.3s, transform 0.1s;
 }
 
 /* Hover */
 .input--checkbox:hover {
-  border-color: var(--checkbox-border-color-hover, #3ba66b);
-  background-color: var(--checkbox-background-color-hover, #f5f5f5);
+  border-color: var(--checkbox-border-color-hover, #0056b3);
+  background-color: var(--checkbox-background-color-hover, #f0f8ff);
 }
 
 /* Focus */
@@ -44,8 +43,8 @@
 
 /* Checked */
 .input--checkbox:checked {
-  border-color: var(--checkbox-border-color-checked, #2e8b57);
-  background-color: var(--checkbox-background-color-checked, #2e8b57);
+  border-color: var(--checkbox-border-color-checked, #0056b3);
+  background-color: var(--checkbox-background-color-checked, #0056b3);
 }
 
 .input--checkbox:checked::after {
@@ -62,17 +61,22 @@
   height: 60%;
 
   /* Visual Styles */
-  background-color: var(--checkbox-checkmark-color-checked, #fff);
-  clip-path: polygon(14% 44%, 38% 72%, 84% 16%, 100% 32%, 38% 100%, 0% 60%);
+  background-color: var(--checkbox-checkmark-color-checked, #ffffff);
+  clip-path: var(--checkbox-clip-path-checked, polygon(14% 44%, 38% 72%, 84% 16%, 100% 32%, 38% 100%, 0% 60%));
+}
+
+/* Active (Click) */
+.input--checkbox:active {
+  transform: scale(0.95);
 }
 
 /* Disabled */
 .input--checkbox:disabled {
-  border-color: var(--checkbox-border-color-disabled, #bbb);
+  border-color: var(--checkbox-border-color-disabled, #d6d6d6);
   background-color: var(--checkbox-background-color-disabled, #e0e0e0);
   cursor: not-allowed;
 }
 
 .input--checkbox:disabled:checked::after {
-  background-color: var(--checkbox-checkmark-color-disabled, #999);
+  background-color: var(--checkbox-checkmark-color-disabled, #a1a1a1);
 }

@@ -3,7 +3,7 @@ import { Checkbox } from "@froglet/ui";
 import { useState } from "react";
 
 const meta = {
-  title: "Components/Checkbox",
+  title: "Checkbox",
   component: Checkbox,
   tags: ["autodocs"],
   argTypes: {
