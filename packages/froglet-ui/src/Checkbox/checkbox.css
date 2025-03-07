@@ -1,0 +1,82 @@
+/*
+--------------------------------------------------------------------------------
+    Checkbox CSS File
+    Represents CSS Custom Property Style for Checkbox Component
+--------------------------------------------------------------------------------
+*/
+
+/* Base Checkbox Styles */
+.input--checkbox {
+  /* Positioning & Display */
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  appearance: none;
+  cursor: pointer;
+
+  /* Box Model */
+  width: var(--checkbox-size, 1rem);
+  height: var(--checkbox-size, 1rem);
+  border: var(--checkbox-border-width, 2px) solid var(--checkbox-border-color, #007bff);
+  border-radius: var(--checkbox-border-radius, 4px);
+  outline: none;
+
+  /* Typography */
+  color: inherit;
+
+  /* Visual Styles */
+  background-color: var(--checkbox-background-color, #ffffff);
+  transition: background-color 0.3s, border-color 0.3s, transform 0.1s;
+}
+
+/* Hover */
+.input--checkbox:hover {
+  border-color: var(--checkbox-border-color-hover, #0056b3);
+  background-color: var(--checkbox-background-color-hover, #f0f8ff);
+}
+
+/* Focus */
+.input--checkbox:focus {
+  outline: var(--checkbox-outline-width-focus, 2px) solid var(--checkbox-outline-color-focus, #80bdff);
+  outline-offset: var(--checkbox-outline-offset-focus, 2px);
+}
+
+/* Checked */
+.input--checkbox:checked {
+  border-color: var(--checkbox-border-color-checked, #0056b3);
+  background-color: var(--checkbox-background-color-checked, #0056b3);
+}
+
+.input--checkbox:checked::after {
+  /* Positioning & Display */
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* Box Model */
+  width: 60%;
+  height: 60%;
+
+  /* Visual Styles */
+  background-color: var(--checkbox-checkmark-color-checked, #ffffff);
+  clip-path: var(--checkbox-clip-path-checked, polygon(14% 44%, 38% 72%, 84% 16%, 100% 32%, 38% 100%, 0% 60%));
+}
+
+/* Active (Click) */
+.input--checkbox:active {
+  transform: scale(0.95);
+}
+
+/* Disabled */
+.input--checkbox:disabled {
+  border-color: var(--checkbox-border-color-disabled, #d6d6d6);
+  background-color: var(--checkbox-background-color-disabled, #e0e0e0);
+  cursor: not-allowed;
+}
+
+.input--checkbox:disabled:checked::after {
+  background-color: var(--checkbox-checkmark-color-disabled, #a1a1a1);
+}
