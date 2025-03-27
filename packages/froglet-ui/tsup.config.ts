@@ -12,13 +12,14 @@ export default defineConfig({
   target: "esnext",
   external: ["react", "react-dom"],
   outDir: "dist",
-  esbuildOptions(options) {
-    options.outbase = "src";
-  },
   splitting: false,
   treeshake: true,
   minify: true,
-  loader: {
-    ".css": "css",
+  banner: {
+    js: "'use client';",
+  },
+  esbuildOptions(options) {
+    options.outbase = "src";
+    options.keepNames = true;
   },
 });
