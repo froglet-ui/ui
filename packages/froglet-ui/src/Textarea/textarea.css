@@ -1,0 +1,51 @@
+/*
+--------------------------------------------------------------------------------
+    Textarea CSS File
+    Represents CSS Custom Property Style for Textarea Component
+--------------------------------------------------------------------------------
+*/
+
+/* Base Textarea Styles */
+.textarea {
+  /* Positioning & Display */
+  display: inline-block;
+  width: 100%;
+  min-height: var(--textarea-min-height, 120px); /* Default minimum height */
+  resize: vertical; /* Allow vertical resizing */
+  border: var(--textarea-border-width, 2px) solid var(--textarea-border-color, #007bff);
+  border-radius: var(--textarea-border-radius, 4px);
+  outline: none;
+  
+  /* Box Model */
+  padding: var(--textarea-padding, 8px 16px);
+  
+  /* Typography */
+  font-size: var(--textarea-font-size, 1rem);
+  line-height: var(--textarea-line-height, 1.4);
+  color: var(--textarea-text-color, #333333);
+  
+  /* Visual Styles */
+  background-color: var(--textarea-background-color, #ffffff);
+  transition: border-color 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Hover */
+.textarea:hover {
+  border-color: var(--textarea-border-color-hover, #0056b3);
+  background-color: var(--textarea-background-color-hover, #f0f8ff);
+}
+
+/* Focus */
+.textarea:focus {
+  border-color: var(--textarea-border-color-focus, #80bdff);
+  box-shadow: var(--textarea-box-shadow-focus, 0 0 0 2px rgba(128, 189, 255, 0.5));
+  outline: none;
+}
+
+/* Disabled */
+.textarea:disabled {
+  border-color: var(--textarea-border-color-disabled, #d6d6d6);
+  background-color: var(--textarea-background-color-disabled, #e0e0e0);
+  color: var(--textarea-text-color-disabled, #a1a1a1);
+  cursor: not-allowed;
+}
