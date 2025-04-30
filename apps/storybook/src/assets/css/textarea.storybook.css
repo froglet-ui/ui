@@ -1,0 +1,23 @@
+/*
+--------------------------------------------------------------------------------
+    Textarea Storybook Styles
+    Custom styles for showcasing the Textarea component in Storybook.
+--------------------------------------------------------------------------------
+*/
+
+.textarea--primary {
+  --textarea-background-color: #2e8b57;
+  --textarea-text-color: #ffffff;
+  --textarea-border-color: #276c46;
+  --textarea-border-width: 2px;
+  --textarea-border-radius: 8px;
+  --textarea-padding: 12px 16px;
+  --textarea-font-size: 1rem;
+  
+  --textarea-background-color-hover: #3ba66b;
+  --textarea-border-color-hover: #2d6a47;
+  
+  --textarea-background-color-disabled: #d3e9d7;
+  --textarea-border-color-disabled: #d6d6d6;
+  --textarea-text-color-disabled: #7a9a7d;
+}
