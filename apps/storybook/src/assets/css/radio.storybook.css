@@ -1,0 +1,32 @@
+/*
+--------------------------------------------------------------------------------
+    Radio CSS File
+    This file serves as the Storybook radio-specific CSS.
+--------------------------------------------------------------------------------
+*/
+
+/* Primary Radio Demo */
+.radio--primary {
+  /* Base Colors */
+  --radio-border-color: #2e8b57;
+  --radio-background-color: #ffffff;
+  --radio-border-color-checked: #2e8b57;
+  --radio-background-color-checked: #2e8b57;
+  --radio-dot-color-checked: #ffffff;
+
+  /* Border and Radius */
+  --radio-border-width: 2px;
+  --radio-border-radius: 50%;
+
+  /* Size */
+  --radio-size: 1.25rem;
+
+  /* Hover State */
+  --radio-border-color-hover: #276c46;
+  --radio-background-color-hover: #f0fdf4;
+
+  /* Disabled State */
+  --radio-border-color-disabled: #d3e9d7;
+  --radio-background-color-disabled: #f5f5f5;
+  --radio-dot-color-disabled: #b0b0b0;
+}
