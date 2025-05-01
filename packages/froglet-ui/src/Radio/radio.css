@@ -1,0 +1,83 @@
+/*
+--------------------------------------------------------------------------------
+    Radio CSS File
+    Represents CSS Custom Property Style for Radio Component
+--------------------------------------------------------------------------------
+*/
+
+/* Base Radio Styles */
+.input--radio {
+  /* Positioning & Display */
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  appearance: none;
+  cursor: pointer;
+
+  /* Box Model */
+  width: var(--radio-size, 1rem);
+  height: var(--radio-size, 1rem);
+  border: var(--radio-border-width, 2px) solid var(--radio-border-color, #007bff);
+  border-radius: var(--radio-border-radius, 50%);
+  outline: none;
+
+  /* Typography */
+  color: inherit;
+
+  /* Visual Styles */
+  border-color: var(--radio-border-color, #ffffff);
+  background-color: var(--radio-background-color, #ffffff);
+  transition: background-color 0.3s, border-color 0.3s, transform 0.1s;
+}
+
+/* Hover */
+.input--radio:hover {
+  border-color: var(--radio-border-color-hover, #0056b3);
+  background-color: var(--radio-background-color-hover, #f0f8ff);
+}
+
+/* Focus */
+.input--radio:focus {
+  outline: var(--radio-outline-width-focus, 2px) solid var(--radio-outline-color-focus, #80bdff);
+  outline-offset: var(--radio-outline-offset-focus, 2px);
+}
+
+/* Checked */
+.input--radio:checked {
+  border-color: var(--radio-border-color-checked, #0056b3);
+  background-color: var(--radio-background-color-checked, #0056b3);
+}
+
+.input--radio:checked::after {
+  /* Positioning & Display */
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* Box Model */
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+
+  /* Visual Styles */
+  background-color: var(--radio-dot-color-checked, #ffffff);
+}
+
+/* Active (Click) */
+.input--radio:active {
+  transform: scale(0.95);
+}
+
+/* Disabled */
+.input--radio:disabled {
+  border-color: var(--radio-border-color-disabled, #d6d6d6);
+  background-color: var(--radio-background-color-disabled, #e0e0e0);
+  cursor: not-allowed;
+}
+
+.input--radio:disabled:checked::after {
+  background-color: var(--radio-dot-color-disabled, #a1a1a1);
+}
