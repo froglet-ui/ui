@@ -8,7 +8,7 @@
 /* Base Textarea Styles */
 .textarea {
   /* Positioning & Display */
-  display: inline-block;
+  box-sizing: border-box;
   width: 100%;
   min-height: var(--textarea-min-height, 120px); /* Default minimum height */
   resize: vertical; /* Allow vertical resizing */
