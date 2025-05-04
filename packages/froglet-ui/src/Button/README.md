@@ -2,8 +2,6 @@
 
 The `Button` component provides a customizable, accessible button element with full support for CSS Custom Properties. It supports standard HTML `<button>` attributes and allows for flexible styling using BEM-style class modifiers and scoped CSS variables.
 
----
-
 ## Usage
 
 ```tsx
@@ -14,8 +12,6 @@ export default function Example() {
 }
 ```
 
----
-
 ## Props
 
 | Prop        | Type                                      | Default | Description                                                                |
@@ -23,8 +19,6 @@ export default function Example() {
 | `children`  | `ReactNode`                               | `—`     | Content inside the button. Supports text, icons, and other elements.       |
 | `className` | `string`                                  | `—`     | Additional classes to modify appearance or behavior.                       |
 | `...props`  | `ButtonHTMLAttributes<HTMLButtonElement>` | `—`     | All standard HTML button attributes (e.g., `type`, `disabled`, `onClick`). |
-
----
 
 ## CSS Custom Properties
 
@@ -44,12 +38,6 @@ The following custom properties are available to override default styles. These 
 | `--button-background-color-disabled` | `#d6d6d6`     | Background color when button is disabled |
 | `--button-text-color-disabled`       | `#a1a1a1`     | Text color when button is disabled       |
 | `--button-border-color-disabled`     | `#d6d6d6`     | Border color when button is disabled     |
-
----
-
-## Modifier Classes (BEM-style Hooks)
-
-Froglet UI does not provide built-in modifier classes, but it encourages consumers to create their own using BEM conventions. These classes can be used to override styles via CSS Custom Properties.
 
 ### Example: `.button--primary`
 
@@ -86,13 +74,9 @@ Froglet UI does not provide built-in modifier classes, but it encourages consume
 }
 ```
 
----
-
 ## Accessibility
 
 The `Button` component is a semantic `<button>` element and supports all standard keyboard and screen reader behaviors out of the box. When `disabled`, it becomes non-interactive and updates its visual state via custom properties.
-
----
 
 ## Best Practices
 
