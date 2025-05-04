@@ -10,6 +10,16 @@ import { Checkbox } from "@froglet/ui";
 <Checkbox checked={true} onChange={() => {}} />;
 ```
 
+## Props
+
+The `Checkbox` component accepts all standard HTML `<input type="checkbox">` attributes, as well as the following props:
+
+| Prop        | Type                                                   | Description                              |
+| ----------- | ------------------------------------------------------ | ---------------------------------------- |
+| `checked`   | `boolean`                                              | The current checked state (controlled).  |
+| `onChange`  | `(event: React.ChangeEvent<HTMLInputElement>) => void` | Callback when the checked state changes. |
+| `className` | `string`                                               | Additional CSS classes for styling.      |
+
 ## CSS Custom Properties
 
 The `Checkbox` component uses the following CSS custom properties for design tokens:
@@ -33,16 +43,6 @@ The `Checkbox` component uses the following CSS custom properties for design tok
 --checkbox-background-color-disabled
 --checkbox-checkmark-color-disabled
 ```
-
-## Props
-
-The `Checkbox` component accepts all standard HTML `<input type="checkbox">` attributes, as well as the following props:
-
-| Prop        | Type                                                   | Description                              |
-| ----------- | ------------------------------------------------------ | ---------------------------------------- |
-| `checked`   | `boolean`                                              | The current checked state (controlled).  |
-| `onChange`  | `(event: React.ChangeEvent<HTMLInputElement>) => void` | Callback when the checked state changes. |
-| `className` | `string`                                               | Additional CSS classes for styling.      |
 
 ## Related Components
 

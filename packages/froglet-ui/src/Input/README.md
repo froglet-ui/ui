@@ -10,6 +10,15 @@ import { Input } from "@froglet/ui";
 <Input placeholder="Your name" />;
 ```
 
+## Props
+
+The `Input` component accepts all standard HTML `<input>` attributes. It also accepts the following additional prop:
+
+| Prop        | Type                          | Description                                   |
+| ----------- | ----------------------------- | --------------------------------------------- |
+| `className` | `string`                      | Additional CSS classes for styling hooks.     |
+| `ref`       | `React.Ref<HTMLInputElement>` | Optional React ref to access the DOM element. |
+
 ## CSS Custom Properties
 
 The `Input` component uses the following CSS custom properties for design tokens:
@@ -34,15 +43,6 @@ The `Input` component uses the following CSS custom properties for design tokens
 ```
 
 These properties can be overridden in your own styles or with utility classes like `.input--primary`, `.input--secondary`, etc., to create different visual styles.
-
-## Props
-
-The `Input` component accepts all standard HTML `<input>` attributes. It also accepts the following additional prop:
-
-| Prop        | Type                          | Description                                   |
-| ----------- | ----------------------------- | --------------------------------------------- |
-| `className` | `string`                      | Additional CSS classes for styling hooks.     |
-| `ref`       | `React.Ref<HTMLInputElement>` | Optional React ref to access the DOM element. |
 
 ## Related Components
 
