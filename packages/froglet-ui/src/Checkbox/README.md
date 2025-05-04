@@ -7,7 +7,7 @@ A styled checkbox component built on top of the `Input` component. It supports c
 ```tsx
 import { Checkbox } from "@froglet/ui";
 
-<Checkbox checked={true} onChange={() => {}} />
+<Checkbox checked={true} onChange={() => {}} />;
 ```
 
 ## CSS Custom Properties
@@ -38,11 +38,11 @@ The `Checkbox` component uses the following CSS custom properties for design tok
 
 The `Checkbox` component accepts all standard HTML `<input type="checkbox">` attributes, as well as the following props:
 
-| Prop        | Type                                        | Description                                            |
-|-------------|---------------------------------------------|--------------------------------------------------------|
-| `checked`   | `boolean`                                   | The current checked state (controlled).                |
-| `onChange`  | `(event: React.ChangeEvent<HTMLInputElement>) => void` | Callback when the checked state changes.       |
-| `className` | `string`                                    | Additional CSS classes for styling.                    |
+| Prop        | Type                                                   | Description                              |
+| ----------- | ------------------------------------------------------ | ---------------------------------------- |
+| `checked`   | `boolean`                                              | The current checked state (controlled).  |
+| `onChange`  | `(event: React.ChangeEvent<HTMLInputElement>) => void` | Callback when the checked state changes. |
+| `className` | `string`                                               | Additional CSS classes for styling.      |
 
 ## Related Components
 
