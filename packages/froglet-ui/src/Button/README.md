@@ -1,4 +1,4 @@
-# `<Button>`
+# Button
 
 The `Button` component provides a customizable, accessible button element with full support for CSS Custom Properties. It supports standard HTML `<button>` attributes and allows for flexible styling using BEM-style class modifiers and scoped CSS variables.
 
