@@ -50,26 +50,6 @@ The following custom properties can be overridden globally, scoped with modifier
 - Native anchor behavior is preserved (e.g. `target`, `rel`, `aria-*` attributes).
 - Styling supports visited/hover/active/focus-visible states.
 
-## Examples
-
-```tsx
-<Link className="link--secondary" href="https://docs.froglet.dev">
-  Froglet Documentation
-</Link>
-```
-
-```css
-.link--secondary {
-  --link-text-color: #9b4dca;
-  --link-text-color-hover: #b13fd6;
-  --link-text-color-visited: #7a36a4;
-  --link-text-decoration: underline;
-  --link-text-decoration-hover: none;
-  --link-text-decoration-focus: underline;
-  --link-outline-color-focus: #80bdff;
-  --link-outline-width-focus: 2px;
-  --link-outline-offset-focus: 2px;
-}
-```
+## Best Practices
 
 For consistent styling guidance, refer to the shared [Modifiers](../../../../docs/modifiers.md).

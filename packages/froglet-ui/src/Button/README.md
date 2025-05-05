@@ -82,3 +82,5 @@ The `Button` component is a semantic `<button>` element and supports all standar
 
 - Use BEM modifier classes like `button--primary` or `button--secondary` to theme buttons via custom properties without modifying base styles.
 - Avoid hardcoding colors or sizes in external stylesheets—leverage the exposed custom properties instead.
+
+For consistent styling guidance, refer to the shared [Modifiers](../../../../docs/modifiers.md).
