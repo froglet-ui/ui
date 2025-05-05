@@ -9,7 +9,7 @@ Import and use the `Link` component to render anchor elements:
 ```tsx
 import { Link } from "@froglet/ui";
 
-<Link href="https://example.com">Visit Example</Link>
+<Link href="https://example.com">Visit Example</Link>;
 ```
 
 This component accepts all standard anchor tag attributes, including `href`, `target`, `rel`, `aria-*`, and more.
@@ -18,10 +18,10 @@ This component accepts all standard anchor tag attributes, including `href`, `ta
 
 In addition to all native anchor tag attributes, `Link` supports:
 
-| Prop       | Type                 | Description                                      |
-|------------|----------------------|--------------------------------------------------|
-| `children` | `ReactNode`          | Link text or elements inside the link tag.       |
-| `className`| `string`             | Optional utility or modifier classes.            |
+| Prop        | Type        | Description                                |
+| ----------- | ----------- | ------------------------------------------ |
+| `children`  | `ReactNode` | Link text or elements inside the link tag. |
+| `className` | `string`    | Optional utility or modifier classes.      |
 
 ## CSS Custom Properties
 
