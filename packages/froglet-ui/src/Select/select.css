@@ -1,0 +1,41 @@
+/*
+--------------------------------------------------------------------------------
+    Select CSS File
+    Represents CSS Custom Property Style for Select
+--------------------------------------------------------------------------------
+*/
+
+/* Base Select Styles */
+.select {
+  /* Box Model */
+  padding: var(--select-padding, 8px 12px);
+  border: var(--select-border-width, 2px) solid var(--select-border-color, #007bff);
+  border-radius: var(--select-border-radius, 4px);
+
+  /* Typography */
+  font-size: var(--select-font-size, 1rem);
+  color: var(--select-text-color, #000000);
+
+  /* Background and Appearance */
+  background-color: var(--select-background-color, #ffffff);
+  appearance: none;
+
+  /* Interaction and Transitions */
+  transition: background-color 0.3s, border-color 0.3s;
+  cursor: pointer;
+}
+
+/* Hover State */
+.select:hover {
+  color: var(--select-text-color-hover, #000000);
+  background-color: var(--select-background-color-hover, #f2f2f2);
+  border-color: var(--select-border-color-hover, #0056b3);
+}
+
+/* Disabled State */
+.select:disabled {
+  color: var(--select-text-color-disabled, #a1a1a1);
+  background-color: var(--select-background-color-disabled, #e0e0e0);
+  border-color: var(--select-border-color-disabled, #d6d6d6);
+  cursor: not-allowed;
+}
