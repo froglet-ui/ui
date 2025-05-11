@@ -21,12 +21,12 @@
   border-style: solid;
   border-color: var(--radio-border-color, #007bff);
   border-radius: var(--radio-border-radius, 50%);
-  outline: none;
 
   /* Typography */
   color: inherit;
 
   /* Visual Styles */
+  outline: none;
   background-color: var(--radio-background-color, #ffffff);
   transition: background-color 0.3s, border-color 0.3s, transform 0.1s;
 }

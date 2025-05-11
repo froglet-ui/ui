@@ -7,14 +7,21 @@
 
 /* Base Button Styles */
 .button {
+  /* Box Model */
   padding: var(--button-padding, 8px 16px);
-  border: var(--button-border-width, 2px) solid var(--button-border-color, #007bff);
+  border-width: var(--button-border-width, 2px);
+  border-style: solid;
+  border-color: var(--button-border-color, #007bff);
   border-radius: var(--button-border-radius, 4px);
+
+  /* Typography */
   font-size: var(--button-font-size, 1rem);
   color: var(--button-text-color, #ffffff);
+
+  /* Visual Styles */
+  cursor: pointer;
   background-color: var(--button-background-color, #007bff);
   transition: background-color 0.3s, transform 0.1s;
-  cursor: pointer;
 }
 
 /* Hover State */
