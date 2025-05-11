@@ -7,29 +7,34 @@
 
 /* Base Select Styles */
 .select {
+  /* Positioning & Display */
+  display: block;
+  box-sizing: border-box;
+  
   /* Box Model */
+  width: 100%;
   padding: var(--select-padding, 8px 12px);
-  border: var(--select-border-width, 2px) solid var(--select-border-color, #007bff);
+  border-width: var(--select-border-width, 2px);
+  border-style: solid;
+  border-color: var(--select-border-color, #cccccc);
   border-radius: var(--select-border-radius, 4px);
 
   /* Typography */
   font-size: var(--select-font-size, 1rem);
   color: var(--select-text-color, #000000);
 
-  /* Background and Appearance */
-  background-color: var(--select-background-color, #ffffff);
+  /* Visual Styles */
   appearance: none;
-
-  /* Interaction and Transitions */
-  transition: background-color 0.3s, border-color 0.3s;
   cursor: pointer;
+  background-color: var(--select-background-color, #ffffff);
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
 /* Hover State */
 .select:hover {
   color: var(--select-text-color-hover, #000000);
-  background-color: var(--select-background-color-hover, #f2f2f2);
-  border-color: var(--select-border-color-hover, #0056b3);
+  border-color: var(--select-border-color-hover, #cccccc);
+  background-color: var(--select-background-color-hover, #ffffff);
 }
 
 /* Disabled State */

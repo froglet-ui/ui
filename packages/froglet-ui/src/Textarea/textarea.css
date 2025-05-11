@@ -8,16 +8,18 @@
 /* Base Textarea Styles */
 .textarea {
   /* Positioning & Display */
+  display: block;
   box-sizing: border-box;
-  width: 100%;
-  min-height: var(--textarea-min-height, 120px); /* Default minimum height */
-  resize: vertical; /* Allow vertical resizing */
-  border: var(--textarea-border-width, 2px) solid var(--textarea-border-color, #007bff);
-  border-radius: var(--textarea-border-radius, 4px);
-  outline: none;
+  resize: vertical;
   
   /* Box Model */
+  width: 100%;
+  min-height: var(--textarea-min-height, 120px);
   padding: var(--textarea-padding, 8px 16px);
+  border-width: var(--textarea-border-width, 2px);
+  border-style: solid;
+  border-color: var(--textarea-border-color, #cccccc);
+  border-radius: var(--textarea-border-radius, 4px);
   
   /* Typography */
   font-size: var(--textarea-font-size, 1rem);
@@ -25,14 +27,15 @@
   color: var(--textarea-text-color, #333333);
   
   /* Visual Styles */
+  outline: none;
   background-color: var(--textarea-background-color, #ffffff);
   transition: border-color 0.3s, background-color 0.3s, box-shadow 0.3s;
 }
 
 /* Hover */
 .textarea:hover {
-  border-color: var(--textarea-border-color-hover, #0056b3);
-  background-color: var(--textarea-background-color-hover, #f0f8ff);
+  border-color: var(--textarea-border-color-hover, #cccccc);
+  background-color: var(--textarea-background-color-hover, #ffffff);
 }
 
 /* Focus */
