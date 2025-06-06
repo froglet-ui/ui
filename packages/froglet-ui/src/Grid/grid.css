@@ -1,0 +1,36 @@
+/*
+--------------------------------------------------------------------------------
+    Grid CSS File
+    Represents CSS Custom Property Styles for GridContainer and GridItem
+--------------------------------------------------------------------------------
+*/
+
+/* Grid Container Styles */
+.grid-container {
+  display: grid;
+
+  /* Spacing */
+  gap: var(--grid-container-gap, 1rem);
+
+  /* Column Layout */
+  grid-template-columns: repeat(var(--grid-container-columns, 12), 1fr);
+
+  /* Row Behavior */
+  grid-auto-rows: var(--grid-container-auto-rows, auto);
+  grid-auto-flow: var(--grid-container-auto-flow, row);
+
+  /* Content Alignment */
+  justify-content: var(--grid-container-justify-content, start);
+  align-content: var(--grid-container-align-content, start);
+}
+
+/* Grid Item Styles */
+.grid-item {
+  /* Placement */
+  grid-column: var(--grid-item-column, auto) / span var(--grid-item-column-span, 12);
+  grid-row: var(--grid-item-row, auto) / span var(--grid-item-row-span, 1);
+
+  /* Self-Alignment */
+  justify-self: var(--grid-item-justify-self, stretch);
+  align-self: var(--grid-item-align-self, stretch);
+}
