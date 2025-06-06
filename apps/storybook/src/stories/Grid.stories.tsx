@@ -22,9 +22,6 @@ export const Default: Story = {
       <GridItem columnSpan={4}>One Third (4/12)</GridItem>
     </GridContainer>
   ),
-  args: {
-    children: null,
-  },
   parameters: {
     docs: {
       description: {
