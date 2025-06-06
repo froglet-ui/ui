@@ -1,0 +1,19 @@
+/*
+--------------------------------------------------------------------------------
+    Grid Storybook CSS
+    This file provides story-specific styles for GridItem demos.
+--------------------------------------------------------------------------------
+*/
+
+/* Custom green square box demo for GridItem */
+.grid-item {
+  background-color: #2f7a4e;
+  height: 3rem;
+  color: #d4f1dc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  font-weight: 600;
+  user-select: none;
+}

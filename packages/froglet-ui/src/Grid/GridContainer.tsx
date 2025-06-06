@@ -11,9 +11,9 @@ import "./grid.css";
  */
 interface GridContainerProps {
   /**
-   * Child elements to render inside the grid.
+   * Optional child elements to render inside the grid.
    */
-  children: ReactNode;
+  children?: ReactNode;
 
   /**
    * Number of equal-width columns in the grid.
