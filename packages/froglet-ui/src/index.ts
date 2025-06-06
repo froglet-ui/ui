@@ -1,5 +1,7 @@
 export { Button } from "./Button/Button";
 export { Checkbox } from "./Checkbox/Checkbox";
+export { GridContainer } from "./Grid/GridContainer";
+export { GridItem } from "./Grid/GridItem";
 export { Input } from "./Input/Input";
 export { Link } from "./Link/Link";
 export { Radio } from "./Radio/Radio";
