@@ -1,42 +1,14 @@
-/*
---------------------------------------------------------------------------------
-    Link CSS File
-    This file serves as the Storybook link specific CSS.
---------------------------------------------------------------------------------
-*/
-
-/* Primary Link Demo */
-.link--primary {
-  /* Base Colors */
+.link--froglet {
   --link-text-color: #2e8b57;
-  --link-text-color-hover: #3ba66b;
-  --link-text-color-visited: #276c46;
-
-  /* Text Decoration */
   --link-text-decoration: underline;
+
+  --link-text-color-hover: #245f45;
   --link-text-decoration-hover: none;
+
+  --link-outline-width-focus: var(--focus-outline-width);
+  --link-outline-color-focus: var(--focus-outline-color);
+  --link-outline-offset-focus: var(--focus-outline-offset);
   --link-text-decoration-focus: underline;
 
-  /* Focus/Focus-visible Outline */
-  --link-outline-color-focus: #80bdff;
-  --link-outline-width-focus: 2px;
-  --link-outline-offset-focus: 2px;
-}
-
-/* Secondary Link Demo */
-.link--secondary {
-  /* Base Colors */
-  --link-text-color: #9b4dca;
-  --link-text-color-hover: #b13fd6;
-  --link-text-color-visited: #7a36a4;
-
-  /* Text Decoration */
-  --link-text-decoration: underline;
-  --link-text-decoration-hover: none;
-  --link-text-decoration-focus: underline;
-
-  /* Focus/Focus-visible Outline */
-  --link-outline-color-focus: #80bdff;
-  --link-outline-width-focus: 2px;
-  --link-outline-offset-focus: 2px;
+  --link-text-color-visited: #7c3aed;
 }

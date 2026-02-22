@@ -1,11 +1,22 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Link } from "@froglet/ui";
 import "../assets/css/link.storybook.css";
+import readme from "../../../../packages/froglet-ui/src/Link/README.md?raw";
+
+// Strip the leading `# Link` heading — Storybook renders its own h1 from the story title.
+const readmeBody = readme.replace(/^#[^\n]*\n+/, "");
 
 const meta = {
   title: "Link",
   component: Link,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component: readmeBody,
+      },
+    },
+  },
 } satisfies Meta<typeof Link>;
 
 export default meta;
@@ -13,96 +24,46 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    children: "Default Link",
+    children: "Visit Example",
     href: "#",
   },
   parameters: {
     docs: {
       description: {
         story:
-          "The default Froglet UI link without any additional class modifications.",
+          "The unstyled Link. No CSS custom properties are set — apply a modifier class to theme it.",
       },
     },
   },
 };
 
-export const Primary: Story = {
+export const Froglet: Story = {
   args: {
-    children: "Primary Link",
-    className: "link--primary",
+    children: "Visit Example",
+    className: "link--froglet",
     href: "#",
   },
   parameters: {
     docs: {
       description: {
-        story: `
-An example of how a consumer might implement a primary link using
-custom CSS class names. The \`link--primary\` class is not provided
-by Froglet UI by default, but is used here as a styling hook.
-
-This approach leverages CSS Custom Properties to allow easy customization.
-For example, the following styles could be applied:
+        story: `Themed with the Froglet primary green and secondary violet for visited links.
 
 \`\`\`css
-.link--primary {
-  /* Base Colors */
+.link--froglet {
   --link-text-color: #2e8b57;
-  --link-text-color-hover: #3ba66b;
-  --link-text-color-visited: #276c46;
-
-  /* Text Decoration */
   --link-text-decoration: underline;
+
+  --link-text-color-hover: #245f45;
   --link-text-decoration-hover: none;
+
+  --link-outline-width-focus: 2px;
+  --link-outline-color-focus: #5eba87;
+  --link-outline-offset-focus: 3px;
   --link-text-decoration-focus: underline;
 
-  /* Focus/Focus-visible Outline */
-  --link-outline-color-focus: #80bdff;
-  --link-outline-width-focus: 2px;
-  --link-outline-offset-focus: 2px;
+  --link-text-color-visited: #7c3aed;
 }
-\`\`\`
-        `,
-      },
-    },
-  },
-};
-
-export const Secondary: Story = {
-  args: {
-    children: "Secondary Link",
-    className: "link--secondary",
-    href: "#",
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: `
-Another example demonstrating how a consumer might apply custom
-styles using the \`link--secondary\` class as a styling hook. Like
-\`link--primary\`, this class is not included in Froglet UI by default
-but allows for easy customization using CSS Custom Properties.
-
-For example, the following styles could be applied:
-
-\`\`\`css
-.link--secondary {
-  /* Base Colors */
-  --link-text-color: #9b4dca;
-  --link-text-color-hover: #b13fd6;
-  --link-text-color-visited: #7a36a4;
-
-  /* Text Decoration */
-  --link-text-decoration: underline;
-  --link-text-decoration-hover: none;
-  --link-text-decoration-focus: underline;
-
-  /* Focus/Focus-visible Outline */
-  --link-outline-color-focus: #80bdff;
-  --link-outline-width-focus: 2px;
-  --link-outline-offset-focus: 2px;
-}
-\`\`\`
-        `,
+\`\`\``,
       },
     },
   },

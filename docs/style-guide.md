@@ -209,6 +209,25 @@ All interactive components share a consistent shape language.
 }
 ```
 
+### Link
+
+```css
+.link--froglet {
+  --link-text-color: #2e8b57;
+  --link-text-decoration: underline;
+
+  --link-text-color-hover: #245f45;
+  --link-text-decoration-hover: none;
+
+  --link-outline-width-focus: 2px;
+  --link-outline-color-focus: #5eba87;
+  --link-outline-offset-focus: 3px;
+  --link-text-decoration-focus: underline;
+
+  --link-text-color-visited: #7c3aed;
+}
+```
+
 ---
 
 _Additional component token references will be added here as each component is completed._
