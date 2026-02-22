@@ -1,7 +1,8 @@
 /*
 --------------------------------------------------------------------------------
-    Select CSS File
-    Represents CSS Custom Property Style for Select
+  Select CSS
+  Brandless base styles for the Select component.
+  All visual styling is driven by CSS custom properties.
 --------------------------------------------------------------------------------
 */
 
@@ -9,38 +10,46 @@
 .select {
   /* Positioning & Display */
   display: block;
-  box-sizing: border-box;
-  
+
   /* Box Model */
+  box-sizing: border-box;
   width: 100%;
-  padding: var(--select-padding, 8px 12px);
-  border-width: var(--select-border-width, 2px);
-  border-style: solid;
-  border-color: var(--select-border-color, #cccccc);
-  border-radius: var(--select-border-radius, 4px);
+  padding: var(--select-padding, 0.5rem 0.75rem);
+  border-width: var(--select-border-width, 1px);
+  border-style: var(--select-border-style, solid);
+  border-color: var(--select-border-color, currentColor);
+  border-radius: var(--select-border-radius, 0);
 
   /* Typography */
   font-size: var(--select-font-size, 1rem);
-  color: var(--select-text-color, #000000);
+  color: var(--select-text-color, CanvasText);
 
   /* Visual Styles */
   appearance: none;
   cursor: pointer;
-  background-color: var(--select-background-color, #ffffff);
-  transition: background-color 0.3s, border-color 0.3s;
+  background-color: var(--select-background-color, Canvas);
+  transition: background-color 0.2s, border-color 0.2s;
 }
 
-/* Hover State */
-.select:hover {
-  color: var(--select-text-color-hover, #000000);
-  border-color: var(--select-border-color-hover, #cccccc);
-  background-color: var(--select-background-color-hover, #ffffff);
+/* Hover */
+.select:hover:where(:not(:disabled)) {
+  color: var(--select-text-color-hover, CanvasText);
+  border-color: var(--select-border-color-hover, currentColor);
+  background-color: var(--select-background-color-hover, Canvas);
 }
 
-/* Disabled State */
+/* Focus */
+.select:focus-visible {
+  border-color: var(--select-border-color-focus, currentColor);
+  outline: var(--select-outline-width-focus, 2px) solid
+    var(--select-outline-color-focus, currentColor);
+  outline-offset: var(--select-outline-offset-focus, 2px);
+}
+
+/* Disabled */
 .select:disabled {
-  color: var(--select-text-color-disabled, #a1a1a1);
-  background-color: var(--select-background-color-disabled, #e0e0e0);
-  border-color: var(--select-border-color-disabled, #d6d6d6);
+  color: var(--select-text-color-disabled, GrayText);
+  background-color: var(--select-background-color-disabled, Canvas);
+  border-color: var(--select-border-color-disabled, GrayText);
   cursor: not-allowed;
 }

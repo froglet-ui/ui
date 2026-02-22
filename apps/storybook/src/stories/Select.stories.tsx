@@ -1,11 +1,22 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Select } from "@froglet/ui";
 import "../assets/css/select.storybook.css";
+import readme from "../../../../packages/froglet-ui/src/Select/README.md?raw";
+
+// Strip the leading `# Select` heading — Storybook renders its own h1 from the story title.
+const readmeBody = readme.replace(/^#[^\n]*\n+/, "");
 
 const meta = {
   title: "Select",
   component: Select,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component: readmeBody,
+      },
+    },
+  },
 } satisfies Meta<typeof Select>;
 
 export default meta;
@@ -26,13 +37,13 @@ export const Default: Story = {
     docs: {
       description: {
         story:
-          "The default Froglet UI select without additional class modifications.",
+          "The unstyled Froglet UI select. No CSS custom properties are set — apply a modifier class to theme it.",
       },
     },
   },
 };
 
-export const Primary: Story = {
+export const Froglet: Story = {
   args: {
     children: (
       <>
@@ -41,41 +52,38 @@ export const Primary: Story = {
         <option value="two">Option Two</option>
       </>
     ),
-    className: "select--primary",
+    className: "select--froglet",
     disabled: false,
   },
   parameters: {
     docs: {
       description: {
-        story: `
-An example of how a consumer might implement a primary select using
-a custom CSS class. The \`select--primary\` class is not provided by
-Froglet UI by default, but serves as a styling hook.
-
-This approach leverages CSS Custom Properties for customization.
-For example:
+        story: `Themed with the Froglet neutral border and primary focus ring.
 
 \`\`\`css
-.select--primary {
-  --select-background-color: #f0f8ff;
-  --select-text-color: #1a1a1a;
-
-  --select-border-color: #2e8b57;
+.select--froglet {
   --select-border-width: 2px;
+  --select-border-style: solid;
+  --select-border-color: #d1d5db;
   --select-border-radius: 6px;
-
-  --select-padding: 10px 14px;
+  --select-padding: 10px 16px;
   --select-font-size: 1rem;
+  --select-text-color: #111827;
+  --select-background-color: #ffffff;
 
-  --select-background-color-hover: #e6f5ec;
-  --select-text-color-hover: #000000;
+  --select-border-color-hover: #9ca3af;
+  --select-background-color-hover: #f9fafb;
 
-  --select-background-color-disabled: #f5f5f5;
-  --select-text-color-disabled: #999999;
-  --select-border-color-disabled: #cccccc;
+  --select-border-color-focus: #2e8b57;
+  --select-outline-width-focus: 2px;
+  --select-outline-color-focus: #5eba87;
+  --select-outline-offset-focus: 3px;
+
+  --select-border-color-disabled: #e5e7eb;
+  --select-text-color-disabled: #d1d5db;
+  --select-background-color-disabled: #f9fafb;
 }
-\`\`\`
-        `,
+\`\`\``,
       },
     },
   },

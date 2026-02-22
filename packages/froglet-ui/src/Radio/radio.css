@@ -1,7 +1,8 @@
 /*
 --------------------------------------------------------------------------------
-    Radio CSS File
-    Represents CSS Custom Property Style for Radio Component
+  Radio CSS
+  Brandless base styles for the Radio component.
+  All visual styling is driven by CSS custom properties.
 --------------------------------------------------------------------------------
 */
 
@@ -15,38 +16,40 @@
   cursor: pointer;
 
   /* Box Model */
+  box-sizing: border-box;
+  padding: 0;
   width: var(--radio-size, 1rem);
   height: var(--radio-size, 1rem);
   border-width: var(--radio-border-width, 2px);
-  border-style: solid;
-  border-color: var(--radio-border-color, #007bff);
+  border-style: var(--radio-border-style, solid);
+  border-color: var(--radio-border-color, currentColor);
   border-radius: var(--radio-border-radius, 50%);
 
   /* Typography */
   color: inherit;
 
   /* Visual Styles */
-  outline: none;
-  background-color: var(--radio-background-color, #ffffff);
-  transition: background-color 0.3s, border-color 0.3s, transform 0.1s;
+  background-color: var(--radio-background-color, transparent);
+  transition: background-color 0.2s, border-color 0.2s, transform 0.1s;
 }
 
 /* Hover */
 .input--radio:hover {
-  border-color: var(--radio-border-color-hover, #0056b3);
-  background-color: var(--radio-background-color-hover, #f0f8ff);
+  border-color: var(--radio-border-color-hover, currentColor);
+  background-color: var(--radio-background-color-hover, transparent);
 }
 
 /* Focus */
-.input--radio:focus {
-  outline: var(--radio-outline-width-focus, 2px) solid var(--radio-outline-color-focus, #80bdff);
+.input--radio:focus-visible {
+  outline: var(--radio-outline-width-focus, 2px) solid
+    var(--radio-outline-color-focus, currentColor);
   outline-offset: var(--radio-outline-offset-focus, 2px);
 }
 
 /* Checked */
 .input--radio:checked {
-  border-color: var(--radio-border-color-checked, #0056b3);
-  background-color: var(--radio-background-color-checked, #0056b3);
+  border-color: var(--radio-border-color-checked, currentColor);
+  background-color: var(--radio-background-color-checked, currentColor);
 }
 
 .input--radio:checked::after {
@@ -64,7 +67,7 @@
   border-radius: 50%;
 
   /* Visual Styles */
-  background-color: var(--radio-dot-color-checked, #ffffff);
+  background-color: var(--radio-dot-color-checked, Canvas);
 }
 
 /* Active (Click) */
@@ -74,11 +77,11 @@
 
 /* Disabled */
 .input--radio:disabled {
-  border-color: var(--radio-border-color-disabled, #d6d6d6);
-  background-color: var(--radio-background-color-disabled, #e0e0e0);
+  border-color: var(--radio-border-color-disabled, GrayText);
+  background-color: var(--radio-background-color-disabled, Canvas);
   cursor: not-allowed;
 }
 
 .input--radio:disabled:checked::after {
-  background-color: var(--radio-dot-color-disabled, #a1a1a1);
+  background-color: var(--radio-dot-color-disabled, GrayText);
 }

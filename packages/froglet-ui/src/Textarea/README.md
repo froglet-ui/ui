@@ -1,6 +1,6 @@
 # Textarea
 
-The `Textarea` component provides a styled multi-line text input area with full support for native HTML attributes and customizable design using scoped CSS custom properties. It is part of the Froglet UI library and promotes flexibility through utility class composition and design tokens.
+A brandless textarea. All visual styling is driven by CSS custom properties. Accepts all native `<textarea>` attributes.
 
 ## Usage
 
@@ -12,40 +12,48 @@ import { Textarea } from "@froglet/ui";
 
 ## Props
 
-The `Textarea` component extends all native `HTMLTextAreaElement` attributes, along with the following additional prop:
-
-| Prop        | Type     | Description                      |
-| ----------- | -------- | -------------------------------- |
-| `className` | `string` | Additional CSS classes to apply. |
+| Prop        | Type                                          | Default | Description                                         |
+| ----------- | --------------------------------------------- | ------- | --------------------------------------------------- |
+| `className` | `string`                                      | —       | Additional CSS classes. Use to apply a token block. |
+| `ref`       | `React.Ref<HTMLTextAreaElement>`              | —       | Forwarded to the underlying `<textarea>` element.   |
+| `...props`  | `TextareaHTMLAttributes<HTMLTextAreaElement>` | —       | All standard HTML textarea attributes.              |
 
 ## CSS Custom Properties
 
-You can customize the appearance of the Textarea using the following scoped CSS variables:
+| Property                               | Default          | Description                |
+| -------------------------------------- | ---------------- | -------------------------- |
+| `--textarea-min-height`                | `120px`          | Minimum height             |
+| `--textarea-padding`                   | `0.5rem 0.75rem` | Internal padding           |
+| `--textarea-border-width`              | `1px`            | Border width               |
+| `--textarea-border-style`              | `solid`          | Border style               |
+| `--textarea-border-color`              | —                | Border color               |
+| `--textarea-border-radius`             | `0`              | Border radius              |
+| `--textarea-font-size`                 | `1rem`           | Font size                  |
+| `--textarea-line-height`               | `1.5`            | Line height                |
+| `--textarea-text-color`                | —                | Text color                 |
+| `--textarea-background-color`          | —                | Background color           |
+| `--textarea-border-color-hover`        | —                | Border color on hover      |
+| `--textarea-background-color-hover`    | —                | Background on hover        |
+| `--textarea-border-color-focus`        | —                | Border color when focused  |
+| `--textarea-outline-width-focus`       | `2px`            | Focus ring width           |
+| `--textarea-outline-color-focus`       | `currentColor`   | Focus ring color           |
+| `--textarea-outline-offset-focus`      | `2px`            | Focus ring offset          |
+| `--textarea-border-color-disabled`     | —                | Border color when disabled |
+| `--textarea-text-color-disabled`       | —                | Text color when disabled   |
+| `--textarea-background-color-disabled` | —                | Background when disabled   |
+
+## Variants
+
+Apply a modifier class to theme the textarea:
 
 ```css
---textarea-background-color
---textarea-text-color
---textarea-font-size
---textarea-line-height
---textarea-padding
---textarea-border-color
---textarea-border-width
---textarea-border-radius
---textarea-background-color-hover
---textarea-border-color-hover
---textarea-background-color-disabled
---textarea-text-color-disabled
---textarea-border-color-disabled
---textarea-border-color-focus
---textarea-box-shadow-focus
+.textarea--brand {
+  --textarea-border-color: #d1d5db;
+  --textarea-border-color-focus: #2e8b57;
+  --textarea-outline-color-focus: #5eba87;
+  --textarea-text-color: #111827;
+  --textarea-background-color: #ffffff;
+}
 ```
 
-## Accessibility
-
-The `Textarea` component is accessible by default and supports all standard accessibility practices for native `<textarea>` elements. Always use appropriate `aria-` attributes and label elements to ensure clarity for assistive technologies.
-
-## Best Practices
-
-- Always provide a `placeholder` or an associated `<label>` for context.
-- Consider limiting `resize` via CSS if layout constraints are important.
-- Avoid excessive use of `min-height`—let content and context drive height decisions.
+See [style-guide.md](../../../../docs/style-guide.md) for the Froglet brand token reference.

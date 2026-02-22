@@ -1,6 +1,8 @@
 # Radio
 
-The `Radio` component is a custom-styled form input that extends the Froglet `Input` component. It supports controlled behavior and can be used in grouped radio selections via the `name` attribute.
+A brandless radio button. All visual styling is driven by CSS custom properties. Extends `InputProps` — accepts all native `<input>` attributes.
+
+Radio buttons must share a `name` prop within a group for correct native browser behavior.
 
 ## Usage
 
@@ -17,38 +19,48 @@ import { Radio } from "@froglet/ui";
 
 ## Props
 
-This component extends the base [`InputProps`](../Input/Input.tsx) interface, omitting the `type` prop.
-
-| Prop        | Type                                                   | Description                                         |
-| ----------- | ------------------------------------------------------ | --------------------------------------------------- |
-| `checked`   | `boolean`                                              | The checked state of the radio button (controlled). |
-| `onChange`  | `(event: React.ChangeEvent<HTMLInputElement>) => void` | Callback triggered when the radio state changes.    |
-| `className` | `string`                                               | Additional CSS classes to apply.                    |
+| Prop        | Type                                                   | Default    | Description                                         |
+| ----------- | ------------------------------------------------------ | ---------- | --------------------------------------------------- |
+| `checked`   | `boolean`                                              | —          | Controlled checked state.                           |
+| `onChange`  | `(event: React.ChangeEvent<HTMLInputElement>) => void` | `() => {}` | Callback fired when the checked state changes.      |
+| `className` | `string`                                               | —          | Additional CSS classes. Use to apply a token block. |
+| `ref`       | `React.Ref<HTMLInputElement>`                          | —          | Forwarded to the underlying `<input>` element.      |
+| `...props`  | `InputHTMLAttributes<HTMLInputElement>`                | —          | All other native input attributes.                  |
 
 ## CSS Custom Properties
 
-You can style the `Radio` component using the following CSS custom properties:
+| Property                            | Default        | Description                                |
+| ----------------------------------- | -------------- | ------------------------------------------ |
+| `--radio-size`                      | `1rem`         | Width and height of the radio control      |
+| `--radio-border-width`              | `2px`          | Border width                               |
+| `--radio-border-style`              | `solid`        | Border style                               |
+| `--radio-border-color`              | `currentColor` | Border color (unchecked)                   |
+| `--radio-border-radius`             | `50%`          | Border radius (keep `50%` for circle)      |
+| `--radio-background-color`          | `transparent`  | Background (unchecked)                     |
+| `--radio-border-color-hover`        | `currentColor` | Border color on hover                      |
+| `--radio-background-color-hover`    | `transparent`  | Background on hover                        |
+| `--radio-outline-width-focus`       | `2px`          | Focus ring width                           |
+| `--radio-outline-color-focus`       | `currentColor` | Focus ring color                           |
+| `--radio-outline-offset-focus`      | `2px`          | Focus ring offset                          |
+| `--radio-border-color-checked`      | `currentColor` | Border color when checked                  |
+| `--radio-background-color-checked`  | `currentColor` | Background when checked                    |
+| `--radio-dot-color-checked`         | `Canvas`       | Center dot color when checked              |
+| `--radio-border-color-disabled`     | `GrayText`     | Border color when disabled                 |
+| `--radio-background-color-disabled` | `Canvas`       | Background when disabled                   |
+| `--radio-dot-color-disabled`        | `GrayText`     | Center dot color when disabled and checked |
+
+## Variants
+
+Apply a modifier class to theme the radio:
 
 ```css
---radio-size
---radio-border-width
---radio-border-color
---radio-border-radius
---radio-background-color
---radio-border-color-hover
---radio-background-color-hover
---radio-outline-width-focus
---radio-outline-color-focus
---radio-outline-offset-focus
---radio-border-color-checked
---radio-background-color-checked
---radio-dot-color-checked
---radio-border-color-disabled
---radio-background-color-disabled
---radio-dot-color-disabled
+.radio--brand {
+  --radio-border-color: #2e8b57;
+  --radio-border-color-checked: #2e8b57;
+  --radio-background-color-checked: #2e8b57;
+  --radio-dot-color-checked: #ffffff;
+  --radio-outline-color-focus: #5eba87;
+}
 ```
 
-## Best Practices
-
-- Ensure radio buttons in the same group share a `name` prop for correct native behavior.
-- Use the `className` prop to apply styling hooks such as modifier classes.
+See [style-guide.md](../../../../docs/style-guide.md) for the Froglet brand token reference.
