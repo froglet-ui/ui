@@ -1,44 +1,55 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Button } from "@froglet/ui";
+# Froglet Style Guide
 
-const meta = {
-  title: "Button",
-  component: Button,
-  tags: ["autodocs"],
-} satisfies Meta<typeof Button>;
+This document defines the Froglet brand's color palette, design decisions, and reference token implementations for each component. It is the source of truth for how Froglet themes its own component library.
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+For how tokens are named and structured, see [CSS Composition](./css-composition.md).
+For how modifier classes work, see [Modifier Classes](./modifiers.md).
 
-export const Default: Story = {
-  args: {
-    children: "Default Button",
-    disabled: false,
-  },
-  parameters: {
-    docs: {
-      description: {
-        story:
-          "The unstyled Froglet UI button. No CSS custom properties are set — apply a modifier class to theme it.",
-      },
-    },
-  },
-};
+---
 
-export const Primary: Story = {
-  args: {
-    children: "Primary Button",
-    className: "button--primary",
-    type: "button",
-    disabled: false,
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: `
-High-emphasis action. Use for the primary call to action on a page.
+## Color Palette
 
-\`\`\`css
+| Role      | Base      | Hover     | Focus Ring | Disabled BG   | Disabled Text |
+| --------- | --------- | --------- | ---------- | ------------- | ------------- |
+| Primary   | `#2e8b57` | `#245f45` | `#5eba87`  | `#d3e9d7`     | `#7a9a7d`     |
+| Secondary | `#7c3aed` | `#6d28d9` | `#a78bfa`  | `#ede9fe`     | `#a78bfa`     |
+| Neutral   | `#4b5563` | —         | `#9ca3af`  | `transparent` | `#d1d5db`     |
+| Danger    | `#dc2626` | `#b91c1c` | `#f87171`  | `#fee2e2`     | `#fca5a5`     |
+
+### Neutral borders
+
+| Use             | Value     |
+| --------------- | --------- |
+| Default border  | `#d1d5db` |
+| Hover border    | `#9ca3af` |
+| Disabled border | `#e5e7eb` |
+
+### Text on dark backgrounds
+
+All base colors above pass WCAG AA contrast against `#ffffff`.
+
+---
+
+## Shape
+
+All interactive components share a consistent shape language.
+
+| Token              | Value       |
+| ------------------ | ----------- |
+| Border radius      | `6px`       |
+| Border width       | `2px`       |
+| Padding (standard) | `10px 20px` |
+| Font size          | `1rem`      |
+
+---
+
+## Component Token Reference
+
+### Button
+
+#### Primary
+
+```css
 .button--primary {
   --button-background-color: #2e8b57;
   --button-text-color: #ffffff;
@@ -52,33 +63,19 @@ High-emphasis action. Use for the primary call to action on a page.
   --button-background-color-hover: #245f45;
   --button-text-color-hover: #ffffff;
 
+  --button-outline-width-focus: 2px;
   --button-outline-color-focus: #5eba87;
+  --button-outline-offset-focus: 3px;
 
   --button-background-color-disabled: #d3e9d7;
   --button-text-color-disabled: #7a9a7d;
   --button-border-color-disabled: #d3e9d7;
 }
-\`\`\`
-        `,
-      },
-    },
-  },
-};
+```
 
-export const Secondary: Story = {
-  args: {
-    children: "Secondary Button",
-    className: "button--secondary",
-    type: "button",
-    disabled: false,
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: `
-Medium-emphasis action. Use alongside a primary button for supporting actions.
+#### Secondary
 
-\`\`\`css
+```css
 .button--secondary {
   --button-background-color: #7c3aed;
   --button-text-color: #ffffff;
@@ -92,33 +89,19 @@ Medium-emphasis action. Use alongside a primary button for supporting actions.
   --button-background-color-hover: #6d28d9;
   --button-text-color-hover: #ffffff;
 
+  --button-outline-width-focus: 2px;
   --button-outline-color-focus: #a78bfa;
+  --button-outline-offset-focus: 3px;
 
   --button-background-color-disabled: #ede9fe;
   --button-text-color-disabled: #a78bfa;
   --button-border-color-disabled: #ede9fe;
 }
-\`\`\`
-        `,
-      },
-    },
-  },
-};
+```
 
-export const Tertiary: Story = {
-  args: {
-    children: "Tertiary Button",
-    className: "button--tertiary",
-    type: "button",
-    disabled: false,
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: `
-Low-emphasis action. Use for cancel, back, or supplemental actions.
+#### Tertiary
 
-\`\`\`css
+```css
 .button--tertiary {
   --button-background-color: transparent;
   --button-text-color: #4b5563;
@@ -132,33 +115,19 @@ Low-emphasis action. Use for cancel, back, or supplemental actions.
   --button-background-color-hover: #f3f4f6;
   --button-text-color-hover: #111827;
 
+  --button-outline-width-focus: 2px;
   --button-outline-color-focus: #9ca3af;
+  --button-outline-offset-focus: 3px;
 
   --button-background-color-disabled: transparent;
   --button-text-color-disabled: #d1d5db;
   --button-border-color-disabled: #e5e7eb;
 }
-\`\`\`
-        `,
-      },
-    },
-  },
-};
+```
 
-export const Danger: Story = {
-  args: {
-    children: "Delete",
-    className: "button--danger",
-    type: "button",
-    disabled: false,
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: `
-Destructive action. Use for delete, remove, or other irreversible operations.
+#### Danger
 
-\`\`\`css
+```css
 .button--danger {
   --button-background-color: #dc2626;
   --button-text-color: #ffffff;
@@ -172,15 +141,16 @@ Destructive action. Use for delete, remove, or other irreversible operations.
   --button-background-color-hover: #b91c1c;
   --button-text-color-hover: #ffffff;
 
+  --button-outline-width-focus: 2px;
   --button-outline-color-focus: #f87171;
+  --button-outline-offset-focus: 3px;
 
   --button-background-color-disabled: #fee2e2;
   --button-text-color-disabled: #fca5a5;
   --button-border-color-disabled: #fee2e2;
 }
-\`\`\`
-        `,
-      },
-    },
-  },
-};
+```
+
+---
+
+_Additional component token references will be added here as each component is completed._

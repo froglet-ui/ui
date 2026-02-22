@@ -1,4 +1,5 @@
-export { Button } from "./Button/Button";
+export { Button } from "./Button";
+export type { ButtonProps } from "./Button";
 export { Checkbox } from "./Checkbox/Checkbox";
 export { GridContainer } from "./Grid/GridContainer";
 export { GridItem } from "./Grid/GridItem";

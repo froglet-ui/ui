@@ -1,53 +1,104 @@
 /*
 --------------------------------------------------------------------------------
-    Button CSS File
-    This file serves as the Storybook button specific CSS.
+    Button Storybook CSS
+    Froglet design theme for Button variants.
+
+    Palette:
+      Primary   green  #2e8b57
+      Secondary violet #7c3aed
+      Tertiary  neutral
+      Danger    red    #dc2626
 --------------------------------------------------------------------------------
 */
 
-/* Primary Button Demo */
+/* Primary Button */
 .button--primary {
-  /* Base Colors */
   --button-background-color: #2e8b57;
   --button-text-color: #ffffff;
-  --button-border-color: #276c46;
-
-  /* Border and Border Radius */
+  --button-border-color: #2e8b57;
+  --button-border-style: solid;
   --button-border-width: 2px;
-  --button-border-radius: 8px;
+  --button-border-radius: 6px;
+  --button-padding: 10px 20px;
+  --button-font-size: 1rem;
 
-  /* Padding & Font Size */
-  --button-padding: 12px 24px;
-  --button-font-size: 1.2rem;
-
-  /* Hover State */
-  --button-background-color-hover: #3ba66b;
+  --button-background-color-hover: #245f45;
   --button-text-color-hover: #ffffff;
 
-  /* Disabled State */
+  --button-outline-width-focus: 2px;
+  --button-outline-color-focus: #5eba87;
+  --button-outline-offset-focus: 3px;
+
   --button-background-color-disabled: #d3e9d7;
   --button-text-color-disabled: #7a9a7d;
+  --button-border-color-disabled: #d3e9d7;
 }
 
-/* Secondary Button Demo */
+/* Secondary Button */
 .button--secondary {
-  /* Base Colors */
-  --button-background-color: #9b4dca;
+  --button-background-color: #7c3aed;
   --button-text-color: #ffffff;
-  --button-border-color: #7a36a4;
+  --button-border-color: #7c3aed;
+  --button-border-style: solid;
+  --button-border-width: 2px;
+  --button-border-radius: 6px;
+  --button-padding: 10px 20px;
+  --button-font-size: 1rem;
 
-  /* Border and Border Radius */
-  --button-border-radius: 50px;
-
-  /* Padding & Font Size */
-  --button-padding: 12px 24px;
-  --button-font-size: 1.2rem;
-
-  /* Hover State */
-  --button-background-color-hover: #b13fd6;
+  --button-background-color-hover: #6d28d9;
   --button-text-color-hover: #ffffff;
 
-  /* Disabled State */
-  --button-background-color-disabled: #f5f5f5;
-  --button-text-color-disabled: #b0b0b0;
+  --button-outline-width-focus: 2px;
+  --button-outline-color-focus: #a78bfa;
+  --button-outline-offset-focus: 3px;
+
+  --button-background-color-disabled: #ede9fe;
+  --button-text-color-disabled: #a78bfa;
+  --button-border-color-disabled: #ede9fe;
+}
+
+/* Tertiary Button */
+.button--tertiary {
+  --button-background-color: transparent;
+  --button-text-color: #4b5563;
+  --button-border-color: #d1d5db;
+  --button-border-style: solid;
+  --button-border-width: 2px;
+  --button-border-radius: 6px;
+  --button-padding: 10px 20px;
+  --button-font-size: 1rem;
+
+  --button-background-color-hover: #f3f4f6;
+  --button-text-color-hover: #111827;
+
+  --button-outline-width-focus: 2px;
+  --button-outline-color-focus: #9ca3af;
+  --button-outline-offset-focus: 3px;
+
+  --button-background-color-disabled: transparent;
+  --button-text-color-disabled: #d1d5db;
+  --button-border-color-disabled: #e5e7eb;
+}
+
+/* Danger Button */
+.button--danger {
+  --button-background-color: #dc2626;
+  --button-text-color: #ffffff;
+  --button-border-color: #dc2626;
+  --button-border-style: solid;
+  --button-border-width: 2px;
+  --button-border-radius: 6px;
+  --button-padding: 10px 20px;
+  --button-font-size: 1rem;
+
+  --button-background-color-hover: #b91c1c;
+  --button-text-color-hover: #ffffff;
+
+  --button-outline-width-focus: 2px;
+  --button-outline-color-focus: #f87171;
+  --button-outline-offset-focus: 3px;
+
+  --button-background-color-disabled: #fee2e2;
+  --button-text-color-disabled: #fca5a5;
+  --button-border-color-disabled: #fee2e2;
 }

@@ -1,4 +1,3 @@
-/// <reference types="vitest" />
 import { resolve } from "path";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
@@ -33,9 +32,5 @@ export default defineConfig({
     },
     sourcemap: true,
     minify: true,
-  },
-  test: {
-    environment: "jsdom",
-    setupFiles: ["./src/test-setup.ts"],
   },
 });

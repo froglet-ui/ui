@@ -1,86 +1,70 @@
 # Button
 
-The `Button` component provides a customizable, accessible button element with full support for CSS Custom Properties. It supports standard HTML `<button>` attributes and allows for flexible styling using BEM-style class modifiers and scoped CSS variables.
+A brandless `<button>` element. All visual styling is driven by CSS custom properties — no defaults are applied for colors, so the component renders as a plain browser button until tokens are provided.
 
 ## Usage
 
 ```tsx
-import { Button } from "froglet-ui";
+import { Button } from "@froglet/ui";
 
-export default function Example() {
-  return <Button>Click Me</Button>;
-}
+<Button type="button" onClick={handleClick}>
+  Save changes
+</Button>;
 ```
 
 ## Props
 
-| Prop        | Type                                      | Default | Description                                                                |
-| ----------- | ----------------------------------------- | ------- | -------------------------------------------------------------------------- |
-| `children`  | `ReactNode`                               | `—`     | Content inside the button. Supports text, icons, and other elements.       |
-| `className` | `string`                                  | `—`     | Additional classes to modify appearance or behavior.                       |
-| `...props`  | `ButtonHTMLAttributes<HTMLButtonElement>` | `—`     | All standard HTML button attributes (e.g., `type`, `disabled`, `onClick`). |
+| Prop        | Type                                      | Description                                                        |
+| ----------- | ----------------------------------------- | ------------------------------------------------------------------ |
+| `children`  | `ReactNode`                               | Button label. Supports text, icons, and other React nodes.         |
+| `className` | `string`                                  | Additional CSS classes. Use to apply a token block (see Variants). |
+| `ref`       | `React.Ref<HTMLButtonElement>`            | Forwarded to the underlying `<button>` element.                    |
+| `...props`  | `ButtonHTMLAttributes<HTMLButtonElement>` | All standard HTML button attributes (`type`, `disabled`, etc.).    |
 
 ## CSS Custom Properties
 
-The following custom properties are available to override default styles. These can be scoped using modifier classes or theming strategies.
+All color properties have no fallback and must be set by the consumer. Structural properties have neutral browser-compatible defaults.
 
-| Property Name                        | Default Value | Description                              |
-| ------------------------------------ | ------------- | ---------------------------------------- |
-| `--button-background-color`          | `#007bff`     | Background color of the button           |
-| `--button-text-color`                | `#ffffff`     | Text color of the button                 |
-| `--button-font-size`                 | `1rem`        | Font size of the button text             |
-| `--button-padding`                   | `8px 16px`    | Padding inside the button                |
-| `--button-border-color`              | `#007bff`     | Border color of the button               |
-| `--button-border-width`              | `2px`         | Width of the button border               |
-| `--button-border-radius`             | `4px`         | Corner radius of the button              |
-| `--button-background-color-hover`    | `#0056b3`     | Background color on hover                |
-| `--button-text-color-hover`          | `#ffffff`     | Text color on hover                      |
-| `--button-background-color-disabled` | `#d6d6d6`     | Background color when button is disabled |
-| `--button-text-color-disabled`       | `#a1a1a1`     | Text color when button is disabled       |
-| `--button-border-color-disabled`     | `#d6d6d6`     | Border color when button is disabled     |
+| Property                             | Default       | Description                         |
+| ------------------------------------ | ------------- | ----------------------------------- |
+| `--button-background-color`          | —             | Background color                    |
+| `--button-text-color`                | —             | Text color                          |
+| `--button-border-color`              | —             | Border color                        |
+| `--button-border-style`              | `solid`       | Border style                        |
+| `--button-border-width`              | `2px`         | Border width                        |
+| `--button-border-radius`             | `0`           | Corner radius                       |
+| `--button-font-size`                 | `1rem`        | Font size                           |
+| `--button-padding`                   | `0.5rem 1rem` | Inner padding                       |
+| `--button-background-color-hover`    | —             | Background color on hover           |
+| `--button-text-color-hover`          | —             | Text color on hover                 |
+| `--button-outline-color-focus`       | —             | Focus ring color (`:focus-visible`) |
+| `--button-outline-width-focus`       | `2px`         | Focus ring width                    |
+| `--button-outline-offset-focus`      | `2px`         | Focus ring offset                   |
+| `--button-background-color-disabled` | —             | Background color when disabled      |
+| `--button-text-color-disabled`       | —             | Text color when disabled            |
+| `--button-border-color-disabled`     | —             | Border color when disabled          |
 
-### Example: `.button--primary`
+## Variants
 
-```css
-.button--primary {
-  --button-background-color: #2e8b57;
-  --button-text-color: #ffffff;
-  --button-border-color: #276c46;
-  --button-border-width: 2px;
-  --button-border-radius: 8px;
-  --button-padding: 12px 24px;
-  --button-font-size: 1.2rem;
-  --button-background-color-hover: #3ba66b;
-  --button-text-color-hover: #ffffff;
-  --button-background-color-disabled: #d3e9d7;
-  --button-text-color-disabled: #7a9a7d;
-}
+Variants are not built into the component. Apply a CSS class that sets the appropriate tokens for your brand.
+
+A typical button system includes four semantic levels:
+
+- **Primary** — high-emphasis, main call to action
+- **Secondary** — medium-emphasis, supporting action
+- **Tertiary** — low-emphasis, cancel or supplemental
+- **Danger** — destructive action, delete or irreversible
+
+```tsx
+<Button className="button--primary">Save</Button>
+<Button className="button--danger" type="button">Delete</Button>
 ```
 
-### Example: `.button--secondary`
-
-```css
-.button--secondary {
-  --button-background-color: #9b4dca;
-  --button-text-color: #ffffff;
-  --button-border-color: #7a36a4;
-  --button-border-radius: 50px;
-  --button-padding: 12px 24px;
-  --button-font-size: 1.2rem;
-  --button-background-color-hover: #b13fd6;
-  --button-text-color-hover: #ffffff;
-  --button-background-color-disabled: #f5f5f5;
-  --button-text-color-disabled: #b0b0b0;
-}
-```
+Each variant class sets values for all required tokens. See the [Froglet Style Guide](../../../../docs/style-guide.md) for a reference implementation, or [Modifier Classes](../../../../docs/modifiers.md) for the general pattern.
 
 ## Accessibility
 
-The `Button` component is a semantic `<button>` element and supports all standard keyboard and screen reader behaviors out of the box. When `disabled`, it becomes non-interactive and updates its visual state via custom properties.
-
-## Best Practices
-
-- Use BEM modifier classes like `button--primary` or `button--secondary` to theme buttons via custom properties without modifying base styles.
-- Avoid hardcoding colors or sizes in external stylesheets—leverage the exposed custom properties instead.
-
-For consistent styling guidance, refer to the shared [Modifiers](../../../../docs/modifiers.md).
+- Renders as a semantic `<button>` element with full keyboard and screen reader support.
+- Focus is indicated via `:focus-visible` — keyboard users see the outline, pointer users do not.
+- `disabled` removes interactivity and updates visual state via the disabled token set.
+- Always provide a meaningful label via `children` or `aria-label`.
