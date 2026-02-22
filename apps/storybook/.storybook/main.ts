@@ -1,18 +1,28 @@
-import { resolve } from "path";
 import type { StorybookConfig } from "@storybook/react-vite";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+function getAbsolutePath(value: string) {
+  return path.dirname(
+    fileURLToPath(import.meta.resolve(`${value}/package.json`)),
+  );
+}
 
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  addons: [getAbsolutePath("@storybook/addon-docs")],
   framework: {
-    name: "@storybook/react-vite",
+    name: getAbsolutePath("@storybook/react-vite") as "@storybook/react-vite",
     options: {},
   },
-  async viteFinal(config) {
-    config.resolve ??= {};
+  viteFinal(config) {
+    config.resolve = config.resolve ?? {};
     config.resolve.alias = {
       ...config.resolve.alias,
-      "@froglet/ui": resolve(
-        import.meta.dirname,
+      "@froglet/ui": path.resolve(
+        __dirname,
         "../../../packages/froglet-ui/src/index.ts",
       ),
     };

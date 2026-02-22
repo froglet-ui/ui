@@ -1,10 +1,21 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from "@froglet/ui";
+import readme from "../../../../packages/froglet-ui/src/Button/README.md?raw";
+
+// Strip the leading `# Button` heading — Storybook renders its own h1 from the story title.
+const readmeBody = readme.replace(/^#[^\n]*\n+/, "");
 
 const meta = {
   title: "Button",
   component: Button,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component: readmeBody,
+      },
+    },
+  },
 } satisfies Meta<typeof Button>;
 
 export default meta;
