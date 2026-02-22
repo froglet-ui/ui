@@ -9,13 +9,8 @@
         ".next/**",
         "!.next/cache/**",
         "packages/froglet-ui/dist/**",
-        "apps/storybook/dist/**"
+        "apps/storybook/storybook-static/**"
       ]
-    },
-    "build-storybook": {
-      "dependsOn": ["^build-storybook"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": ["apps/storybook/storybook-static/**"]
     },
     "clean": {
       "cache": false,

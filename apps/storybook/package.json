@@ -4,10 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "tsc -b && vite build",
-    "build-storybook": "storybook build",
+    "build": "storybook build",
     "clean": "rm -rf .turbo dist node_modules storybook-static",
-    "clean:build": "rm -rf dist storybook-static",
+    "clean:build": "rm -rf storybook-static",
     "dev": "vite",
     "lint": "eslint .",
     "preview": "vite preview",
