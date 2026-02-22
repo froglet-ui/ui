@@ -1,8 +1,8 @@
 .link--froglet {
-  --link-text-color: #2e8b57;
+  --link-text-color: var(--color-primary);
   --link-text-decoration: underline;
 
-  --link-text-color-hover: #245f45;
+  --link-text-color-hover: var(--color-primary-hover);
   --link-text-decoration-hover: none;
 
   --link-outline-width-focus: var(--focus-outline-width);
@@ -10,5 +10,5 @@
   --link-outline-offset-focus: var(--focus-outline-offset);
   --link-text-decoration-focus: underline;
 
-  --link-text-color-visited: #7c3aed;
+  --link-text-color-visited: var(--color-secondary);
 }
