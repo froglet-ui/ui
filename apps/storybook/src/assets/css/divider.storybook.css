@@ -1,0 +1,5 @@
+.divider--froglet {
+  --divider-border-color: var(--color-border);
+  --divider-border-width: 1px;
+  --divider-border-style: solid;
+}
