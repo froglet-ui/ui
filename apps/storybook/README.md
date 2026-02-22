@@ -1,50 +1,48 @@
-# React + TypeScript + Vite
+# @froglet/ui Storybook
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Component documentation and visual testing for `@froglet/ui`.
 
-Currently, two official plugins are available:
+## Running Locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+From the monorepo root:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
+```bash
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Storybook starts at `http://localhost:6006`.
 
-```js
-// eslint.config.js
-import react from "eslint-plugin-react";
+## What's Here
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: "18.3" } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs["jsx-runtime"].rules,
-  },
-});
+- **Default stories** — each component rendered unstyled, showing the raw structure
+- **Froglet stories** — components themed with the Froglet brand token set
+- **Controls panel** — interactive prop playground on most stories
+- **Docs tab** — auto-generated API docs from component README and TypeScript interfaces
+
+## Storybook CSS
+
+Component-specific Storybook styles live in `src/assets/css/`:
+
+| File                     | Purpose                                   |
+| ------------------------ | ----------------------------------------- |
+| `global.storybook.css`   | Design tokens: palette, shape, typography |
+| `button.storybook.css`   | Button Froglet variant tokens             |
+| `checkbox.storybook.css` | Checkbox Froglet variant tokens           |
+| `grid.storybook.css`     | Grid item demo visualization class        |
+| `input.storybook.css`    | Input Froglet variant tokens              |
+| `link.storybook.css`     | Link Froglet variant tokens               |
+| `radio.storybook.css`    | Radio Froglet variant tokens              |
+| `select.storybook.css`   | Select Froglet variant tokens             |
+| `textarea.storybook.css` | Textarea Froglet variant tokens           |
+
+CSS is imported directly in each story file. There is no central `index.css`.
+
+## Build
+
+To build the static Storybook site:
+
+```bash
+npm run build -w apps/storybook
 ```
+
+Output is written to `apps/storybook/storybook-static/`. The static site is automatically deployed to GitHub Pages on every push to `main`.

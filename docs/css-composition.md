@@ -89,7 +89,7 @@ Organizing CSS properties in a logical manner improves readability and maintaina
 
 - `grid`, `grid-template-columns`, `grid-template-rows`
 - `grid-column`, `grid-row`
-- `grid-gap`, `grid-auto-flow`
+- `gap`, `grid-auto-flow`
 
 ### 6. Animation & Transformations
 
