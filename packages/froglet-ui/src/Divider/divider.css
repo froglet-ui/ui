@@ -1,0 +1,32 @@
+/*
+--------------------------------------------------------------------------------
+    Divider CSS File
+    Represents CSS Custom Property Style for Divider
+--------------------------------------------------------------------------------
+*/
+
+/* Base Divider Styles — horizontal (default) */
+.divider {
+  /* Box Model */
+  box-sizing: border-box;
+  width: var(--divider-width, 100%);
+  height: 0;
+  border: none;
+  border-top-width: var(--divider-border-width, 1px);
+  border-top-style: var(--divider-border-style, solid);
+  border-top-color: var(--divider-border-color);
+  margin: var(--divider-margin, 1rem 0);
+}
+
+/* Vertical Orientation */
+.divider--vertical {
+  /* Box Model */
+  width: 0;
+  height: var(--divider-height, 100%);
+  border-top: none;
+  border-left-width: var(--divider-border-width, 1px);
+  border-left-style: var(--divider-border-style, solid);
+  border-left-color: var(--divider-border-color);
+  margin: var(--divider-margin, 0 1rem);
+  align-self: stretch;
+}

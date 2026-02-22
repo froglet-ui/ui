@@ -179,6 +179,16 @@ All interactive components share a consistent shape language.
 }
 ```
 
+### Divider
+
+```css
+.divider--froglet {
+  --divider-border-color: #d1d5db;
+  --divider-border-width: 1px;
+  --divider-border-style: solid;
+}
+```
+
 ### Input
 
 ```css
