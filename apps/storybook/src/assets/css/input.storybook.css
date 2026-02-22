@@ -1,0 +1,25 @@
+.input--froglet {
+  --input-border-width: var(--shape-border-width);
+  --input-border-style: solid;
+  --input-border-color: var(--color-border);
+  --input-border-radius: var(--shape-border-radius);
+  --input-padding: 0.625rem 1rem;
+  --input-font-size: var(--font-size-base);
+  --input-text-color: var(--color-text);
+  --input-background-color: var(--color-surface);
+  --input-text-color-placeholder: var(--color-text-subtle);
+
+  --input-border-color-hover: var(--color-border-hover);
+  --input-background-color-hover: var(--color-surface-subtle);
+
+  --input-border-color-focus: var(--color-primary);
+  --input-outline-width-focus: var(--focus-outline-width);
+  --input-outline-color-focus: var(--focus-outline-color);
+  --input-outline-offset-focus: var(--focus-outline-offset);
+
+  --input-border-color-disabled: var(--color-border-disabled);
+  --input-text-color-disabled: var(--color-neutral-disabled-text);
+  --input-background-color-disabled: var(--color-surface-subtle);
+
+  --input-border-color-invalid: var(--color-danger);
+}

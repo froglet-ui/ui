@@ -15,38 +15,40 @@
   cursor: pointer;
 
   /* Box Model */
+  box-sizing: border-box;
+  padding: 0;
   width: var(--checkbox-size, 1rem);
   height: var(--checkbox-size, 1rem);
   border-width: var(--checkbox-border-width, 2px);
-  border-style: solid;
-  border-color: var(--checkbox-border-color, #007bff);
+  border-style: var(--checkbox-border-style, solid);
+  border-color: var(--checkbox-border-color, currentColor);
   border-radius: var(--checkbox-border-radius, 4px);
 
   /* Typography */
   color: inherit;
 
   /* Visual Styles */
-  outline: none;
-  background-color: var(--checkbox-background-color, #ffffff);
+  background-color: var(--checkbox-background-color, transparent);
   transition: background-color 0.3s, border-color 0.3s, transform 0.1s;
 }
 
 /* Hover */
 .input--checkbox:hover {
-  border-color: var(--checkbox-border-color-hover, #0056b3);
-  background-color: var(--checkbox-background-color-hover, #f0f8ff);
+  border-color: var(--checkbox-border-color-hover, currentColor);
+  background-color: var(--checkbox-background-color-hover, transparent);
 }
 
 /* Focus */
-.input--checkbox:focus {
-  outline: var(--checkbox-outline-width-focus, 2px) solid var(--checkbox-outline-color-focus, #80bdff);
+.input--checkbox:focus-visible {
+  outline: var(--checkbox-outline-width-focus, 2px) solid
+    var(--checkbox-outline-color-focus, currentColor);
   outline-offset: var(--checkbox-outline-offset-focus, 2px);
 }
 
 /* Checked */
 .input--checkbox:checked {
-  border-color: var(--checkbox-border-color-checked, #0056b3);
-  background-color: var(--checkbox-background-color-checked, #0056b3);
+  border-color: var(--checkbox-border-color-checked, currentColor);
+  background-color: var(--checkbox-background-color-checked, currentColor);
 }
 
 .input--checkbox:checked::after {
@@ -63,8 +65,11 @@
   height: 60%;
 
   /* Visual Styles */
-  background-color: var(--checkbox-checkmark-color-checked, #ffffff);
-  clip-path: var(--checkbox-clip-path-checked, polygon(14% 44%, 38% 72%, 84% 16%, 100% 32%, 38% 100%, 0% 60%));
+  background-color: var(--checkbox-checkmark-color-checked, Canvas);
+  clip-path: var(
+    --checkbox-clip-path-checked,
+    polygon(14% 44%, 38% 72%, 84% 16%, 100% 32%, 38% 100%, 0% 60%)
+  );
 }
 
 /* Active (Click) */
@@ -74,11 +79,11 @@
 
 /* Disabled */
 .input--checkbox:disabled {
-  border-color: var(--checkbox-border-color-disabled, #d6d6d6);
-  background-color: var(--checkbox-background-color-disabled, #e0e0e0);
+  border-color: var(--checkbox-border-color-disabled, GrayText);
+  background-color: var(--checkbox-background-color-disabled, Canvas);
   cursor: not-allowed;
 }
 
 .input--checkbox:disabled:checked::after {
-  background-color: var(--checkbox-checkmark-color-disabled, #a1a1a1);
+  background-color: var(--checkbox-checkmark-color-disabled, GrayText);
 }

@@ -1,0 +1,23 @@
+.checkbox--froglet {
+  --checkbox-size: 1.125rem;
+  --checkbox-border-width: var(--shape-border-width);
+  --checkbox-border-style: solid;
+  --checkbox-border-color: var(--color-primary);
+  --checkbox-border-radius: 4px;
+  --checkbox-background-color: var(--color-surface);
+
+  --checkbox-border-color-hover: var(--color-primary-hover);
+  --checkbox-background-color-hover: var(--color-primary-tint);
+
+  --checkbox-outline-width-focus: var(--focus-outline-width);
+  --checkbox-outline-color-focus: var(--focus-outline-color);
+  --checkbox-outline-offset-focus: var(--focus-outline-offset);
+
+  --checkbox-border-color-checked: var(--color-primary);
+  --checkbox-background-color-checked: var(--color-primary);
+  --checkbox-checkmark-color-checked: #ffffff;
+
+  --checkbox-border-color-disabled: var(--color-primary-disabled-bg);
+  --checkbox-background-color-disabled: var(--color-primary-tint);
+  --checkbox-checkmark-color-disabled: var(--color-primary-disabled-text);
+}

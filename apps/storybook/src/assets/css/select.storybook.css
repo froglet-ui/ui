@@ -1,31 +1,22 @@
-/*
---------------------------------------------------------------------------------
-    Select CSS File
-    This file serves as the Storybook select-specific CSS.
---------------------------------------------------------------------------------
-*/
+.select--froglet {
+  --select-border-width: var(--shape-border-width);
+  --select-border-style: solid;
+  --select-border-color: var(--color-border);
+  --select-border-radius: var(--shape-border-radius);
+  --select-padding: 0.625rem 1rem;
+  --select-font-size: var(--font-size-base);
+  --select-text-color: var(--color-text);
+  --select-background-color: var(--color-surface);
 
-/* Primary Select Demo */
-.select--primary {
-  /* Base Colors */
-  --select-background-color: #f0f8ff;
-  --select-text-color: #1a1a1a;
-  --select-border-color: #2e8b57;
+  --select-border-color-hover: var(--color-border-hover);
+  --select-background-color-hover: var(--color-surface-subtle);
 
-  /* Border and Border Radius */
-  --select-border-width: 2px;
-  --select-border-radius: 6px;
+  --select-border-color-focus: var(--color-primary);
+  --select-outline-width-focus: var(--focus-outline-width);
+  --select-outline-color-focus: var(--focus-outline-color);
+  --select-outline-offset-focus: var(--focus-outline-offset);
 
-  /* Padding & Font Size */
-  --select-padding: 10px 14px;
-  --select-font-size: 1rem;
-
-  /* Hover State */
-  --select-background-color-hover: #e6f5ec;
-  --select-text-color-hover: #000000;
-
-  /* Disabled State */
-  --select-background-color-disabled: #f5f5f5;
-  --select-text-color-disabled: #999999;
-  --select-border-color-disabled: #cccccc;
+  --select-border-color-disabled: var(--color-border-disabled);
+  --select-text-color-disabled: var(--color-neutral-disabled-text);
+  --select-background-color-disabled: var(--color-surface-subtle);
 }

@@ -1,9 +1,11 @@
 # Pull Request
 
 <!--
-Make sure to run formatting and linting:
+Before submitting, run all checks from the monorepo root:
   npm run format
   npm run lint
+  npm run check-types
+  npm run test
 -->
 
 ## Issue Description

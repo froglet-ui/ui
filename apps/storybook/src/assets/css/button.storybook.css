@@ -1,53 +1,99 @@
 /*
 --------------------------------------------------------------------------------
-    Button CSS File
-    This file serves as the Storybook button specific CSS.
+    Button Storybook CSS
+    Froglet design theme for Button variants.
+    All palette values reference global.storybook.css tokens.
 --------------------------------------------------------------------------------
 */
 
-/* Primary Button Demo */
+/* Primary Button */
 .button--primary {
-  /* Base Colors */
-  --button-background-color: #2e8b57;
+  --button-background-color: var(--color-primary);
   --button-text-color: #ffffff;
-  --button-border-color: #276c46;
+  --button-border-color: var(--color-primary);
+  --button-border-style: solid;
+  --button-border-width: var(--shape-border-width);
+  --button-border-radius: var(--shape-border-radius);
+  --button-padding: var(--spacing-standard);
+  --button-font-size: var(--font-size-base);
 
-  /* Border and Border Radius */
-  --button-border-width: 2px;
-  --button-border-radius: 8px;
-
-  /* Padding & Font Size */
-  --button-padding: 12px 24px;
-  --button-font-size: 1.2rem;
-
-  /* Hover State */
-  --button-background-color-hover: #3ba66b;
+  --button-background-color-hover: var(--color-primary-hover);
   --button-text-color-hover: #ffffff;
 
-  /* Disabled State */
-  --button-background-color-disabled: #d3e9d7;
-  --button-text-color-disabled: #7a9a7d;
+  --button-outline-width-focus: var(--focus-outline-width);
+  --button-outline-color-focus: var(--focus-outline-color);
+  --button-outline-offset-focus: var(--focus-outline-offset);
+
+  --button-background-color-disabled: var(--color-primary-disabled-bg);
+  --button-text-color-disabled: var(--color-primary-disabled-text);
+  --button-border-color-disabled: var(--color-primary-disabled-bg);
 }
 
-/* Secondary Button Demo */
+/* Secondary Button */
 .button--secondary {
-  /* Base Colors */
-  --button-background-color: #9b4dca;
+  --button-background-color: var(--color-secondary);
   --button-text-color: #ffffff;
-  --button-border-color: #7a36a4;
+  --button-border-color: var(--color-secondary);
+  --button-border-style: solid;
+  --button-border-width: var(--shape-border-width);
+  --button-border-radius: var(--shape-border-radius);
+  --button-padding: var(--spacing-standard);
+  --button-font-size: var(--font-size-base);
 
-  /* Border and Border Radius */
-  --button-border-radius: 50px;
-
-  /* Padding & Font Size */
-  --button-padding: 12px 24px;
-  --button-font-size: 1.2rem;
-
-  /* Hover State */
-  --button-background-color-hover: #b13fd6;
+  --button-background-color-hover: var(--color-secondary-hover);
   --button-text-color-hover: #ffffff;
 
-  /* Disabled State */
-  --button-background-color-disabled: #f5f5f5;
-  --button-text-color-disabled: #b0b0b0;
+  --button-outline-width-focus: var(--focus-outline-width);
+  --button-outline-color-focus: var(--color-secondary-focus);
+  --button-outline-offset-focus: var(--focus-outline-offset);
+
+  --button-background-color-disabled: var(--color-secondary-disabled-bg);
+  --button-text-color-disabled: var(--color-secondary-disabled-text);
+  --button-border-color-disabled: var(--color-secondary-disabled-bg);
+}
+
+/* Tertiary Button */
+.button--tertiary {
+  --button-background-color: transparent;
+  --button-text-color: var(--color-neutral);
+  --button-border-color: var(--color-border);
+  --button-border-style: solid;
+  --button-border-width: var(--shape-border-width);
+  --button-border-radius: var(--shape-border-radius);
+  --button-padding: var(--spacing-standard);
+  --button-font-size: var(--font-size-base);
+
+  --button-background-color-hover: var(--color-surface-hover);
+  --button-text-color-hover: var(--color-text);
+
+  --button-outline-width-focus: var(--focus-outline-width);
+  --button-outline-color-focus: var(--color-neutral-focus);
+  --button-outline-offset-focus: var(--focus-outline-offset);
+
+  --button-background-color-disabled: transparent;
+  --button-text-color-disabled: var(--color-neutral-disabled-text);
+  --button-border-color-disabled: var(--color-border-disabled);
+}
+
+/* Danger Button */
+.button--danger {
+  --button-background-color: var(--color-danger);
+  --button-text-color: #ffffff;
+  --button-border-color: var(--color-danger);
+  --button-border-style: solid;
+  --button-border-width: var(--shape-border-width);
+  --button-border-radius: var(--shape-border-radius);
+  --button-padding: var(--spacing-standard);
+  --button-font-size: var(--font-size-base);
+
+  --button-background-color-hover: var(--color-danger-hover);
+  --button-text-color-hover: #ffffff;
+
+  --button-outline-width-focus: var(--focus-outline-width);
+  --button-outline-color-focus: var(--color-danger-focus);
+  --button-outline-offset-focus: var(--focus-outline-offset);
+
+  --button-background-color-disabled: var(--color-danger-disabled-bg);
+  --button-text-color-disabled: var(--color-danger-disabled-text);
+  --button-border-color-disabled: var(--color-danger-disabled-bg);
 }

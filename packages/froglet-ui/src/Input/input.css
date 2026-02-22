@@ -1,7 +1,8 @@
 /*
 --------------------------------------------------------------------------------
-    Input CSS File
-    Represents CSS Custom Property Style for Input
+  Input CSS
+  Brandless base styles for the Input component.
+  All visual styling is driven by CSS custom properties.
 --------------------------------------------------------------------------------
 */
 
@@ -12,44 +13,65 @@
   box-sizing: border-box;
 
   /* Box Model */
-  width: 100%;
-  padding: var(--input-padding, 0.5rem);
+  padding: var(--input-padding, 0.5rem 0.75rem);
   border-width: var(--input-border-width, 1px);
-  border-style: solid;
-  border-color: var(--input-border-color, #cccccc);
-  border-radius: var(--input-border-radius, 4px);
+  border-style: var(--input-border-style, solid);
+  border-color: var(--input-border-color);
+  border-radius: var(--input-border-radius, 0);
 
   /* Typography */
   font-size: var(--input-font-size, 1rem);
-  color: var(--input-text-color, #000000);
-  
+  color: var(--input-text-color);
+
   /* Visual Styles */
-  background-color: var(--input-background-color, #ffffff);
-  transition: background-color 0.3s, border-color 0.3s;
+  background-color: var(--input-background-color);
+  transition: border-color 0.2s, background-color 0.2s;
 }
 
 /* Placeholder */
 .input::placeholder {
-  color: var(--input-text-color-placeholder, #999999);
+  color: var(--input-text-color-placeholder);
+}
+
+/* Hover — :where() zeroes specificity so component-specific hover selectors (e.g. .input--checkbox:hover) win by source order */
+.input:hover:where(:not(:disabled)) {
+  border-color: var(--input-border-color-hover);
+  background-color: var(--input-background-color-hover);
+  color: var(--input-text-color-hover);
 }
 
 /* Focus */
-.input:focus,
 .input:focus-visible {
-  border-color: var(--input-border-color-focus, #007bff);
-  outline: var(--input-outline-width-focus, 2px) solid var(--input-outline-color-focus, #007bff);
+  border-color: var(--input-border-color-focus);
+  outline: var(--input-outline-width-focus, 2px) solid var(--input-outline-color-focus, currentColor);
   outline-offset: var(--input-outline-offset-focus, 2px);
 }
 
 /* Disabled */
 .input:disabled {
-  border-color: var(--input-border-color-disabled, #ddd);
-  color: var(--input-text-color-disabled, #ccc);
-  background-color: var(--input-background-color-disabled, #f5f5f5);
+  border-color: var(--input-border-color-disabled);
+  color: var(--input-text-color-disabled);
+  background-color: var(--input-background-color-disabled);
+  cursor: not-allowed;
 }
 
 /* Invalid */
-.input:invalid,
-.input:focus:invalid {
-  border-color: var(--input-border-color-invalid, #e74c3c);
+.input:invalid {
+  border-color: var(--input-border-color-invalid);
+}
+
+/* Search: normalize the browser cancel button */
+.input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
+
+/* Number: normalize spin buttons for consistent cross-browser appearance */
+.input[type="number"]::-webkit-inner-spin-button,
+.input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input[type="number"] {
+  -moz-appearance: textfield;
 }

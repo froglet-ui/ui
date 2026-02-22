@@ -8,26 +8,27 @@
 /* Base Button Styles */
 .button {
   /* Box Model */
-  padding: var(--button-padding, 8px 16px);
+  box-sizing: border-box;
+  padding: var(--button-padding, 0.5rem 1rem);
   border-width: var(--button-border-width, 2px);
-  border-style: solid;
-  border-color: var(--button-border-color, #007bff);
-  border-radius: var(--button-border-radius, 4px);
+  border-style: var(--button-border-style, solid);
+  border-color: var(--button-border-color);
+  border-radius: var(--button-border-radius, 0);
 
   /* Typography */
   font-size: var(--button-font-size, 1rem);
-  color: var(--button-text-color, #ffffff);
+  color: var(--button-text-color);
 
   /* Visual Styles */
   cursor: pointer;
-  background-color: var(--button-background-color, #007bff);
+  background-color: var(--button-background-color);
   transition: background-color 0.3s, transform 0.1s;
 }
 
 /* Hover State */
 .button:hover {
-  color: var(--button-text-color-hover, #ffffff);
-  background-color: var(--button-background-color-hover, #0056b3);
+  color: var(--button-text-color-hover);
+  background-color: var(--button-background-color-hover);
 }
 
 /* Active State */
@@ -35,10 +36,16 @@
   transform: scale(0.98);
 }
 
+/* Focus Visible State */
+.button:focus-visible {
+  outline: var(--button-outline-width-focus, 2px) solid var(--button-outline-color-focus, currentColor);
+  outline-offset: var(--button-outline-offset-focus, 2px);
+}
+
 /* Disabled State */
 .button:disabled {
-  border-color: var(--button-border-color-disabled, #d6d6d6);
-  color: var(--button-text-color-disabled, #a1a1a1);
-  background-color: var(--button-background-color-disabled, #d6d6d6);
+  border-color: var(--button-border-color-disabled);
+  color: var(--button-text-color-disabled);
+  background-color: var(--button-background-color-disabled);
   cursor: not-allowed;
 }

@@ -1,0 +1,79 @@
+/*
+--------------------------------------------------------------------------------
+  Global Storybook CSS
+  Froglet brand design tokens applied across all stories.
+
+  Token categories:
+    Focus ring   — --focus-outline-*  (single source of truth; components map to these)
+    Shape        — --shape-*          (border-radius, border-width)
+    Spacing      — --spacing-*        (standard padding in rem)
+    Typography   — --font-family-base, --font-size-base
+    Color        — --color-*          (full Froglet palette; components map to these)
+
+  Usage:
+    Component storybook CSS references these via var() instead of hardcoded values.
+    Variant classes that need a different focus color override only
+    --{component}-outline-color-focus pointing at the appropriate --color-*-focus var.
+--------------------------------------------------------------------------------
+*/
+
+:root {
+  /* ---------- Focus Ring ---------- */
+  --focus-outline-width: 2px;
+  --focus-outline-color: var(--color-primary-focus);
+  --focus-outline-offset: 3px;
+
+  /* ---------- Shape ---------- */
+  --shape-border-radius: 6px;
+  --shape-border-width: 2px;
+
+  /* ---------- Spacing ---------- */
+  --spacing-standard: 0.625rem 1.25rem; /* 10px 20px */
+
+  /* ---------- Typography ---------- */
+  --font-family-base: "Inter", system-ui, sans-serif;
+  --font-size-base: 1rem;
+
+  /* ---------- Color — Primary ---------- */
+  --color-primary: #2e8b57;
+  --color-primary-hover: #245f45;
+  --color-primary-focus: #5eba87;
+  --color-primary-tint: #f0f7f4;
+  --color-primary-disabled-bg: #d3e9d7;
+  --color-primary-disabled-text: #7a9a7d;
+
+  /* ---------- Color — Secondary ---------- */
+  --color-secondary: #7c3aed;
+  --color-secondary-hover: #6d28d9;
+  --color-secondary-focus: #a78bfa;
+  --color-secondary-disabled-bg: #ede9fe;
+  --color-secondary-disabled-text: #a78bfa;
+
+  /* ---------- Color — Neutral ---------- */
+  --color-neutral: #4b5563;
+  --color-neutral-focus: #9ca3af;
+  --color-neutral-disabled-text: #d1d5db;
+
+  /* ---------- Color — Danger ---------- */
+  --color-danger: #dc2626;
+  --color-danger-hover: #b91c1c;
+  --color-danger-focus: #f87171;
+  --color-danger-disabled-bg: #fee2e2;
+  --color-danger-disabled-text: #fca5a5;
+
+  /* ---------- Color — Borders ---------- */
+  --color-border: #d1d5db;
+  --color-border-hover: #9ca3af;
+  --color-border-disabled: #e5e7eb;
+
+  /* ---------- Color — Surface & Text ---------- */
+  --color-text: #111827;
+  --color-text-subtle: #6b7280;
+  --color-surface: #ffffff;
+  --color-surface-subtle: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+}
+
+body {
+  font-family: var(--font-family-base);
+}
