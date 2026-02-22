@@ -7,10 +7,8 @@
     "build": "storybook build",
     "clean": "rm -rf .turbo dist node_modules storybook-static",
     "clean:build": "rm -rf storybook-static",
-    "dev": "vite",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "storybook": "storybook dev -p 6006"
+    "dev": "storybook dev -p 6006",
+    "lint": "eslint ."
   },
   "eslintConfig": {
     "extends": [
