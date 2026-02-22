@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
     "strict": true,
+    "skipLibCheck": true,
     "target": "ESNext",
     "module": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "esModuleInterop": true,
-    "typeRoots": ["./node_modules/@types"],
     "lib": ["dom", "esnext"],
     "outDir": "dist",
     "jsx": "react-jsx"
