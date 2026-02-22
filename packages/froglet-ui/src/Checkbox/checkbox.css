@@ -15,6 +15,8 @@
   cursor: pointer;
 
   /* Box Model */
+  box-sizing: border-box;
+  padding: 0;
   width: var(--checkbox-size, 1rem);
   height: var(--checkbox-size, 1rem);
   border-width: var(--checkbox-border-width, 2px);

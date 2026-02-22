@@ -9,9 +9,9 @@
   --checkbox-border-color-hover: #245f45;
   --checkbox-background-color-hover: #f0f7f4;
 
-  --checkbox-outline-width-focus: 2px;
-  --checkbox-outline-color-focus: #5eba87;
-  --checkbox-outline-offset-focus: 2px;
+  --checkbox-outline-width-focus: var(--focus-outline-width);
+  --checkbox-outline-color-focus: var(--focus-outline-color);
+  --checkbox-outline-offset-focus: var(--focus-outline-offset);
 
   --checkbox-border-color-checked: #2e8b57;
   --checkbox-background-color-checked: #2e8b57;

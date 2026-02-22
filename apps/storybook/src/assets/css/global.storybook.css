@@ -1,0 +1,20 @@
+/*
+--------------------------------------------------------------------------------
+  Global Storybook CSS
+  Froglet brand defaults applied across all stories.
+
+  --focus-outline-* tokens are the single source of truth for the focus ring.
+  Each component's storybook CSS references these via var() so changing them
+  here updates all components at once. Variant classes that need a different
+  focus color (e.g. .button--secondary) override only --{component}-outline-color-focus.
+
+  Add new component focus token mappings to each component's storybook CSS
+  as components are completed — they automatically inherit this global value.
+--------------------------------------------------------------------------------
+*/
+
+:root {
+  --focus-outline-width: 2px;
+  --focus-outline-color: #5eba87;
+  --focus-outline-offset: 3px;
+}

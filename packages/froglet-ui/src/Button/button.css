@@ -8,6 +8,7 @@
 /* Base Button Styles */
 .button {
   /* Box Model */
+  box-sizing: border-box;
   padding: var(--button-padding, 0.5rem 1rem);
   border-width: var(--button-border-width, 2px);
   border-style: var(--button-border-style, solid);
@@ -37,7 +38,7 @@
 
 /* Focus Visible State */
 .button:focus-visible {
-  outline: var(--button-outline-width-focus, 2px) solid var(--button-outline-color-focus);
+  outline: var(--button-outline-width-focus, 2px) solid var(--button-outline-color-focus, currentColor);
   outline-offset: var(--button-outline-offset-focus, 2px);
 }
 

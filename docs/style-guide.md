@@ -179,6 +179,36 @@ All interactive components share a consistent shape language.
 }
 ```
 
+### Input
+
+```css
+.input--froglet {
+  --input-border-width: 2px;
+  --input-border-style: solid;
+  --input-border-color: #d1d5db;
+  --input-border-radius: 6px;
+  --input-padding: 10px 16px;
+  --input-font-size: 1rem;
+  --input-text-color: #111827;
+  --input-background-color: #ffffff;
+  --input-text-color-placeholder: #6b7280;
+
+  --input-border-color-hover: #9ca3af;
+  --input-background-color-hover: #f9fafb;
+
+  --input-border-color-focus: #2e8b57;
+  --input-outline-width-focus: 2px;
+  --input-outline-color-focus: #5eba87;
+  --input-outline-offset-focus: 2px;
+
+  --input-border-color-disabled: #e5e7eb;
+  --input-text-color-disabled: #d1d5db;
+  --input-background-color-disabled: #f9fafb;
+
+  --input-border-color-invalid: #dc2626;
+}
+```
+
 ---
 
 _Additional component token references will be added here as each component is completed._

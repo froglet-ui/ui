@@ -8,6 +8,9 @@
       Secondary violet #7c3aed
       Tertiary  neutral
       Danger    red    #dc2626
+
+    Focus ring: references global --focus-outline-* tokens from global.storybook.css.
+    Variant-specific focus colors override --button-outline-color-focus only.
 --------------------------------------------------------------------------------
 */
 
@@ -25,9 +28,9 @@
   --button-background-color-hover: #245f45;
   --button-text-color-hover: #ffffff;
 
-  --button-outline-width-focus: 2px;
-  --button-outline-color-focus: #5eba87;
-  --button-outline-offset-focus: 3px;
+  --button-outline-width-focus: var(--focus-outline-width);
+  --button-outline-color-focus: var(--focus-outline-color);
+  --button-outline-offset-focus: var(--focus-outline-offset);
 
   --button-background-color-disabled: #d3e9d7;
   --button-text-color-disabled: #7a9a7d;
@@ -48,9 +51,9 @@
   --button-background-color-hover: #6d28d9;
   --button-text-color-hover: #ffffff;
 
-  --button-outline-width-focus: 2px;
+  --button-outline-width-focus: var(--focus-outline-width);
   --button-outline-color-focus: #a78bfa;
-  --button-outline-offset-focus: 3px;
+  --button-outline-offset-focus: var(--focus-outline-offset);
 
   --button-background-color-disabled: #ede9fe;
   --button-text-color-disabled: #a78bfa;
@@ -71,9 +74,9 @@
   --button-background-color-hover: #f3f4f6;
   --button-text-color-hover: #111827;
 
-  --button-outline-width-focus: 2px;
+  --button-outline-width-focus: var(--focus-outline-width);
   --button-outline-color-focus: #9ca3af;
-  --button-outline-offset-focus: 3px;
+  --button-outline-offset-focus: var(--focus-outline-offset);
 
   --button-background-color-disabled: transparent;
   --button-text-color-disabled: #d1d5db;
@@ -94,9 +97,9 @@
   --button-background-color-hover: #b91c1c;
   --button-text-color-hover: #ffffff;
 
-  --button-outline-width-focus: 2px;
+  --button-outline-width-focus: var(--focus-outline-width);
   --button-outline-color-focus: #f87171;
-  --button-outline-offset-focus: 3px;
+  --button-outline-offset-focus: var(--focus-outline-offset);
 
   --button-background-color-disabled: #fee2e2;
   --button-text-color-disabled: #fca5a5;
