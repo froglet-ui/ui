@@ -18,7 +18,12 @@
       "outputs": ["apps/storybook/storybook-static/**"]
     },
     "clean": {
+      "cache": false,
       "dependsOn": ["^clean"]
+    },
+    "clean:build": {
+      "cache": false,
+      "dependsOn": ["^clean:build"]
     },
     "check-types": {
       "dependsOn": ["^check-types"]
