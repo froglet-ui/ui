@@ -1,0 +1,23 @@
+.checkbox--froglet {
+  --checkbox-size: 1.125rem;
+  --checkbox-border-width: 2px;
+  --checkbox-border-style: solid;
+  --checkbox-border-color: #2e8b57;
+  --checkbox-border-radius: 4px;
+  --checkbox-background-color: #ffffff;
+
+  --checkbox-border-color-hover: #245f45;
+  --checkbox-background-color-hover: #f0f7f4;
+
+  --checkbox-outline-width-focus: 2px;
+  --checkbox-outline-color-focus: #5eba87;
+  --checkbox-outline-offset-focus: 2px;
+
+  --checkbox-border-color-checked: #2e8b57;
+  --checkbox-background-color-checked: #2e8b57;
+  --checkbox-checkmark-color-checked: #ffffff;
+
+  --checkbox-border-color-disabled: #d3e9d7;
+  --checkbox-background-color-disabled: #f4f9f6;
+  --checkbox-checkmark-color-disabled: #7a9a7d;
+}

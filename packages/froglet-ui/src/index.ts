@@ -1,6 +1,7 @@
 export { Button } from "./Button";
 export type { ButtonProps } from "./Button";
-export { Checkbox } from "./Checkbox/Checkbox";
+export { Checkbox } from "./Checkbox";
+export type { CheckboxProps } from "./Checkbox";
 export { GridContainer } from "./Grid/GridContainer";
 export { GridItem } from "./Grid/GridItem";
 export { Input } from "./Input/Input";

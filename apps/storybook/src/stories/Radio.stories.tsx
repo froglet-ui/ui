@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Radio } from "@froglet/ui";
+import "../assets/css/radio.storybook.css";
 
 const meta = {
   title: "Radio",

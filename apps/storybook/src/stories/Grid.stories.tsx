@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { GridContainer } from "@froglet/ui";
-import { GridItem } from "@froglet/ui";
+import { GridContainer, GridItem } from "@froglet/ui";
+import "../assets/css/grid.storybook.css";
 
 const meta = {
   title: "Grid",

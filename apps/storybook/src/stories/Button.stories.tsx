@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from "@froglet/ui";
+import "../assets/css/button.storybook.css";
 import readme from "../../../../packages/froglet-ui/src/Button/README.md?raw";
 
 // Strip the leading `# Button` heading — Storybook renders its own h1 from the story title.

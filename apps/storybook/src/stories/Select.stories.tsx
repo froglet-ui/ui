@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Select } from "@froglet/ui";
+import "../assets/css/select.storybook.css";
 
 const meta = {
   title: "Select",

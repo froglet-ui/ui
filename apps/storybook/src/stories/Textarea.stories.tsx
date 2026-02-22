@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Textarea } from "@froglet/ui";
+import "../assets/css/textarea.storybook.css";
 
 const meta = {
   title: "Textarea",
