@@ -1,0 +1,10 @@
+.switch--froglet {
+  --switch-background-color: var(--color-border-hover);
+  --switch-background-color-checked: var(--color-primary);
+  --switch-background-color-disabled: var(--color-border-disabled);
+  --switch-thumb-color: var(--color-surface);
+  --switch-thumb-color-disabled: var(--color-surface);
+  --switch-outline-width-focus: var(--focus-outline-width);
+  --switch-outline-color-focus: var(--focus-outline-color);
+  --switch-outline-offset-focus: var(--focus-outline-offset);
+}

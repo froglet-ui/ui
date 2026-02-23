@@ -1,0 +1,23 @@
+.progress--primary {
+  --progress-fill-color: var(--color-primary);
+  --progress-background-color: var(--color-primary-tint);
+  --progress-border-radius: var(--shape-border-radius);
+}
+
+.progress--secondary {
+  --progress-fill-color: var(--color-secondary);
+  --progress-background-color: var(--color-surface-hover);
+  --progress-border-radius: var(--shape-border-radius);
+}
+
+.progress--neutral {
+  --progress-fill-color: var(--color-neutral);
+  --progress-background-color: var(--color-surface-hover);
+  --progress-border-radius: var(--shape-border-radius);
+}
+
+.progress--danger {
+  --progress-fill-color: var(--color-danger);
+  --progress-background-color: var(--color-danger-disabled-bg);
+  --progress-border-radius: var(--shape-border-radius);
+}

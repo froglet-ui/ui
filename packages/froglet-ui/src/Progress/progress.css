@@ -1,0 +1,45 @@
+/*
+--------------------------------------------------------------------------------
+    Progress CSS File
+    Represents CSS Custom Property Style for Progress
+--------------------------------------------------------------------------------
+*/
+
+/* Base Progress Styles */
+.progress {
+  /* Positioning & Display */
+  display: block;
+  appearance: none;
+
+  /* Box Model */
+  box-sizing: border-box;
+  width: var(--progress-width, 100%);
+  height: var(--progress-height, 0.5rem);
+  border-width: var(--progress-border-width, 0);
+  border-style: var(--progress-border-style, solid);
+  border-color: var(--progress-border-color);
+  border-radius: var(--progress-border-radius, 9999px);
+  overflow: hidden;
+
+  /* Visual Styles */
+  background-color: var(--progress-background-color, Canvas);
+  color: var(--progress-fill-color, currentColor); /* Firefox fill */
+}
+
+/* WebKit / Blink — track */
+.progress::-webkit-progress-bar {
+  background-color: var(--progress-background-color, Canvas);
+  border-radius: var(--progress-border-radius, 9999px);
+}
+
+/* WebKit / Blink — fill */
+.progress::-webkit-progress-value {
+  background-color: var(--progress-fill-color, currentColor);
+  border-radius: var(--progress-border-radius, 9999px);
+}
+
+/* Firefox — fill */
+.progress::-moz-progress-bar {
+  background-color: var(--progress-fill-color, currentColor);
+  border-radius: var(--progress-border-radius, 9999px);
+}
