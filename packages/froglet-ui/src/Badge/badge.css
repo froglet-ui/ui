@@ -1,0 +1,32 @@
+/*
+--------------------------------------------------------------------------------
+    Badge CSS File
+    Represents CSS Custom Property Style for Badge
+--------------------------------------------------------------------------------
+*/
+
+/* Base Badge Styles */
+.badge {
+  /* Display */
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+
+  /* Box Model */
+  box-sizing: border-box;
+  padding: var(--badge-padding, 0.125rem 0.5rem);
+  border-width: var(--badge-border-width, 0);
+  border-style: var(--badge-border-style, solid);
+  border-color: var(--badge-border-color);
+  border-radius: var(--badge-border-radius, 9999px);
+
+  /* Typography */
+  font-family: var(--badge-font-family, inherit);
+  font-size: var(--badge-font-size, inherit);
+  font-weight: var(--badge-font-weight, inherit);
+  line-height: var(--badge-line-height, inherit);
+  color: var(--badge-text-color, #374151);
+
+  /* Visual */
+  background-color: var(--badge-background-color, #e5e7eb);
+}
