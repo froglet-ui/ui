@@ -151,6 +151,19 @@ All interactive components share a consistent shape language.
 }
 ```
 
+### Badge
+
+```css
+.badge--froglet {
+  --badge-background-color: #f3f4f6;
+  --badge-text-color: #374151;
+  --badge-border-radius: 9999px;
+  --badge-font-size: 0.75rem;
+  --badge-font-weight: 600;
+  --badge-padding: 0.125rem 0.5rem;
+}
+```
+
 ### Checkbox
 
 ```css
