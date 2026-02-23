@@ -1,0 +1,22 @@
+.collapse--froglet {
+  --collapse-border-width: 1px;
+  --collapse-border-style: solid;
+  --collapse-border-color: var(--color-border);
+  --collapse-border-radius: 6px;
+  --collapse-background-color: var(--color-surface);
+}
+
+.collapse-summary--froglet {
+  --collapse-summary-font-weight: 500;
+  --collapse-summary-text-color: var(--color-text);
+  --collapse-summary-padding: 0.75rem 1rem;
+  --collapse-summary-background-color: var(--color-surface);
+  --collapse-summary-background-color-hover: var(--color-surface-hover);
+  --collapse-summary-outline-width-focus: var(--focus-outline-width);
+  --collapse-summary-outline-color-focus: var(--focus-outline-color);
+  --collapse-summary-outline-offset-focus: var(--focus-outline-offset);
+  --collapse-summary-marker-content: "+";
+  --collapse-summary-marker-content-open: "−";
+  --collapse-summary-marker-font-size: 1em;
+  --collapse-summary-marker-transform-open: rotate(0deg);
+}

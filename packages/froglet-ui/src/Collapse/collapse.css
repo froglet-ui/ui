@@ -1,0 +1,82 @@
+/*
+--------------------------------------------------------------------------------
+    Collapse CSS File
+    Represents CSS Custom Property Style for Collapse
+--------------------------------------------------------------------------------
+*/
+
+/* Base Collapse Styles — <details> container */
+.collapse {
+  /* Box Model */
+  box-sizing: border-box;
+  padding: var(--collapse-padding, 0);
+  border-width: var(--collapse-border-width, 0);
+  border-style: var(--collapse-border-style, solid);
+  border-color: var(--collapse-border-color);
+  border-radius: var(--collapse-border-radius, 0);
+
+  /* Visual */
+  background-color: var(--collapse-background-color, transparent);
+}
+
+/* Collapse Summary — <summary> trigger */
+.collapse-summary {
+  /* Positioning & Display — flex for marker + label alignment */
+  display: flex;
+  align-items: center;
+  gap: var(--collapse-summary-marker-gap, 0.5rem);
+  cursor: var(--collapse-summary-cursor, pointer);
+  /* Suppress native disclosure marker (all browsers) */
+  list-style: none;
+
+  /* Box Model */
+  box-sizing: border-box;
+  padding: var(--collapse-summary-padding, 0);
+
+  /* Typography */
+  font-family: var(--collapse-summary-font-family, inherit);
+  font-size: var(--collapse-summary-font-size, inherit);
+  font-weight: var(--collapse-summary-font-weight, inherit);
+  color: var(--collapse-summary-text-color);
+
+  /* Visual */
+  background-color: var(--collapse-summary-background-color, transparent);
+}
+
+/* Suppress native marker — older Safari */
+.collapse-summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Custom marker — rotates by default; swaps content when open token is set */
+.collapse-summary::before {
+  content: var(--collapse-summary-marker-content, "▶");
+  color: var(--collapse-summary-marker-color, currentColor);
+  font-size: var(--collapse-summary-marker-font-size, 0.75em);
+  flex-shrink: 0;
+  transition: var(--collapse-summary-marker-transition, transform 0.2s ease);
+  transform: var(--collapse-summary-marker-transform, rotate(0deg));
+}
+
+/* Open state — rotate marker and swap content if open token is provided */
+details[open] > .collapse-summary::before {
+  content: var(
+    --collapse-summary-marker-content-open,
+    var(--collapse-summary-marker-content, "▶")
+  );
+  transform: var(--collapse-summary-marker-transform-open, rotate(90deg));
+}
+
+/* Hover */
+.collapse-summary:hover {
+  background-color: var(--collapse-summary-background-color-hover, transparent);
+  color: var(--collapse-summary-text-color-hover);
+}
+
+/* Focus */
+.collapse-summary:focus-visible {
+  outline-width: var(--collapse-summary-outline-width-focus, 2px);
+  outline-style: solid;
+  outline-color: var(--collapse-summary-outline-color-focus, currentColor);
+  outline-offset: var(--collapse-summary-outline-offset-focus, 2px);
+}
