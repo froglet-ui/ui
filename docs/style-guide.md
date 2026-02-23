@@ -45,6 +45,50 @@ All interactive components share a consistent shape language.
 
 ## Component Token Reference
 
+### Alert
+
+```css
+.alert--info {
+  --alert-background-color: #eff6ff;
+  --alert-text-color: #1e40af;
+  --alert-border-width: 1px;
+  --alert-border-style: solid;
+  --alert-border-color: #bfdbfe;
+  --alert-border-radius: 6px;
+  --alert-padding: 0.75rem 1rem;
+}
+
+.alert--success {
+  --alert-background-color: #f0fdf4;
+  --alert-text-color: #166534;
+  --alert-border-width: 1px;
+  --alert-border-style: solid;
+  --alert-border-color: #bbf7d0;
+  --alert-border-radius: 6px;
+  --alert-padding: 0.75rem 1rem;
+}
+
+.alert--warning {
+  --alert-background-color: #fefce8;
+  --alert-text-color: #854d0e;
+  --alert-border-width: 1px;
+  --alert-border-style: solid;
+  --alert-border-color: #fde047;
+  --alert-border-radius: 6px;
+  --alert-padding: 0.75rem 1rem;
+}
+
+.alert--error {
+  --alert-background-color: #fef2f2;
+  --alert-text-color: #991b1b;
+  --alert-border-width: 1px;
+  --alert-border-style: solid;
+  --alert-border-color: #fecaca;
+  --alert-border-radius: 6px;
+  --alert-padding: 0.75rem 1rem;
+}
+```
+
 ### Button
 
 #### Primary
@@ -161,6 +205,19 @@ All interactive components share a consistent shape language.
   --badge-font-size: 0.75rem;
   --badge-font-weight: 600;
   --badge-padding: 0.125rem 0.5rem;
+}
+```
+
+### Box
+
+```css
+.box--froglet {
+  --box-border-width: 1px;
+  --box-border-style: solid;
+  --box-border-color: #d1d5db;
+  --box-border-radius: 6px;
+  --box-background-color: #ffffff;
+  --box-padding: 1rem;
 }
 ```
 

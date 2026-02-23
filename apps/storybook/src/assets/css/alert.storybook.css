@@ -1,0 +1,39 @@
+.alert--info {
+  --alert-background-color: var(--color-status-info-tint);
+  --alert-text-color: var(--color-status-info);
+  --alert-border-width: 1px;
+  --alert-border-style: solid;
+  --alert-border-color: var(--color-status-info-border);
+  --alert-border-radius: var(--shape-border-radius);
+  --alert-padding: 0.75rem 1rem;
+}
+
+.alert--success {
+  --alert-background-color: var(--color-status-success-tint);
+  --alert-text-color: var(--color-status-success);
+  --alert-border-width: 1px;
+  --alert-border-style: solid;
+  --alert-border-color: var(--color-status-success-border);
+  --alert-border-radius: var(--shape-border-radius);
+  --alert-padding: 0.75rem 1rem;
+}
+
+.alert--warning {
+  --alert-background-color: var(--color-status-warning-tint);
+  --alert-text-color: var(--color-status-warning);
+  --alert-border-width: 1px;
+  --alert-border-style: solid;
+  --alert-border-color: var(--color-status-warning-border);
+  --alert-border-radius: var(--shape-border-radius);
+  --alert-padding: 0.75rem 1rem;
+}
+
+.alert--error {
+  --alert-background-color: var(--color-status-error-tint);
+  --alert-text-color: var(--color-status-error);
+  --alert-border-width: 1px;
+  --alert-border-style: solid;
+  --alert-border-color: var(--color-status-error-border);
+  --alert-border-radius: var(--shape-border-radius);
+  --alert-padding: 0.75rem 1rem;
+}

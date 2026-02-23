@@ -1,5 +1,9 @@
+export { Alert } from "./Alert";
+export type { AlertProps } from "./Alert";
 export { Badge } from "./Badge";
 export type { BadgeProps } from "./Badge";
+export { Box } from "./Box";
+export type { BoxProps } from "./Box";
 export { Button } from "./Button";
 export type { ButtonProps } from "./Button";
 export { Checkbox } from "./Checkbox";
