@@ -1,0 +1,8 @@
+.box--froglet {
+  --box-border-width: 1px;
+  --box-border-style: solid;
+  --box-border-color: var(--color-border);
+  --box-border-radius: var(--shape-border-radius);
+  --box-background-color: var(--color-surface);
+  --box-padding: 1rem;
+}

@@ -72,6 +72,23 @@
   --color-surface: #ffffff;
   --color-surface-subtle: #f9fafb;
   --color-surface-hover: #f3f4f6;
+
+  /* ---------- Color — Status (alert severity) ---------- */
+  --color-status-info: #1e40af;
+  --color-status-info-tint: #eff6ff;
+  --color-status-info-border: #bfdbfe;
+
+  --color-status-success: #166534;
+  --color-status-success-tint: #f0fdf4;
+  --color-status-success-border: #bbf7d0;
+
+  --color-status-warning: #854d0e;
+  --color-status-warning-tint: #fefce8;
+  --color-status-warning-border: #fde047;
+
+  --color-status-error: #991b1b;
+  --color-status-error-tint: #fef2f2;
+  --color-status-error-border: #fecaca;
 }
 
 body {

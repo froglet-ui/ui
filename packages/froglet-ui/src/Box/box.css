@@ -1,0 +1,21 @@
+/*
+--------------------------------------------------------------------------------
+    Box CSS File
+    Represents CSS Custom Property Style for Box
+--------------------------------------------------------------------------------
+*/
+
+/* Base Box Styles — generic <div> container */
+.box {
+  /* Box Model */
+  box-sizing: border-box;
+  padding: var(--box-padding, 0);
+  border-width: var(--box-border-width, 1px);
+  border-style: var(--box-border-style, solid);
+  border-color: var(--box-border-color, #e5e7eb);
+  border-radius: var(--box-border-radius, 4px);
+
+  /* Visual */
+  background-color: var(--box-background-color, transparent);
+  box-shadow: var(--box-shadow, none);
+}
