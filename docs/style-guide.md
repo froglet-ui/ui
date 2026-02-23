@@ -345,6 +345,34 @@ All interactive components share a consistent shape language.
 }
 ```
 
+### Progress
+
+```css
+.progress--primary {
+  --progress-fill-color: #2e8b57;
+  --progress-background-color: #f0f7f4;
+  --progress-border-radius: 6px;
+}
+
+.progress--secondary {
+  --progress-fill-color: #7c3aed;
+  --progress-background-color: #f3f4f6;
+  --progress-border-radius: 6px;
+}
+
+.progress--neutral {
+  --progress-fill-color: #4b5563;
+  --progress-background-color: #f3f4f6;
+  --progress-border-radius: 6px;
+}
+
+.progress--danger {
+  --progress-fill-color: #dc2626;
+  --progress-background-color: #fee2e2;
+  --progress-border-radius: 6px;
+}
+```
+
 ### Radio
 
 ```css
@@ -397,6 +425,21 @@ All interactive components share a consistent shape language.
   --select-border-color-disabled: #e5e7eb;
   --select-text-color-disabled: #d1d5db;
   --select-background-color-disabled: #f9fafb;
+}
+```
+
+### Switch
+
+```css
+.switch--froglet {
+  --switch-background-color: #9ca3af;
+  --switch-background-color-checked: #2e8b57;
+  --switch-background-color-disabled: #e5e7eb;
+  --switch-thumb-color: #ffffff;
+  --switch-thumb-color-disabled: #ffffff;
+  --switch-outline-width-focus: 2px;
+  --switch-outline-color-focus: #5eba87;
+  --switch-outline-offset-focus: 3px;
 }
 ```
 

@@ -1,0 +1,72 @@
+/*
+--------------------------------------------------------------------------------
+    Switch CSS File
+    Represents CSS Custom Property Style for Switch
+--------------------------------------------------------------------------------
+*/
+
+/* Base Switch Styles — track */
+.input--switch {
+  /* Positioning & Display */
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  appearance: none;
+  cursor: pointer;
+
+  /* Box Model */
+  box-sizing: border-box;
+  width: var(--switch-width, 2.5rem);
+  height: var(--switch-height, 1.25rem);
+  border-radius: var(--switch-border-radius, 9999px);
+
+  /* Visual Styles */
+  background-color: var(--switch-background-color, GrayText);
+  transition: background-color 0.15s ease;
+}
+
+/* Thumb */
+.input--switch::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: var(--switch-thumb-offset, 0.125rem);
+  transform: translateY(-50%);
+  width: var(--switch-thumb-size, 1rem);
+  height: var(--switch-thumb-size, 1rem);
+  border-radius: 50%;
+  background-color: var(--switch-thumb-color, Canvas);
+  transition: left 0.15s ease;
+}
+
+/* Hover — re-applies track color so the base .input hover rule doesn't clobber it */
+.input--switch:hover {
+  background-color: var(--switch-background-color-hover, var(--switch-background-color, GrayText));
+}
+
+/* Checked — defined after hover so checked state wins on checked+hover */
+.input--switch:checked {
+  background-color: var(--switch-background-color-checked, currentColor);
+}
+
+.input--switch:checked::before {
+  left: calc(100% - var(--switch-thumb-size, 1rem) - var(--switch-thumb-offset, 0.125rem));
+}
+
+/* Focus */
+.input--switch:focus-visible {
+  outline: var(--switch-outline-width-focus, 2px) solid
+    var(--switch-outline-color-focus, currentColor);
+  outline-offset: var(--switch-outline-offset-focus, 2px);
+}
+
+/* Disabled */
+.input--switch:disabled,
+.input--switch:disabled:checked {
+  background-color: var(--switch-background-color-disabled, GrayText);
+  cursor: not-allowed;
+}
+
+.input--switch:disabled::before {
+  background-color: var(--switch-thumb-color-disabled, Canvas);
+}
