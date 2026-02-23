@@ -17,6 +17,12 @@ const meta = {
       },
     },
   },
+  argTypes: {
+    orientation: {
+      control: { type: "select" },
+      options: ["horizontal", "vertical"],
+    },
+  },
 } satisfies Meta<typeof Divider>;
 
 export default meta;

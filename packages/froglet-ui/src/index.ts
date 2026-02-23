@@ -32,5 +32,7 @@ export { Select } from "./Select";
 export type { SelectProps } from "./Select";
 export { Switch } from "./Switch";
 export type { SwitchProps } from "./Switch";
+export { Table } from "./Table";
+export type { TableProps, TableColumn } from "./Table";
 export { Textarea } from "./Textarea";
 export type { TextareaProps } from "./Textarea";

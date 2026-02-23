@@ -17,6 +17,11 @@ const meta = {
       },
     },
   },
+  argTypes: {
+    disabled: {
+      control: { type: "boolean" },
+    },
+  },
 } satisfies Meta<typeof Button>;
 
 export default meta;
