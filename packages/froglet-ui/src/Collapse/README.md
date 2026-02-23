@@ -67,28 +67,28 @@ Apply modifier classes to theme both components:
 
 ### CollapseSummary (`.collapse-summary`)
 
-| Token                                       | Default        | Description                                                                                       |
-| ------------------------------------------- | -------------- | ------------------------------------------------------------------------------------------------- |
-| `--collapse-summary-font-family`            | `inherit`      | Font family.                                                                                      |
-| `--collapse-summary-font-size`              | `inherit`      | Font size.                                                                                        |
-| `--collapse-summary-font-weight`            | `inherit`      | Font weight.                                                                                      |
-| `--collapse-summary-text-color`             | —              | Text color. Bare var; inherits surrounding `color` when unset.                                    |
-| `--collapse-summary-padding`                | `0`            | Internal padding of the trigger row.                                                              |
-| `--collapse-summary-cursor`                 | `pointer`      | Cursor over the trigger.                                                                          |
-| `--collapse-summary-background-color`       | `transparent`  | Trigger background.                                                                               |
-| `--collapse-summary-background-color-hover` | `transparent`  | Trigger background on hover.                                                                      |
-| `--collapse-summary-text-color-hover`       | —              | Trigger text color on hover.                                                                      |
-| `--collapse-summary-outline-width-focus`    | `2px`          | Focus ring width.                                                                                 |
-| `--collapse-summary-outline-color-focus`    | `currentColor` | Focus ring color.                                                                                 |
-| `--collapse-summary-outline-offset-focus`   | `2px`          | Focus ring offset.                                                                                |
-| `--collapse-summary-marker-content`           | `"▶"`                   | Marker character in the closed state.                                                             |
-| `--collapse-summary-marker-content-open`      | —                       | Marker character in the open state. Falls back to `--collapse-summary-marker-content` when unset. |
-| `--collapse-summary-marker-color`             | `currentColor`          | Marker color.                                                                                     |
-| `--collapse-summary-marker-font-size`         | `0.75em`                | Marker size relative to summary text.                                                             |
-| `--collapse-summary-marker-gap`               | `0.5rem`                | Space between marker and label text.                                                              |
-| `--collapse-summary-marker-transition`        | `transform 0.2s ease`   | Transition applied to the marker (controls rotation animation).                                   |
-| `--collapse-summary-marker-transform`         | `rotate(0deg)`          | Transform applied to the marker in the closed state.                                              |
-| `--collapse-summary-marker-transform-open`    | `rotate(90deg)`         | Transform applied to the marker in the open state. Set to `rotate(0deg)` to disable rotation.    |
+| Token                                       | Default               | Description                                                                                       |
+| ------------------------------------------- | --------------------- | ------------------------------------------------------------------------------------------------- |
+| `--collapse-summary-font-family`            | `inherit`             | Font family.                                                                                      |
+| `--collapse-summary-font-size`              | `inherit`             | Font size.                                                                                        |
+| `--collapse-summary-font-weight`            | `inherit`             | Font weight.                                                                                      |
+| `--collapse-summary-text-color`             | —                     | Text color. Bare var; inherits surrounding `color` when unset.                                    |
+| `--collapse-summary-padding`                | `0`                   | Internal padding of the trigger row.                                                              |
+| `--collapse-summary-cursor`                 | `pointer`             | Cursor over the trigger.                                                                          |
+| `--collapse-summary-background-color`       | `transparent`         | Trigger background.                                                                               |
+| `--collapse-summary-background-color-hover` | `transparent`         | Trigger background on hover.                                                                      |
+| `--collapse-summary-text-color-hover`       | —                     | Trigger text color on hover.                                                                      |
+| `--collapse-summary-outline-width-focus`    | `2px`                 | Focus ring width.                                                                                 |
+| `--collapse-summary-outline-color-focus`    | `currentColor`        | Focus ring color.                                                                                 |
+| `--collapse-summary-outline-offset-focus`   | `2px`                 | Focus ring offset.                                                                                |
+| `--collapse-summary-marker-content`         | `"▶"`                 | Marker character in the closed state.                                                             |
+| `--collapse-summary-marker-content-open`    | —                     | Marker character in the open state. Falls back to `--collapse-summary-marker-content` when unset. |
+| `--collapse-summary-marker-color`           | `currentColor`        | Marker color.                                                                                     |
+| `--collapse-summary-marker-font-size`       | `0.75em`              | Marker size relative to summary text.                                                             |
+| `--collapse-summary-marker-gap`             | `0.5rem`              | Space between marker and label text.                                                              |
+| `--collapse-summary-marker-transition`      | `transform 0.2s ease` | Transition applied to the marker (controls rotation animation).                                   |
+| `--collapse-summary-marker-transform`       | `rotate(0deg)`        | Transform applied to the marker in the closed state.                                              |
+| `--collapse-summary-marker-transform-open`  | `rotate(90deg)`       | Transform applied to the marker in the open state. Set to `rotate(0deg)` to disable rotation.     |
 
 The native `<summary>` disclosure triangle is suppressed and replaced with a `::before` pseudo-element. By default the marker rotates 90° on open — no JavaScript required. To use different characters per state instead: set `--collapse-summary-marker-content`, `--collapse-summary-marker-content-open`, and `--collapse-summary-marker-transform-open: rotate(0deg)` to disable rotation. To remove the marker entirely: `--collapse-summary-marker-content: ""`.
 
