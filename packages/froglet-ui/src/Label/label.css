@@ -1,0 +1,19 @@
+/*
+--------------------------------------------------------------------------------
+    Label CSS File
+    Represents CSS Custom Property Style for Label
+--------------------------------------------------------------------------------
+*/
+
+/* Base Label Styles */
+.label {
+  /* Box Model */
+  box-sizing: border-box;
+  margin: var(--label-margin, 0);
+
+  /* Typography */
+  font-family: var(--label-font-family, inherit);
+  font-size: var(--label-font-size, inherit);
+  font-weight: var(--label-font-weight, inherit);
+  color: var(--label-text-color);
+}

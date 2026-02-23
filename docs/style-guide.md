@@ -189,6 +189,16 @@ All interactive components share a consistent shape language.
 }
 ```
 
+### Label
+
+```css
+.label--froglet {
+  --label-font-size: 0.875rem;
+  --label-font-weight: 500;
+  --label-text-color: #111827;
+}
+```
+
 ### Input
 
 ```css

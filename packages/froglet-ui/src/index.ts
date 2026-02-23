@@ -10,6 +10,8 @@ export { GridItem } from "./Grid";
 export type { GridItemProps } from "./Grid";
 export { Input } from "./Input";
 export type { InputProps } from "./Input";
+export { Label } from "./Label";
+export type { LabelProps } from "./Label";
 export { Link } from "./Link";
 export type { LinkProps } from "./Link";
 export { Radio } from "./Radio";
