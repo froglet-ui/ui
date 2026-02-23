@@ -25,7 +25,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   render: () => (
     <Box>
-      <p style={{ margin: 0 }}>
+      <p className="story-body-text">
         A brandless container. No CSS custom properties are set — inherits
         surrounding styles. Apply a modifier class to theme it.
       </p>
@@ -44,7 +44,7 @@ export const Default: Story = {
 export const Froglet: Story = {
   render: () => (
     <Box className="box--froglet">
-      <p style={{ margin: 0, fontSize: "0.875rem", color: "#374151" }}>
+      <p className="story-body-text">
         A bordered container with padding, background, and rounded corners —
         themed with Froglet tokens.
       </p>

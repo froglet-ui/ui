@@ -1,0 +1,69 @@
+/*
+--------------------------------------------------------------------------------
+  Dialog CSS
+  Brandless base styles for the Dialog component.
+  All visual styling is driven by CSS custom properties.
+--------------------------------------------------------------------------------
+*/
+
+/* <dialog> panel — the modal overlay */
+.dialog:not([open]) {
+  display: none;
+}
+
+.dialog {
+  /* Positioning & Display */
+  display: flex;
+  flex-direction: column;
+
+  /* Box Model */
+  box-sizing: border-box;
+  padding: var(--dialog-padding, 1.5rem);
+  max-width: var(--dialog-max-width, 32rem);
+  width: 100%;
+  border-width: var(--dialog-border-width, 0);
+  border-style: var(--dialog-border-style, solid);
+  border-color: var(--dialog-border-color);
+  border-radius: var(--dialog-border-radius, 0);
+
+  /* Visual */
+  background-color: var(--dialog-background-color, Canvas);
+  color: var(--dialog-color, CanvasText);
+}
+
+/* Native ::backdrop pseudo-element */
+.dialog::backdrop {
+  background-color: var(--dialog-backdrop-color, rgb(0 0 0 / 0.5));
+}
+
+/* Close button */
+.dialog__close {
+  /* Positioning & Display */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  appearance: none;
+  cursor: pointer;
+
+  /* Box Model */
+  box-sizing: border-box;
+  padding: var(--dialog-close-padding, 0.5rem 1rem);
+  border-width: var(--dialog-close-border-width, 1px);
+  border-style: var(--dialog-close-border-style, solid);
+  border-color: var(--dialog-close-border-color, currentColor);
+  border-radius: var(--dialog-close-border-radius, 0);
+
+  /* Typography */
+  font-family: inherit;
+  font-size: 1rem;
+
+  /* Visual */
+  background-color: transparent;
+}
+
+/* Focus — close */
+.dialog__close:focus-visible {
+  outline: var(--dialog-outline-width-focus, 2px) solid
+    var(--dialog-outline-color-focus, currentColor);
+  outline-offset: var(--dialog-outline-offset-focus, 2px);
+}

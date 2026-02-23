@@ -31,17 +31,17 @@ export const Default: Story = {
         <Tab value="notifications">Notifications</Tab>
       </TabList>
       <TabPanel value="account">
-        <p style={{ margin: 0 }}>
+        <p className="story-body-text">
           Manage your account details, email address, and display name here.
         </p>
       </TabPanel>
       <TabPanel value="password">
-        <p style={{ margin: 0 }}>
+        <p className="story-body-text">
           Update your password and configure two-factor authentication here.
         </p>
       </TabPanel>
       <TabPanel value="notifications">
-        <p style={{ margin: 0 }}>
+        <p className="story-body-text">
           Choose which events trigger email or in-app notifications here.
         </p>
       </TabPanel>
@@ -66,17 +66,17 @@ export const Froglet: Story = {
         <Tab value="notifications">Notifications</Tab>
       </TabList>
       <TabPanel value="account">
-        <p style={{ margin: 0, color: "#374151", fontSize: "0.875rem" }}>
+        <p className="story-body-text">
           Manage your account details, email address, and display name here.
         </p>
       </TabPanel>
       <TabPanel value="password">
-        <p style={{ margin: 0, color: "#374151", fontSize: "0.875rem" }}>
+        <p className="story-body-text">
           Update your password and configure two-factor authentication here.
         </p>
       </TabPanel>
       <TabPanel value="notifications">
-        <p style={{ margin: 0, color: "#374151", fontSize: "0.875rem" }}>
+        <p className="story-body-text">
           Choose which events trigger email or in-app notifications here.
         </p>
       </TabPanel>

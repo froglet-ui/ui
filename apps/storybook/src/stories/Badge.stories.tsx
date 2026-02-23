@@ -63,14 +63,7 @@ export const Froglet: Story = {
 
 export const Colors: Story = {
   render: () => (
-    <div
-      style={{
-        display: "flex",
-        gap: "0.5rem",
-        alignItems: "center",
-        flexWrap: "wrap",
-      }}
-    >
+    <div className="story-row">
       <Badge className="badge--froglet">Default</Badge>
       <Badge
         className="badge--froglet"

@@ -1,0 +1,31 @@
+.dialog--froglet {
+  --dialog-padding: 1.5rem;
+  --dialog-max-width: 32rem;
+  --dialog-background-color: var(--color-surface);
+  --dialog-color: var(--color-text);
+  --dialog-border-width: 1px;
+  --dialog-border-style: solid;
+  --dialog-border-color: var(--color-border);
+  --dialog-border-radius: var(--shape-border-radius);
+  --dialog-backdrop-color: rgb(0 0 0 / 0.5);
+  --dialog-outline-width-focus: var(--focus-outline-width);
+  --dialog-outline-color-focus: var(--focus-outline-color);
+  --dialog-outline-offset-focus: var(--focus-outline-offset);
+}
+
+.dialog__close--froglet {
+  --dialog-close-padding: var(--spacing-standard);
+  --dialog-close-border-radius: var(--shape-border-radius);
+}
+
+/* Demo content inside the Froglet dialog story */
+.dialog-story-heading {
+  margin: 0 0 0.5rem;
+  font-size: 1.125rem;
+}
+
+.dialog-story-body {
+  margin: 0 0 1.5rem;
+  font-size: 0.875rem;
+  color: var(--color-text-subtle);
+}

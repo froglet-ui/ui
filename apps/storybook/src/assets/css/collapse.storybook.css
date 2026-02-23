@@ -20,3 +20,12 @@
   --collapse-summary-marker-font-size: 1em;
   --collapse-summary-marker-transform-open: rotate(0deg);
 }
+
+/* Panel body content in Froglet-themed Collapse demos */
+.collapse-panel-content {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  color: var(--color-neutral);
+  line-height: 1.6;
+}
