@@ -58,16 +58,8 @@ export const Froglet: Story = {
         <Button className="button--primary">Open dialog</Button>
       </DialogTrigger>
       <DialogContent className="dialog--froglet" aria-label="Froglet dialog">
-        <h2 style={{ margin: "0 0 0.5rem", fontSize: "1.125rem" }}>
-          Dialog title
-        </h2>
-        <p
-          style={{
-            margin: "0 0 1.5rem",
-            fontSize: "0.875rem",
-            color: "#6b7280",
-          }}
-        >
+        <h2 className="dialog-story-heading">Dialog title</h2>
+        <p className="dialog-story-body">
           Themed with Froglet tokens. Press Escape or click Close to dismiss.
         </p>
         <DialogClose className="dialog__close--froglet">Close</DialogClose>
@@ -78,7 +70,7 @@ export const Froglet: Story = {
     layout: "centered",
     docs: {
       description: {
-        story: `Themed with Froglet tokens. The panel has a white background, border, and rounded corners. The trigger and close buttons use the primary green palette.
+        story: `Themed with Froglet tokens. The panel has a white background, border, and rounded corners. The trigger is a \`<Button className="button--primary">\`. The close button uses \`dialog__close--froglet\` tokens.
 
 \`\`\`css
 .dialog--froglet {
@@ -94,11 +86,6 @@ export const Froglet: Story = {
   --dialog-outline-width-focus: 2px;
   --dialog-outline-color-focus: #5eba87;
   --dialog-outline-offset-focus: 3px;
-}
-
-.dialog__trigger--froglet {
-  --dialog-trigger-padding: 10px 20px;
-  --dialog-trigger-border-radius: 6px;
 }
 
 .dialog__close--froglet {

@@ -6,3 +6,12 @@
   --tooltip-border-radius: var(--shape-border-radius);
   --tooltip-offset: 6px;
 }
+
+/* Showcase layout — extra padding gives room for absolutely-positioned panels */
+.tooltip-story-showcase {
+  display: flex;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+}

@@ -94,3 +94,33 @@
 body {
   font-family: var(--font-family-base);
 }
+
+/*
+--------------------------------------------------------------------------------
+  Story Layout Utilities
+  Demo scaffolding used across stories. Not part of any component API.
+--------------------------------------------------------------------------------
+*/
+
+/* Vertical stack — multi-item showcases (alerts, progress bars, etc.) */
+.story-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 36rem;
+}
+
+/* Horizontal row — side-by-side demos */
+.story-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Body text inside story content panels — resets margin, softens color */
+.story-body-text {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--color-text-subtle);
+}

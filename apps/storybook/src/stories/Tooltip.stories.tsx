@@ -43,15 +43,7 @@ export const Default: Story = {
 
 export const Froglet: Story = {
   render: () => (
-    <div
-      style={{
-        display: "flex",
-        gap: "3rem",
-        padding: "4rem 2rem",
-        flexWrap: "wrap",
-        alignItems: "center",
-      }}
-    >
+    <div className="tooltip-story-showcase">
       <Tooltip className="tooltip--froglet">
         <TooltipTrigger>
           <button type="button">Top (default)</button>

@@ -17,3 +17,15 @@
   --dialog-close-padding: var(--spacing-standard);
   --dialog-close-border-radius: var(--shape-border-radius);
 }
+
+/* Demo content inside the Froglet dialog story */
+.dialog-story-heading {
+  margin: 0 0 0.5rem;
+  font-size: 1.125rem;
+}
+
+.dialog-story-body {
+  margin: 0 0 1.5rem;
+  font-size: 0.875rem;
+  color: var(--color-text-subtle);
+}

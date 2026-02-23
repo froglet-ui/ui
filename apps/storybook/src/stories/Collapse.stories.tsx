@@ -17,6 +17,12 @@ const meta = {
       },
     },
   },
+  argTypes: {
+    open: {
+      control: { type: "boolean" },
+      description: "Whether the disclosure is open.",
+    },
+  },
 } satisfies Meta<typeof Collapse>;
 
 export default meta;
@@ -48,14 +54,7 @@ export const Froglet: Story = {
       <CollapseSummary className="collapse-summary--froglet">
         What is Froglet?
       </CollapseSummary>
-      <p
-        style={{
-          margin: 0,
-          padding: "0.75rem 1rem",
-          color: "#374151",
-          fontSize: "0.875rem",
-        }}
-      >
+      <p className="collapse-panel-content">
         Froglet is a brandless React component library. All visual styling is
         driven by CSS custom properties.
       </p>
@@ -115,30 +114,13 @@ const faqItems = [
 
 export const FAQ: Story = {
   render: () => (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        gap: "0.5rem",
-        maxWidth: "36rem",
-      }}
-    >
+    <div className="story-stack">
       {faqItems.map((item) => (
         <Collapse key={item.question} className="collapse--froglet">
           <CollapseSummary className="collapse-summary--froglet">
             {item.question}
           </CollapseSummary>
-          <p
-            style={{
-              margin: 0,
-              padding: "0.75rem 1rem",
-              color: "#374151",
-              fontSize: "0.875rem",
-              lineHeight: 1.6,
-            }}
-          >
-            {item.answer}
-          </p>
+          <p className="collapse-panel-content">{item.answer}</p>
         </Collapse>
       ))}
     </div>

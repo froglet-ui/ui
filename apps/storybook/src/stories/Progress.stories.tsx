@@ -45,14 +45,7 @@ export const Default: Story = {
 
 export const Froglet: Story = {
   render: (args) => (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        gap: "0.75rem",
-        maxWidth: "24rem",
-      }}
-    >
+    <div className="story-stack" style={{ maxWidth: "24rem" }}>
       <Progress className="progress--primary" {...args} />
       <Progress className="progress--secondary" {...args} />
       <Progress className="progress--neutral" {...args} />

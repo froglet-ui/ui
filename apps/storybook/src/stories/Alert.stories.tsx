@@ -36,14 +36,7 @@ export const Default: Story = {
 
 export const Froglet: Story = {
   render: () => (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        gap: "0.75rem",
-        maxWidth: "36rem",
-      }}
-    >
+    <div className="story-stack">
       <Alert className="alert--info">
         <strong>Info:</strong> Your session will expire in 10 minutes.
       </Alert>
