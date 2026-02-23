@@ -179,6 +179,33 @@ All interactive components share a consistent shape language.
 }
 ```
 
+### Collapse
+
+```css
+.collapse--froglet {
+  --collapse-border-width: 1px;
+  --collapse-border-style: solid;
+  --collapse-border-color: #d1d5db;
+  --collapse-border-radius: 6px;
+  --collapse-background-color: #ffffff;
+}
+
+.collapse-summary--froglet {
+  --collapse-summary-font-weight: 500;
+  --collapse-summary-text-color: #111827;
+  --collapse-summary-padding: 0.75rem 1rem;
+  --collapse-summary-background-color: #ffffff;
+  --collapse-summary-background-color-hover: #f3f4f6;
+  --collapse-summary-outline-width-focus: 2px;
+  --collapse-summary-outline-color-focus: #5eba87;
+  --collapse-summary-outline-offset-focus: 2px;
+  --collapse-summary-marker-content: "+";
+  --collapse-summary-marker-content-open: "−";
+  --collapse-summary-marker-font-size: 1em;
+  --collapse-summary-marker-transform-open: rotate(0deg);
+}
+```
+
 ### Divider
 
 ```css
