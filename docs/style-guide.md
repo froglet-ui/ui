@@ -428,6 +428,23 @@ All interactive components share a consistent shape language.
 }
 ```
 
+### Table
+
+```css
+.table--froglet {
+  --table-th-background-color: #f9fafb;
+  --table-th-text-color: #111827;
+  --table-th-border-bottom-width: 2px;
+  --table-th-border-bottom-color: #d1d5db;
+  --table-tr-background-color-even: #f9fafb;
+  --table-tr-background-color-odd: #ffffff;
+  --table-td-text-color: #111827;
+  --table-td-border-bottom-width: 1px;
+  --table-td-border-bottom-color: #d1d5db;
+  --table-caption-text-color: #6b7280;
+}
+```
+
 ### Switch
 
 ```css

@@ -1,0 +1,76 @@
+/*
+--------------------------------------------------------------------------------
+    Table CSS File
+    Represents CSS Custom Property Style for Table
+--------------------------------------------------------------------------------
+*/
+
+/* Base Table */
+.table {
+  /* Box Model */
+  box-sizing: border-box;
+  width: var(--table-width, 100%);
+  border-collapse: var(--table-border-collapse, collapse);
+  border-spacing: 0;
+  border-width: var(--table-border-width, 0);
+  border-style: var(--table-border-style, solid);
+  border-color: var(--table-border-color);
+  border-radius: var(--table-border-radius, 0);
+
+  /* Typography */
+  font-size: var(--table-font-size, 1rem);
+
+  /* Visual Styles */
+  background-color: var(--table-background-color);
+}
+
+/* Caption */
+.table__caption {
+  caption-side: top;
+  text-align: left;
+
+  /* Typography */
+  font-size: var(--table-caption-font-size, 0.875rem);
+
+  /* Visual Styles */
+  color: var(--table-caption-text-color);
+  padding-bottom: var(--table-caption-padding-bottom, 0.5rem);
+}
+
+/* Header cells */
+.table__th {
+  /* Box Model */
+  padding: var(--table-th-padding, 0.75rem 1rem);
+  border-bottom-width: var(--table-th-border-bottom-width, 2px);
+  border-bottom-style: var(--table-border-style, solid);
+  border-bottom-color: var(--table-th-border-bottom-color, currentColor);
+
+  /* Typography */
+  text-align: var(--table-th-text-align, left);
+  font-weight: var(--table-th-font-weight, 600);
+
+  /* Visual Styles */
+  background-color: var(--table-th-background-color);
+  color: var(--table-th-text-color);
+}
+
+/* Body rows — stripe */
+.table__tr:nth-child(even) {
+  background-color: var(--table-tr-background-color-even);
+}
+
+.table__tr:nth-child(odd) {
+  background-color: var(--table-tr-background-color-odd);
+}
+
+/* Body cells */
+.table__td {
+  /* Box Model */
+  padding: var(--table-td-padding, 0.75rem 1rem);
+  border-bottom-width: var(--table-td-border-bottom-width, 1px);
+  border-bottom-style: var(--table-border-style, solid);
+  border-bottom-color: var(--table-td-border-bottom-color, currentColor);
+
+  /* Visual Styles */
+  color: var(--table-td-text-color);
+}

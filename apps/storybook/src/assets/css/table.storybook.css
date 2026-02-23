@@ -1,0 +1,12 @@
+.table--froglet {
+  --table-th-background-color: var(--color-surface-subtle);
+  --table-th-text-color: var(--color-text);
+  --table-th-border-bottom-width: var(--shape-border-width);
+  --table-th-border-bottom-color: var(--color-border);
+  --table-tr-background-color-even: var(--color-surface-subtle);
+  --table-tr-background-color-odd: var(--color-surface);
+  --table-td-text-color: var(--color-text);
+  --table-td-border-bottom-width: 1px;
+  --table-td-border-bottom-color: var(--color-border);
+  --table-caption-text-color: var(--color-text-subtle);
+}

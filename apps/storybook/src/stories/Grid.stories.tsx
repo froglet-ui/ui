@@ -20,6 +20,7 @@ const meta = {
   argTypes: {
     columns: { control: { type: "number" } },
     gap: { control: { type: "text" } },
+    autoRows: { control: { type: "text" } },
     autoFlow: {
       control: { type: "select" },
       options: ["row", "column", "row dense", "column dense"],
@@ -77,6 +78,10 @@ export const Default: Story = {
       </GridItem>
     </GridContainer>
   ),
+  args: {
+    columns: 12,
+    gap: "1rem",
+  },
   parameters: {
     docs: {
       description: {
@@ -104,12 +109,16 @@ export const Controls: Story = {
   args: {
     columns: 3,
     gap: "1rem",
+    autoRows: "auto",
+    autoFlow: "row",
+    justifyContent: "start",
+    alignContent: "start",
   },
   parameters: {
     docs: {
       description: {
         story:
-          "Use the Controls panel to adjust `columns`, `gap`, `autoFlow`, `justifyContent`, and `alignContent`. All values set CSS custom properties on the container.",
+          "Use the Controls panel to adjust `columns`, `gap`, `autoRows`, `autoFlow`, `justifyContent`, and `alignContent`. All values set CSS custom properties on the container.",
       },
     },
   },

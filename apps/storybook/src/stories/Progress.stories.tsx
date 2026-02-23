@@ -17,13 +17,22 @@ const meta = {
       },
     },
   },
+  argTypes: {
+    value: {
+      control: { type: "range", min: 0, max: 1, step: 0.05 },
+    },
+  },
 } satisfies Meta<typeof Progress>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  render: () => <Progress value={0.6} max={1} />,
+  render: (args) => <Progress {...args} />,
+  args: {
+    value: 0.6,
+    max: 1,
+  },
   parameters: {
     docs: {
       description: {
@@ -35,7 +44,7 @@ export const Default: Story = {
 };
 
 export const Froglet: Story = {
-  render: () => (
+  render: (args) => (
     <div
       style={{
         display: "flex",
@@ -44,16 +53,20 @@ export const Froglet: Story = {
         maxWidth: "24rem",
       }}
     >
-      <Progress className="progress--primary" value={0.75} max={1} />
-      <Progress className="progress--secondary" value={0.5} max={1} />
-      <Progress className="progress--neutral" value={0.9} max={1} />
-      <Progress className="progress--danger" value={0.3} max={1} />
+      <Progress className="progress--primary" {...args} />
+      <Progress className="progress--secondary" {...args} />
+      <Progress className="progress--neutral" {...args} />
+      <Progress className="progress--danger" {...args} />
     </div>
   ),
+  args: {
+    value: 0.6,
+    max: 1,
+  },
   parameters: {
     docs: {
       description: {
-        story: `Four Froglet palette variants — primary, secondary, neutral, and danger — each using a modifier class that sets fill and track colors.
+        story: `Four Froglet palette variants — primary, secondary, neutral, and danger. Use the Controls panel \`value\` slider to scrub all four bars simultaneously.
 
 \`\`\`css
 .progress--primary {
