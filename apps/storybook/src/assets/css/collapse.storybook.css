@@ -2,7 +2,7 @@
   --collapse-border-width: 1px;
   --collapse-border-style: solid;
   --collapse-border-color: var(--color-border);
-  --collapse-border-radius: 6px;
+  --collapse-border-radius: var(--shape-border-radius);
   --collapse-background-color: var(--color-surface);
 }
 

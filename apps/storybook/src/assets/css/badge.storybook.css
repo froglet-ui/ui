@@ -1,5 +1,5 @@
 .badge--froglet {
-  --badge-background-color: #f3f4f6;
+  --badge-background-color: var(--color-surface-hover);
   --badge-text-color: var(--color-text);
   --badge-border-radius: 9999px;
   --badge-font-size: 0.75rem;
