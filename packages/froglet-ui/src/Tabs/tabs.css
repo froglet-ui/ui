@@ -1,0 +1,101 @@
+/*
+--------------------------------------------------------------------------------
+    Tabs CSS File
+    Represents CSS Custom Property Style for Tabs
+--------------------------------------------------------------------------------
+*/
+
+/* Base Tabs Container */
+.tabs {
+  box-sizing: border-box;
+}
+
+/* Tab List — horizontal strip of tab triggers */
+.tabs__list {
+  /* Positioning & Display */
+  display: flex;
+  gap: var(--tabs-list-gap, 0);
+
+  /* Box Model */
+  box-sizing: border-box;
+  padding: var(--tabs-list-padding, 0);
+  border-bottom-width: var(--tabs-list-border-bottom-width, 1px);
+  border-bottom-style: solid;
+  border-bottom-color: var(--tabs-list-border-bottom-color, currentColor);
+
+  /* Visual */
+  background-color: var(--tabs-list-background-color);
+}
+
+/* Tab Button */
+.tabs__tab {
+  /* Positioning & Display */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  appearance: none;
+  cursor: pointer;
+
+  /* Box Model */
+  box-sizing: border-box;
+  padding: var(--tabs-tab-padding, 0.5rem 1rem);
+  /* Reset native button borders, then add bottom indicator */
+  border-width: 0;
+  border-bottom-width: var(--tabs-tab-border-bottom-width, 2px);
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+  /* Overlap the list's bottom border so the indicator "replaces" it */
+  margin-bottom: calc(-1 * var(--tabs-list-border-bottom-width, 1px));
+
+  /* Typography */
+  font-family: inherit;
+  font-size: var(--tabs-tab-font-size, 1rem);
+  font-weight: var(--tabs-tab-font-weight, 400);
+  color: var(--tabs-tab-color, inherit);
+  white-space: nowrap;
+
+  /* Visual */
+  background-color: var(--tabs-tab-background-color, transparent);
+
+  /* Transition */
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease,
+    border-bottom-color 0.15s ease;
+}
+
+/* Selected state */
+.tabs__tab[aria-selected="true"] {
+  font-weight: var(--tabs-tab-font-weight-selected, 600);
+  color: var(--tabs-tab-color-selected, currentColor);
+  background-color: var(--tabs-tab-background-color-selected, transparent);
+  border-bottom-color: var(--tabs-tab-border-bottom-color-selected, currentColor);
+}
+
+/* Hover */
+.tabs__tab:hover:not(:disabled) {
+  color: var(--tabs-tab-color-hover, inherit);
+  background-color: var(--tabs-tab-background-color-hover, transparent);
+}
+
+/* Focus */
+.tabs__tab:focus-visible {
+  outline-width: var(--tabs-tab-outline-width-focus, 2px);
+  outline-style: solid;
+  outline-color: var(--tabs-tab-outline-color-focus, currentColor);
+  outline-offset: var(--tabs-tab-outline-offset-focus, 2px);
+}
+
+/* Disabled */
+.tabs__tab:disabled {
+  cursor: not-allowed;
+  opacity: var(--tabs-tab-opacity-disabled, 0.4);
+  color: var(--tabs-tab-color-disabled);
+}
+
+/* Tab Panel */
+.tabs__panel {
+  /* Box Model */
+  box-sizing: border-box;
+  padding: var(--tabs-panel-padding, 1rem 0);
+}

@@ -1,0 +1,13 @@
+.tabs--froglet {
+  --tabs-list-border-bottom-color: var(--color-border);
+  --tabs-tab-color: var(--color-text-subtle);
+  --tabs-tab-color-selected: var(--color-primary);
+  --tabs-tab-color-hover: var(--color-text);
+  --tabs-tab-background-color-hover: var(--color-surface-hover);
+  --tabs-tab-border-bottom-color-selected: var(--color-primary);
+  --tabs-tab-font-weight-selected: 600;
+  --tabs-tab-outline-width-focus: var(--focus-outline-width);
+  --tabs-tab-outline-color-focus: var(--focus-outline-color);
+  --tabs-tab-outline-offset-focus: var(--focus-outline-offset);
+  --tabs-panel-padding: 1rem 0;
+}
