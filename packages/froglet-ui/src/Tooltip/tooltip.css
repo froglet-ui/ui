@@ -1,0 +1,68 @@
+/*
+--------------------------------------------------------------------------------
+  Tooltip CSS
+  Brandless base styles for the Tooltip component.
+  All visual styling is driven by CSS custom properties.
+--------------------------------------------------------------------------------
+*/
+
+/* Root wrapper — provides positioning context */
+.tooltip {
+  /* Positioning & Display */
+  display: inline-flex;
+  position: relative;
+}
+
+/* Tooltip content panel */
+.tooltip__content {
+  /* Positioning & Display — default: top-center */
+  position: absolute;
+  z-index: 1;
+  bottom: calc(100% + var(--tooltip-offset, 4px));
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+
+  /* Box Model */
+  box-sizing: border-box;
+  padding: var(--tooltip-padding, 0.25rem 0.5rem);
+  border-radius: var(--tooltip-border-radius, 0);
+
+  /* Typography */
+  font-size: var(--tooltip-font-size, 0.875rem);
+  white-space: nowrap;
+
+  /* Visual */
+  background-color: var(--tooltip-background-color, CanvasText);
+  color: var(--tooltip-color, Canvas);
+}
+
+/* Hidden state */
+.tooltip__content[aria-hidden="true"] {
+  display: none;
+}
+
+/* Side: bottom */
+.tooltip__content[data-side="bottom"] {
+  bottom: auto;
+  top: calc(100% + var(--tooltip-offset, 4px));
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Side: left */
+.tooltip__content[data-side="left"] {
+  bottom: auto;
+  top: 50%;
+  left: auto;
+  right: calc(100% + var(--tooltip-offset, 4px));
+  transform: translateY(-50%);
+}
+
+/* Side: right */
+.tooltip__content[data-side="right"] {
+  bottom: auto;
+  top: 50%;
+  left: calc(100% + var(--tooltip-offset, 4px));
+  transform: translateY(-50%);
+}

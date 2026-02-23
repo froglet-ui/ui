@@ -286,6 +286,35 @@ All interactive components share a consistent shape language.
 }
 ```
 
+### Dialog
+
+```css
+.dialog--froglet {
+  --dialog-padding: 1.5rem;
+  --dialog-max-width: 32rem;
+  --dialog-background-color: #ffffff;
+  --dialog-color: #111827;
+  --dialog-border-width: 1px;
+  --dialog-border-style: solid;
+  --dialog-border-color: #d1d5db;
+  --dialog-border-radius: 6px;
+  --dialog-backdrop-color: rgb(0 0 0 / 0.5);
+  --dialog-outline-width-focus: 2px;
+  --dialog-outline-color-focus: #5eba87;
+  --dialog-outline-offset-focus: 3px;
+}
+
+.dialog__trigger--froglet {
+  --dialog-trigger-padding: 10px 20px;
+  --dialog-trigger-border-radius: 6px;
+}
+
+.dialog__close--froglet {
+  --dialog-close-padding: 10px 20px;
+  --dialog-close-border-radius: 6px;
+}
+```
+
 ### Label
 
 ```css
@@ -503,5 +532,18 @@ All interactive components share a consistent shape language.
   --textarea-border-color-disabled: #e5e7eb;
   --textarea-text-color-disabled: #d1d5db;
   --textarea-background-color-disabled: #f9fafb;
+}
+```
+
+### Tooltip
+
+```css
+.tooltip--froglet {
+  --tooltip-padding: 0.375rem 0.625rem;
+  --tooltip-font-size: 0.8125rem;
+  --tooltip-background-color: #111827;
+  --tooltip-color: #ffffff;
+  --tooltip-border-radius: 6px;
+  --tooltip-offset: 6px;
 }
 ```
