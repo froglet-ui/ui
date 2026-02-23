@@ -445,6 +445,24 @@ All interactive components share a consistent shape language.
 }
 ```
 
+### Tabs
+
+```css
+.tabs--froglet {
+  --tabs-list-border-bottom-color: #d1d5db;
+  --tabs-tab-color: #6b7280;
+  --tabs-tab-color-selected: #2e8b57;
+  --tabs-tab-color-hover: #111827;
+  --tabs-tab-background-color-hover: #f3f4f6;
+  --tabs-tab-border-bottom-color-selected: #2e8b57;
+  --tabs-tab-font-weight-selected: 600;
+  --tabs-tab-outline-width-focus: 2px;
+  --tabs-tab-outline-color-focus: #5eba87;
+  --tabs-tab-outline-offset-focus: 3px;
+  --tabs-panel-padding: 1rem 0;
+}
+```
+
 ### Switch
 
 ```css
