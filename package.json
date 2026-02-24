@@ -15,10 +15,14 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "format:check": "prettier --check \"**/*.{ts,tsx,md}\"",
     "lint": "turbo lint",
-    "test": "turbo test",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test": "turbo test"
+  },
+  "overrides": {
+    "typescript-eslint": "^8.56.0"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.29.8",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "husky": "^9.1.7",
@@ -26,11 +30,8 @@
     "turbo": "^2.8.10",
     "typescript": "5.9.3"
   },
-  "overrides": {
-    "typescript-eslint": "^8.56.0"
-  },
   "packageManager": "npm@11.6.2",
   "engines": {
-    "node": ">=22"
+    "node": ">=24"
   }
 }

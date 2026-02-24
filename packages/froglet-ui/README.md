@@ -7,6 +7,8 @@ Open source, brandless React component library. All visual styling is driven by 
 - CSS custom property theming — no CSS-in-JS, no preprocessor required
 - Fully tree-shakeable
 
+**Docs:** [froglet.io](https://froglet.io)
+
 ## Installation
 
 ```bash
@@ -42,26 +44,50 @@ function LoginForm() {
 
 ## Components
 
-| Export               | Element                   | Description                              |
-| -------------------- | ------------------------- | ---------------------------------------- |
-| `Button`             | `<button>`                | Interactive button element               |
-| `ButtonProps`        | —                         | TypeScript interface for Button          |
-| `Checkbox`           | `<input type="checkbox">` | Custom-rendered checkbox                 |
-| `CheckboxProps`      | —                         | TypeScript interface for Checkbox        |
-| `GridContainer`      | `<div>`                   | CSS Grid layout container                |
-| `GridContainerProps` | —                         | TypeScript interface for GridContainer   |
-| `GridItem`           | `<div>`                   | CSS Grid item with span controls         |
-| `GridItemProps`      | —                         | TypeScript interface for GridItem        |
-| `Input`              | `<input>`                 | Text-type input (text, email, password…) |
-| `InputProps`         | —                         | TypeScript interface for Input           |
-| `Link`               | `<a>`                     | Anchor element                           |
-| `LinkProps`          | —                         | TypeScript interface for Link            |
-| `Radio`              | `<input type="radio">`    | Custom-rendered radio button             |
-| `RadioProps`         | —                         | TypeScript interface for Radio           |
-| `Select`             | `<select>`                | Dropdown select                          |
-| `SelectProps`        | —                         | TypeScript interface for Select          |
-| `Textarea`           | `<textarea>`              | Multi-line text input                    |
-| `TextareaProps`      | —                         | TypeScript interface for Textarea        |
+| Export               | Element                    | Description                              |
+| -------------------- | -------------------------- | ---------------------------------------- |
+| `Alert`              | `<div role="alert">`       | Contextual feedback messages             |
+| `AlertProps`         | —                          | TypeScript interface for Alert           |
+| `Badge`              | `<span>`                   | Short status indicators                  |
+| `BadgeProps`         | —                          | TypeScript interface for Badge           |
+| `Box`                | `<div>`                    | Generic layout container                 |
+| `BoxProps`           | —                          | TypeScript interface for Box             |
+| `Button`             | `<button>`                 | Interactive button element               |
+| `ButtonProps`        | —                          | TypeScript interface for Button          |
+| `Checkbox`           | `<input type="checkbox">`  | Custom-rendered checkbox                 |
+| `CheckboxProps`      | —                          | TypeScript interface for Checkbox        |
+| `Collapse`           | `<div>`                    | Show/hide collapsible content            |
+| `CollapseProps`      | —                          | TypeScript interface for Collapse        |
+| `Dialog`             | `<dialog>`                 | Modal dialog overlay                     |
+| `DialogProps`        | —                          | TypeScript interface for Dialog          |
+| `Divider`            | `<hr>`                     | Horizontal rule separator                |
+| `DividerProps`       | —                          | TypeScript interface for Divider         |
+| `GridContainer`      | `<div>`                    | CSS Grid layout container                |
+| `GridContainerProps` | —                          | TypeScript interface for GridContainer   |
+| `GridItem`           | `<div>`                    | CSS Grid item with span controls         |
+| `GridItemProps`      | —                          | TypeScript interface for GridItem        |
+| `Input`              | `<input>`                  | Text-type input (text, email, password…) |
+| `InputProps`         | —                          | TypeScript interface for Input           |
+| `Label`              | `<label>`                  | Form field label                         |
+| `LabelProps`         | —                          | TypeScript interface for Label           |
+| `Link`               | `<a>`                      | Anchor element                           |
+| `LinkProps`          | —                          | TypeScript interface for Link            |
+| `Progress`           | `<div role="progressbar">` | Progress indicator                       |
+| `ProgressProps`      | —                          | TypeScript interface for Progress        |
+| `Radio`              | `<input type="radio">`     | Custom-rendered radio button             |
+| `RadioProps`         | —                          | TypeScript interface for Radio           |
+| `Select`             | `<select>`                 | Dropdown select                          |
+| `SelectProps`        | —                          | TypeScript interface for Select          |
+| `Switch`             | `<button role="switch">`   | Toggle switch                            |
+| `SwitchProps`        | —                          | TypeScript interface for Switch          |
+| `Table`              | `<table>`                  | Semantic data table                      |
+| `TableProps`         | —                          | TypeScript interface for Table           |
+| `Tabs`               | `<div>`                    | Tabbed content panels                    |
+| `TabsProps`          | —                          | TypeScript interface for Tabs            |
+| `Textarea`           | `<textarea>`               | Multi-line text input                    |
+| `TextareaProps`      | —                          | TypeScript interface for Textarea        |
+| `Tooltip`            | `<span>`                   | Floating contextual tip                  |
+| `TooltipProps`       | —                          | TypeScript interface for Tooltip         |
 
 ## Theming
 
@@ -88,7 +114,7 @@ Components expose CSS custom properties for all visual traits. Apply a modifier 
 <Button className="button--primary">Save</Button>
 ```
 
-Each component's README lists its full CSS custom property table. See the [CSS Composition guide](https://github.com/froglet-ui/ui/blob/main/docs/css-composition.md) for token naming conventions and the [Modifier Classes guide](https://github.com/froglet-ui/ui/blob/main/docs/modifiers.md) for the general theming pattern.
+See the [CSS Composition guide](https://github.com/froglet-ui/ui/blob/main/docs/css-composition.md) for token naming conventions and the [Modifier Classes guide](https://github.com/froglet-ui/ui/blob/main/docs/modifiers.md) for the general theming pattern. Full per-component token tables are at [froglet.io/docs](https://froglet.io/docs).
 
 ## CSS Import
 

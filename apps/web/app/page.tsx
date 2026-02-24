@@ -149,7 +149,7 @@ const FEATURES = [
   {
     icon: "🎨",
     title: "Brandless",
-    body: "Zero opinions on color or visual style. Every property is a CSS custom property — theme with a few lines of CSS.",
+    body: "Zero opinions on color or visual style. Every property is a CSS custom property. Theme with a few lines of CSS.",
   },
   {
     icon: "🔷",
@@ -173,9 +173,10 @@ export default function Home() {
             Build UIs that{" "}
             <span className="landing-hero__title-gradient">feel alive.</span>
           </h1>
+          <p className="landing-hero__tagline">20 components, zero opinions.</p>
           <p className="landing-hero__subtitle">
             Froglet is a brandless, accessible React component library. No
-            styles forced on you — just solid foundations you can theme however
+            styles forced on you. Just solid foundations you can theme however
             you want.
           </p>
           <div className="landing-hero__actions">
@@ -227,8 +228,7 @@ export default function Home() {
             </h2>
             <p className="landing-section-subtitle">
               20+ components covering forms, layout, feedback, and navigation.
-              All styled with CSS custom properties — make them yours in
-              minutes.
+              All styled with CSS custom properties. Make them yours in minutes.
             </p>
             <div className="landing-preview__components">
               <Badge className="badge--primary">v1.0.0</Badge>
@@ -237,7 +237,7 @@ export default function Home() {
               <Button className="button--secondary">Secondary</Button>
               <Button className="button--ghost">Ghost</Button>
               <Alert className="alert--info">
-                20 components, zero opinions.
+                Bring your own design tokens.
               </Alert>
             </div>
             <div style={{ marginTop: "2rem", maxWidth: "24rem" }}>
