@@ -1,0 +1,56 @@
+---
+title: Textarea
+description: A brandless textarea with full CSS custom property theming.
+---
+
+# Textarea
+
+A brandless textarea. Accepts all native `<textarea>` attributes. All visual styling is driven by CSS custom properties.
+
+## Usage
+
+```tsx
+import { Textarea } from '@froglet/ui'
+
+<Textarea placeholder="Enter your message here..." />
+
+// Themed
+<Textarea className="textarea--brand" placeholder="Your message..." />
+```
+
+## Props
+
+| Prop | Type | Description |
+|---|---|---|
+| `className` | `string` | Additional CSS classes. Use to apply a token block. |
+| `ref` | `React.Ref<HTMLTextAreaElement>` | Forwarded to the underlying `<textarea>`. |
+| `...props` | `TextareaHTMLAttributes<HTMLTextAreaElement>` | All standard textarea attributes. |
+
+## CSS Custom Properties
+
+| Token | Default | Description |
+|---|---|---|
+| `--textarea-min-height` | `120px` | Minimum height. |
+| `--textarea-padding` | `0.5rem 0.75rem` | Internal padding. |
+| `--textarea-border-width` | `1px` | Border width. |
+| `--textarea-border-style` | `solid` | Border style. |
+| `--textarea-border-color` | — | Border color. |
+| `--textarea-border-radius` | `0` | Border radius. |
+| `--textarea-font-size` | `1rem` | Font size. |
+| `--textarea-line-height` | `1.5` | Line height. |
+| `--textarea-text-color` | — | Text color. |
+| `--textarea-background-color` | — | Background color. |
+| `--textarea-border-color-hover` | — | Border color on hover. |
+| `--textarea-background-color-hover` | — | Background on hover. |
+| `--textarea-border-color-focus` | — | Border color when focused. |
+| `--textarea-outline-width-focus` | `2px` | Focus ring width. |
+| `--textarea-outline-color-focus` | `currentColor` | Focus ring color. |
+| `--textarea-outline-offset-focus` | `2px` | Focus ring offset. |
+| `--textarea-border-color-disabled` | — | Border color when disabled. |
+| `--textarea-text-color-disabled` | — | Text color when disabled. |
+| `--textarea-background-color-disabled` | — | Background when disabled. |
+
+## Accessibility
+
+- Renders as a semantic `<textarea>` with full keyboard support.
+- Always associate a visible label using a `<label>` element or `aria-label`.

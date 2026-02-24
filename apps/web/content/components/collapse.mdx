@@ -1,0 +1,89 @@
+---
+title: Collapse
+description: A native details/summary disclosure component with no JavaScript required.
+---
+
+import { Collapse, CollapseSummary } from '@froglet/ui'
+
+# Collapse
+
+A brandless disclosure component built on the native `<details>` and `<summary>` elements. Open/close behavior is handled entirely by the browser — no JavaScript required.
+
+## Demo
+
+<Collapse>
+  <CollapseSummary>What is Froglet UI?</CollapseSummary>
+  <p style={{ padding: '0.75rem 1rem 0', margin: 0 }}>Froglet is a brandless, accessible React component library.</p>
+</Collapse>
+
+## Usage
+
+```tsx
+import { Collapse, CollapseSummary } from '@froglet/ui'
+
+<Collapse>
+  <CollapseSummary>What is Froglet?</CollapseSummary>
+  <p>Froglet is a brandless React component library.</p>
+</Collapse>
+
+// Open by default
+<Collapse open>
+  <CollapseSummary>Always starts open</CollapseSummary>
+  <p>Content visible on initial render.</p>
+</Collapse>
+```
+
+## Props
+
+### Collapse
+
+| Prop | Type | Description |
+|---|---|---|
+| `open` | `boolean` | Whether the disclosure starts open. |
+| `children` | `ReactNode` | Content. Include a `<CollapseSummary>` as the first child. |
+| `className` | `string` | Additional CSS classes. |
+| `ref` | `React.Ref<HTMLDetailsElement>` | Forwarded to the underlying `<details>`. |
+| `...props` | `HTMLAttributes<HTMLDetailsElement>` | All standard details attributes. |
+
+### CollapseSummary
+
+| Prop | Type | Description |
+|---|---|---|
+| `children` | `ReactNode` | Trigger text or content. |
+| `className` | `string` | Additional CSS classes. |
+| `ref` | `React.Ref<HTMLElement>` | Forwarded to the underlying `<summary>`. |
+| `...props` | `HTMLAttributes<HTMLElement>` | All standard element attributes. |
+
+## CSS Custom Properties
+
+### Collapse (`.collapse`)
+
+| Token | Default | Description |
+|---|---|---|
+| `--collapse-border-width` | `0` | Border width. |
+| `--collapse-border-style` | `solid` | Border style. |
+| `--collapse-border-color` | — | Border color. No border when unset. |
+| `--collapse-border-radius` | `0` | Corner rounding. |
+| `--collapse-padding` | `0` | Outer spacing. |
+| `--collapse-background-color` | `transparent` | Background fill. |
+
+### CollapseSummary (`.collapse-summary`)
+
+| Token | Default | Description |
+|---|---|---|
+| `--collapse-summary-padding` | `0` | Trigger padding. |
+| `--collapse-summary-font-size` | `inherit` | Font size. |
+| `--collapse-summary-font-weight` | `inherit` | Font weight. |
+| `--collapse-summary-text-color` | — | Text color. Inherits when unset. |
+| `--collapse-summary-background-color` | `transparent` | Trigger background. |
+| `--collapse-summary-background-color-hover` | `transparent` | Background on hover. |
+| `--collapse-summary-outline-color-focus` | `currentColor` | Focus ring color. |
+| `--collapse-summary-marker-content` | `"▶"` | Marker character (closed). |
+| `--collapse-summary-marker-transform` | `rotate(0deg)` | Marker transform (closed). |
+| `--collapse-summary-marker-transform-open` | `rotate(90deg)` | Marker transform (open). |
+
+## Accessibility
+
+- `<details>` and `<summary>` are native HTML disclosure elements — no ARIA attributes needed.
+- The browser handles `aria-expanded` on `<summary>` automatically.
+- `Enter` or `Space` on a focused `<summary>` toggles the panel.

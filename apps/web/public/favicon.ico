@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 64 64"
+     width="64"
+     height="64">
+
+  <!-- Froglet green circle -->
+  <circle cx="32" cy="32" r="30" fill="#58B95F"/>
+
+  <!-- Whimsical "F" -->
+  <path d="M24 18
+           L24 46
+           M24 18
+           L44 18
+           M24 32
+           L40 32"
+        stroke="white"
+        stroke-width="6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        fill="none"/>
+
+</svg>

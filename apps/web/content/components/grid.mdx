@@ -1,0 +1,91 @@
+---
+title: Grid
+description: A CSS Grid layout system with GridContainer and GridItem components.
+---
+
+# Grid
+
+A brandless CSS Grid layout system. `GridContainer` establishes the grid; `GridItem` places content within it. All layout behavior is driven by CSS custom properties.
+
+## Usage
+
+```tsx
+import { GridContainer, GridItem } from '@froglet/ui'
+
+<GridContainer columns={12} gap="1rem">
+  <GridItem columnSpan={12}>Full width</GridItem>
+  <GridItem columnSpan={6}>Half width</GridItem>
+  <GridItem columnSpan={6}>Half width</GridItem>
+  <GridItem columnSpan={4}>One third</GridItem>
+  <GridItem columnSpan={4}>One third</GridItem>
+  <GridItem columnSpan={4}>One third</GridItem>
+</GridContainer>
+```
+
+## Props
+
+### GridContainer
+
+| Prop | Type | Default | Description |
+|---|---|---|---|
+| `children` | `ReactNode` | — | Grid items to render. |
+| `columns` | `number` | `12` | Number of equal-width columns. |
+| `gap` | `CSSProperties["gap"]` | `1rem` | Grid gap (row and column). |
+| `autoRows` | `CSSProperties["gridAutoRows"]` | `auto` | Height of implicitly created rows. |
+| `autoFlow` | `CSSProperties["gridAutoFlow"]` | `row` | Direction items are placed. |
+| `justifyContent` | `CSSProperties["justifyContent"]` | `start` | Align grid along the inline axis. |
+| `alignContent` | `CSSProperties["alignContent"]` | `start` | Align grid along the block axis. |
+| `className` | `string` | — | Additional CSS classes. |
+| `ref` | `React.Ref<HTMLDivElement>` | — | Forwarded to the underlying `<div>`. |
+
+### GridItem
+
+| Prop | Type | Default | Description |
+|---|---|---|---|
+| `children` | `ReactNode` | — | Item content. |
+| `columnSpan` | `number` | `12` | Number of columns to span. |
+| `rowSpan` | `number` | `1` | Number of rows to span. |
+| `column` | `number \| string` | `auto` | Grid column start line. |
+| `row` | `number \| string` | `auto` | Grid row start line. |
+| `justifySelf` | `CSSProperties["justifySelf"]` | `stretch` | Inline-axis self-alignment. |
+| `alignSelf` | `CSSProperties["alignSelf"]` | `stretch` | Block-axis self-alignment. |
+| `className` | `string` | — | Additional CSS classes. |
+| `ref` | `React.Ref<HTMLDivElement>` | — | Forwarded to the underlying `<div>`. |
+
+## CSS Custom Properties
+
+### GridContainer
+
+| Token | Default | Description |
+|---|---|---|
+| `--grid-container-columns` | `12` | Number of equal-width columns. |
+| `--grid-container-gap` | `1rem` | Gap between rows and columns. |
+| `--grid-container-auto-rows` | `auto` | Implicit row height. |
+| `--grid-container-auto-flow` | `row` | Item auto-placement direction. |
+| `--grid-container-justify-content` | `start` | Inline-axis alignment. |
+| `--grid-container-align-content` | `start` | Block-axis alignment. |
+
+### GridItem
+
+| Token | Default | Description |
+|---|---|---|
+| `--grid-item-column-span` | `12` | Number of columns to span. |
+| `--grid-item-row-span` | `1` | Number of rows to span. |
+| `--grid-item-column` | `auto` | Column start line. |
+| `--grid-item-row` | `auto` | Row start line. |
+| `--grid-item-justify-self` | `stretch` | Inline-axis self-alignment. |
+| `--grid-item-align-self` | `stretch` | Block-axis self-alignment. |
+
+## Responsive Use
+
+The library does not define breakpoints. Override CSS custom properties at any breakpoint in your own stylesheet:
+
+```css
+@media (min-width: 640px) {
+  .my-item { --grid-item-column-span: 6; }
+}
+
+@media (min-width: 1024px) {
+  .my-item { --grid-item-column-span: 4; }
+}
+```

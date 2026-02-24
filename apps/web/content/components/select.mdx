@@ -1,0 +1,60 @@
+---
+title: Select
+description: A brandless select element with appearance:none and CSS custom property theming.
+---
+
+# Select
+
+A brandless select element. Uses `appearance: none` — the browser's native select rendering is fully removed. Color fallbacks use CSS system color keywords so the unstyled component remains visible in both light and dark mode.
+
+## Usage
+
+```tsx
+import { Select } from '@froglet/ui'
+
+<Select>
+  <option value="one">Option One</option>
+  <option value="two">Option Two</option>
+</Select>
+
+// Themed
+<Select className="select--brand">
+  <option value="one">Option One</option>
+</Select>
+```
+
+## Props
+
+| Prop | Type | Description |
+|---|---|---|
+| `children` | `ReactNode` | `<option>` elements. |
+| `className` | `string` | Additional CSS classes. Use to apply a token block. |
+| `ref` | `React.Ref<HTMLSelectElement>` | Forwarded to the underlying `<select>`. |
+| `...props` | `SelectHTMLAttributes<HTMLSelectElement>` | All standard select attributes. |
+
+## CSS Custom Properties
+
+| Token | Default | Description |
+|---|---|---|
+| `--select-border-width` | `1px` | Border width. |
+| `--select-border-style` | `solid` | Border style. |
+| `--select-border-color` | `currentColor` | Border color. |
+| `--select-border-radius` | `0` | Border radius. |
+| `--select-padding` | `0.5rem 0.75rem` | Internal padding. |
+| `--select-font-size` | `1rem` | Font size. |
+| `--select-text-color` | `CanvasText` | Text color. |
+| `--select-background-color` | `Canvas` | Background color. |
+| `--select-border-color-hover` | `currentColor` | Border color on hover. |
+| `--select-background-color-hover` | `Canvas` | Background on hover. |
+| `--select-border-color-focus` | `currentColor` | Border color when focused. |
+| `--select-outline-width-focus` | `2px` | Focus ring width. |
+| `--select-outline-color-focus` | `currentColor` | Focus ring color. |
+| `--select-outline-offset-focus` | `2px` | Focus ring offset. |
+| `--select-text-color-disabled` | `GrayText` | Text color when disabled. |
+| `--select-background-color-disabled` | `Canvas` | Background when disabled. |
+| `--select-border-color-disabled` | `GrayText` | Border color when disabled. |
+
+## Accessibility
+
+- Renders as a semantic `<select>` with full keyboard and screen reader support.
+- Always associate a visible label using a `<label>` element or `aria-label`.

@@ -1,0 +1,92 @@
+---
+title: Tooltip
+description: A compound tooltip overlay using aria-describedby and CSS positioning.
+---
+
+# Tooltip
+
+A compound component for contextual tooltip overlays. The tooltip is always present in the DOM — `aria-hidden` and CSS `display: none` control visibility. Uses `aria-describedby` to associate the tooltip with its trigger for screen readers.
+
+## Usage
+
+```tsx
+import { Tooltip, TooltipContent, TooltipTrigger } from '@froglet/ui'
+
+// Uncontrolled
+<Tooltip>
+  <TooltipTrigger>
+    <button type="button">Save</button>
+  </TooltipTrigger>
+  <TooltipContent>Saves your current work</TooltipContent>
+</Tooltip>
+
+// Side placement
+<Tooltip>
+  <TooltipTrigger>
+    <button type="button">Help</button>
+  </TooltipTrigger>
+  <TooltipContent side="right">Opens the help panel</TooltipContent>
+</Tooltip>
+
+// Controlled
+const [open, setOpen] = useState(false)
+
+<Tooltip open={open} onOpenChange={setOpen}>
+  <TooltipTrigger>
+    <button type="button">Info</button>
+  </TooltipTrigger>
+  <TooltipContent>Controlled tooltip</TooltipContent>
+</Tooltip>
+```
+
+## Props
+
+### `Tooltip`
+
+| Prop | Type | Default | Description |
+|---|---|---|---|
+| `defaultOpen` | `boolean` | `false` | Uncontrolled initial open state. |
+| `open` | `boolean` | — | Controlled open state. |
+| `onOpenChange` | `(open: boolean) => void` | — | Called when open state changes. |
+| `className` | `string` | — | Additional CSS classes. |
+| `ref` | `React.Ref<HTMLSpanElement>` | — | Forwarded to the underlying `<span>`. |
+
+### `TooltipTrigger`
+
+| Prop | Type | Description |
+|---|---|---|
+| `children` | `ReactElement` | **Required.** A single React element to wrap. |
+
+Uses `cloneElement` — no DOM wrapper is added. Injects `aria-describedby`, `onMouseEnter`, `onMouseLeave`, `onFocus`, and `onBlur` onto the child. Existing handlers are composed.
+
+### `TooltipContent`
+
+Extends `HTMLAttributes<HTMLSpanElement>`.
+
+| Prop | Type | Default | Description |
+|---|---|---|---|
+| `side` | `"top" \| "bottom" \| "left" \| "right"` | `"top"` | Placement relative to the trigger. |
+| `className` | `string` | — | Additional CSS classes. |
+| `ref` | `React.Ref<HTMLSpanElement>` | — | Forwarded to the underlying `<span>`. |
+
+## CSS Custom Properties
+
+| Token | Default | Description |
+|---|---|---|
+| `--tooltip-padding` | `0.25rem 0.5rem` | Internal spacing. |
+| `--tooltip-font-size` | `0.875rem` | Text size. |
+| `--tooltip-background-color` | `CanvasText` | Background. |
+| `--tooltip-color` | `Canvas` | Text color. |
+| `--tooltip-border-radius` | `0` | Corner rounding. |
+| `--tooltip-offset` | `4px` | Distance between trigger edge and tooltip. |
+
+## Notes
+
+- `TooltipContent` uses `position: absolute` — it may be clipped by an ancestor with `overflow: hidden`.
+- Use a focusable element (`<button>`, `<a>`) as the `TooltipTrigger` child so keyboard users can trigger the tooltip.
+
+## Accessibility
+
+- `TooltipContent` renders `role="tooltip"` and is linked to the trigger via `aria-describedby`.
+- The tooltip text is always in the DOM so `aria-describedby` resolves correctly. `aria-hidden="true"` hides it from the accessibility tree when not shown.
+- Show/hide is triggered on `mouseenter`/`mouseleave` and `focus`/`blur`.

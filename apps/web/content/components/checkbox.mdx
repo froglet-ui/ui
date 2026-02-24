@@ -1,0 +1,63 @@
+---
+title: Checkbox
+description: A brandless checkbox with appearance:none and full CSS custom property theming.
+---
+
+# Checkbox
+
+A brandless checkbox input. Uses `appearance: none` — the browser's native rendering is fully removed. Color properties use CSS system color keywords as fallbacks so the unstyled component is visible without any tokens set.
+
+## Usage
+
+```tsx
+import { Checkbox } from '@froglet/ui'
+
+const [checked, setChecked] = useState(false)
+
+<Checkbox checked={checked} onChange={() => setChecked(!checked)} />
+
+// Themed
+<Checkbox
+  className="checkbox--brand"
+  checked={checked}
+  onChange={handleChange}
+/>
+```
+
+## Props
+
+| Prop | Type | Description |
+|---|---|---|
+| `checked` | `boolean` | Controlled checked state. |
+| `onChange` | `(e: ChangeEvent<HTMLInputElement>) => void` | Callback fired when checked state changes. |
+| `className` | `string` | Additional CSS classes. Use to apply a token block. |
+| `ref` | `React.Ref<HTMLInputElement>` | Forwarded to the underlying `<input>`. |
+| `...props` | `InputHTMLAttributes<HTMLInputElement>` | All standard input attributes (`disabled`, `aria-*`, etc.). |
+
+## CSS Custom Properties
+
+| Token | Default | Description |
+|---|---|---|
+| `--checkbox-size` | `1rem` | Width and height. |
+| `--checkbox-border-width` | `2px` | Border width. |
+| `--checkbox-border-style` | `solid` | Border style. |
+| `--checkbox-border-color` | `currentColor` | Border color. |
+| `--checkbox-border-radius` | `4px` | Corner radius. |
+| `--checkbox-background-color` | `transparent` | Background (unchecked). |
+| `--checkbox-border-color-hover` | `currentColor` | Border color on hover. |
+| `--checkbox-background-color-hover` | `transparent` | Background on hover. |
+| `--checkbox-outline-width-focus` | `2px` | Focus ring width. |
+| `--checkbox-outline-color-focus` | `currentColor` | Focus ring color. |
+| `--checkbox-outline-offset-focus` | `2px` | Focus ring offset. |
+| `--checkbox-border-color-checked` | `currentColor` | Border color when checked. |
+| `--checkbox-background-color-checked` | `currentColor` | Background when checked. |
+| `--checkbox-checkmark-color-checked` | `Canvas` | Checkmark color when checked. |
+| `--checkbox-border-color-disabled` | `GrayText` | Border color when disabled. |
+| `--checkbox-background-color-disabled` | `Canvas` | Background when disabled. |
+| `--checkbox-checkmark-color-disabled` | `GrayText` | Checkmark color when disabled. |
+
+## Accessibility
+
+- Renders as a semantic `<input type="checkbox">` with full keyboard and screen reader support.
+- Focus is indicated via `:focus-visible`.
+- Always associate a visible label using a `<label>` element or `aria-label`.

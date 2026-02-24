@@ -8,6 +8,10 @@
 /* Base Button Styles */
 .button {
   /* Box Model */
+  display: inline-flex;
+  gap: var(--button-gap, 4px);
+  align-items: center;
+  justify-content: center;
   box-sizing: border-box;
   padding: var(--button-padding, 0.5rem 1rem);
   border-width: var(--button-border-width, 2px);

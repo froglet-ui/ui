@@ -1,0 +1,49 @@
+---
+title: Label
+description: A brandless label element for associating text with form controls.
+---
+
+# Label
+
+A brandless label element. No typography defaults are applied beyond `inherit` — the component renders with surrounding text styles until tokens are provided.
+
+## Usage
+
+```tsx
+import { Label } from '@froglet/ui'
+
+// Associate via htmlFor
+<Label htmlFor="email">Email address</Label>
+<input id="email" type="email" />
+
+// Wrap a control
+<Label>
+  Email address
+  <input id="email" type="email" />
+</Label>
+```
+
+## Props
+
+| Prop | Type | Description |
+|---|---|---|
+| `children` | `ReactNode` | Label text or content. |
+| `className` | `string` | Additional CSS classes. Use to apply a token block. |
+| `htmlFor` | `string` | ID of the associated form control. |
+| `ref` | `React.Ref<HTMLLabelElement>` | Forwarded to the underlying `<label>`. |
+| `...props` | `LabelHTMLAttributes<HTMLLabelElement>` | All standard label attributes. |
+
+## CSS Custom Properties
+
+| Token | Default | Description |
+|---|---|---|
+| `--label-font-family` | `inherit` | Font family. |
+| `--label-font-size` | `inherit` | Font size. |
+| `--label-font-weight` | `inherit` | Font weight. |
+| `--label-text-color` | — | Text color. Inherits surrounding `color` when unset. |
+| `--label-margin` | `0` | Outer spacing. |
+
+## Accessibility
+
+- `<label>` natively associates with a form control via `htmlFor` or by wrapping it.
+- Click on a label focuses or activates the associated control — no JavaScript needed.

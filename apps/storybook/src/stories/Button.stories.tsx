@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import React from "react";
 import { Button } from "@froglet/ui";
 import "../assets/css/button.storybook.css";
 import readme from "../../../../packages/froglet-ui/src/Button/README.md?raw";
@@ -157,6 +158,67 @@ Low-emphasis action. Use for cancel, back, or supplemental actions.
 }
 \`\`\`
         `,
+      },
+    },
+  },
+};
+
+function StarIcon() {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+    </svg>
+  );
+}
+
+export const WithIcon: Story = {
+  render: (args) => (
+    <Button {...args}>
+      <StarIcon />
+      Favorite
+    </Button>
+  ),
+  args: {
+    className: "button--primary",
+    type: "button",
+    disabled: false,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "The button uses `display: inline-flex` and `align-items: center` so icons and text align vertically. Control the icon-to-label gap with `--button-gap` (default `4px`).",
+      },
+    },
+  },
+};
+
+export const IconOnly: Story = {
+  render: (args) => (
+    <Button
+      {...args}
+      aria-label="Favorite"
+      style={{ "--button-padding": "0.5rem" } as React.CSSProperties}
+    >
+      <StarIcon />
+    </Button>
+  ),
+  args: {
+    className: "button--primary",
+    type: "button",
+    disabled: false,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "For icon-only buttons, set `--button-padding` to a uniform value (e.g. `0.5rem`). The button collapses to a square naturally. Always provide `aria-label` so screen readers announce the action.",
       },
     },
   },
