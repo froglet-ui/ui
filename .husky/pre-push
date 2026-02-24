@@ -1,2 +1,16 @@
 npm run check-types
 npm run test
+
+# Warn if package source changed but no changeset exists
+if git diff --name-only origin/main...HEAD 2>/dev/null | grep -q "^packages/froglet-ui/src/"; then
+  if ! ls .changeset/*.md 2>/dev/null | grep -qv "config.json"; then
+    echo ""
+    echo "⚠️  You've changed packages/froglet-ui/src/ but no changeset was found."
+    echo "   Run: npx changeset"
+    echo "   Then commit the generated .changeset/*.md file."
+    echo ""
+    echo "   Skip this check with: git push --no-verify"
+    echo ""
+    exit 1
+  fi
+fi
