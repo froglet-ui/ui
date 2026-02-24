@@ -1,0 +1,55 @@
+---
+title: Badge
+description: An inline badge element with full CSS custom property theming.
+---
+
+import { Badge } from '@froglet/ui'
+
+# Badge
+
+A brandless inline badge element. Unlike native form elements, `<span>` carries no browser UA styles — the base `.badge` class ships with neutral gray fallbacks so it renders as a recognizable badge without any modifier class applied.
+
+## Demo
+
+<Badge className="badge--primary">New</Badge>
+
+## Usage
+
+```tsx
+import { Badge } from '@froglet/ui'
+
+<Badge>New</Badge>
+
+// Themed
+<Badge className="badge--brand">New</Badge>
+```
+
+## Props
+
+| Prop | Type | Description |
+|---|---|---|
+| `children` | `ReactNode` | Badge text or content. |
+| `className` | `string` | Additional CSS classes. Use to apply a token block. |
+| `ref` | `React.Ref<HTMLSpanElement>` | Forwarded to the underlying `<span>`. |
+| `...props` | `HTMLAttributes<HTMLSpanElement>` | All standard span attributes. |
+
+## CSS Custom Properties
+
+| Token | Default | Description |
+|---|---|---|
+| `--badge-background-color` | `#e5e7eb` | Background fill. |
+| `--badge-text-color` | `#374151` | Text color. |
+| `--badge-border-radius` | `9999px` | Corner rounding (pill shape). |
+| `--badge-padding` | `0.125rem 0.5rem` | Inner spacing. |
+| `--badge-font-family` | `inherit` | Font family. |
+| `--badge-font-size` | `inherit` | Font size. |
+| `--badge-font-weight` | `inherit` | Font weight. |
+| `--badge-line-height` | `inherit` | Line height. |
+| `--badge-border-width` | `0` | Border width. Set to `1px` to enable an outline badge. |
+| `--badge-border-style` | `solid` | Border style. |
+| `--badge-border-color` | — | Border color. Only visible when `--badge-border-width` is set. |
+
+## Accessibility
+
+- `<span>` has no implicit ARIA role. For a live-region notification badge (e.g. an unread count), add `role="status"` and `aria-live="polite"`.
+- Ensure text contrast meets WCAG AA when choosing background and text token values.

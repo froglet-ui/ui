@@ -1,0 +1,107 @@
+---
+title: Dialog
+description: A compound modal dialog built on the native dialog element.
+---
+
+# Dialog
+
+A compound component for modal dialogs. Built on the native `<dialog>` element — `showModal()` provides a native focus trap, Escape key handling, and `::backdrop` support.
+
+## Usage
+
+```tsx
+import { Dialog, DialogClose, DialogContent, DialogTrigger } from '@froglet/ui'
+
+// Uncontrolled
+<Dialog>
+  <DialogTrigger>
+    <button type="button">Open dialog</button>
+  </DialogTrigger>
+  <DialogContent aria-label="Example dialog">
+    <p>Dialog content goes here.</p>
+    <DialogClose>Close</DialogClose>
+  </DialogContent>
+</Dialog>
+
+// Controlled
+const [open, setOpen] = useState(false)
+
+<Dialog open={open} onOpenChange={setOpen}>
+  <DialogTrigger>
+    <button type="button">Open</button>
+  </DialogTrigger>
+  <DialogContent aria-label="Controlled dialog">
+    <p>Content.</p>
+    <DialogClose>Close</DialogClose>
+  </DialogContent>
+</Dialog>
+```
+
+## Props
+
+### `Dialog`
+
+| Prop | Type | Default | Description |
+|---|---|---|---|
+| `defaultOpen` | `boolean` | `false` | Uncontrolled initial open state. |
+| `open` | `boolean` | — | Controlled open state. |
+| `onOpenChange` | `(open: boolean) => void` | — | Called when open state changes. |
+| `children` | `ReactNode` | — | DialogTrigger and DialogContent. |
+
+`Dialog` renders no DOM element — it is a context provider only.
+
+### `DialogTrigger`
+
+| Prop | Type | Description |
+|---|---|---|
+| `children` | `ReactElement` | A single element whose `onClick` is augmented to open the dialog. |
+
+Uses `cloneElement` — pass any focusable element (`<button>`, `<Button>`). No DOM wrapper is added.
+
+### `DialogContent`
+
+Extends `HTMLAttributes<HTMLDialogElement>`.
+
+| Prop | Type | Description |
+|---|---|---|
+| `className` | `string` | Additional CSS classes. Use to apply a token block. |
+| `ref` | `React.Ref<HTMLDialogElement>` | Forwarded to the underlying `<dialog>`. |
+
+Pass `aria-label` or `aria-labelledby` directly on `DialogContent`.
+
+### `DialogClose`
+
+Extends `ButtonHTMLAttributes<HTMLButtonElement>`.
+
+| Prop | Type | Description |
+|---|---|---|
+| `className` | `string` | Additional CSS classes. Use to apply a token block. |
+| `ref` | `React.Ref<HTMLButtonElement>` | Forwarded to the underlying `<button>`. |
+
+## CSS Custom Properties
+
+| Token | Default | Description |
+|---|---|---|
+| `--dialog-padding` | `1.5rem` | Panel internal spacing. |
+| `--dialog-max-width` | `32rem` | Maximum panel width. |
+| `--dialog-background-color` | `Canvas` | Panel background. |
+| `--dialog-color` | `CanvasText` | Panel text color. |
+| `--dialog-border-width` | `0` | Panel border width. |
+| `--dialog-border-style` | `solid` | Panel border style. |
+| `--dialog-border-color` | — | Panel border color. No border when unset. |
+| `--dialog-border-radius` | `0` | Panel corner rounding. |
+| `--dialog-backdrop-color` | `rgb(0 0 0 / 0.5)` | Backdrop overlay color. |
+| `--dialog-close-padding` | `0.5rem 1rem` | Close button padding. |
+| `--dialog-close-border-width` | `1px` | Close border width. |
+| `--dialog-close-border-color` | `currentColor` | Close border color. |
+| `--dialog-close-border-radius` | `0` | Close button corner rounding. |
+| `--dialog-outline-width-focus` | `2px` | Focus ring width. |
+| `--dialog-outline-color-focus` | `currentColor` | Focus ring color. |
+| `--dialog-outline-offset-focus` | `2px` | Focus ring offset. |
+
+## Accessibility
+
+- `DialogContent` renders a native `<dialog>` with `role="dialog"` automatically.
+- `showModal()` creates a native focus trap — keyboard focus is locked inside the dialog while open.
+- Pressing Escape fires a native `close` event, which this component handles by calling `setOpen(false)`.
+- Provide `aria-label` or `aria-labelledby` on `DialogContent` to label the dialog for screen readers.

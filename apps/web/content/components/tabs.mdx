@@ -1,0 +1,93 @@
+---
+title: Tabs
+description: A compound tabbed navigation component with keyboard support.
+---
+
+# Tabs
+
+A compound component for tabbed navigation. State is managed internally — no external state machine required. Follows the WAI-ARIA Tabs pattern.
+
+## Usage
+
+```tsx
+import { Tabs, TabList, Tab, TabPanel } from '@froglet/ui'
+
+<Tabs defaultValue="account">
+  <TabList>
+    <Tab value="account">Account</Tab>
+    <Tab value="password">Password</Tab>
+  </TabList>
+  <TabPanel value="account">
+    <p>Account settings go here.</p>
+  </TabPanel>
+  <TabPanel value="password">
+    <p>Password settings go here.</p>
+  </TabPanel>
+</Tabs>
+
+// Controlled
+const [active, setActive] = useState('account')
+
+<Tabs value={active} onValueChange={setActive}>
+  ...
+</Tabs>
+```
+
+## Props
+
+### `Tabs`
+
+| Prop | Type | Default | Description |
+|---|---|---|---|
+| `defaultValue` | `string` | `""` | Uncontrolled initial active tab. |
+| `value` | `string` | — | Controlled active tab value. |
+| `onValueChange` | `(value: string) => void` | — | Called when the active tab changes. |
+| `className` | `string` | — | Additional CSS classes. |
+| `ref` | `React.Ref<HTMLDivElement>` | — | Forwarded to the underlying `<div>`. |
+
+### `Tab`
+
+Extends `ButtonHTMLAttributes<HTMLButtonElement>`.
+
+| Prop | Type | Description |
+|---|---|---|
+| `value` | `string` | **Required.** Identifies this tab. Match a TabPanel. |
+| `className` | `string` | Additional CSS classes. |
+| `ref` | `React.Ref<HTMLButtonElement>` | Forwarded to the underlying `<button>`. |
+
+### `TabPanel`
+
+Extends `HTMLAttributes<HTMLDivElement>`.
+
+| Prop | Type | Description |
+|---|---|---|
+| `value` | `string` | **Required.** Identifies this panel. Match a Tab. |
+| `className` | `string` | Additional CSS classes. |
+| `ref` | `React.Ref<HTMLDivElement>` | Forwarded to the underlying `<div>`. |
+
+## CSS Custom Properties
+
+| Token | Default | Description |
+|---|---|---|
+| `--tabs-list-border-bottom-width` | `1px` | List bottom border width. |
+| `--tabs-list-border-bottom-color` | `currentColor` | List bottom border color. |
+| `--tabs-list-gap` | `0` | Gap between tab buttons. |
+| `--tabs-tab-padding` | `0.5rem 1rem` | Tab button padding. |
+| `--tabs-tab-font-size` | `1rem` | Tab font size. |
+| `--tabs-tab-font-weight` | `400` | Tab font weight (inactive). |
+| `--tabs-tab-font-weight-selected` | `600` | Active tab font weight. |
+| `--tabs-tab-color` | `inherit` | Tab text color (inactive). |
+| `--tabs-tab-color-selected` | `currentColor` | Active tab text color. |
+| `--tabs-tab-color-hover` | `inherit` | Tab text color on hover. |
+| `--tabs-tab-border-bottom-width` | `2px` | Active indicator height. |
+| `--tabs-tab-border-bottom-color-selected` | `currentColor` | Active indicator color. |
+| `--tabs-tab-outline-width-focus` | `2px` | Focus outline width. |
+| `--tabs-tab-outline-color-focus` | `currentColor` | Focus outline color. |
+| `--tabs-tab-outline-offset-focus` | `2px` | Focus outline offset. |
+| `--tabs-panel-padding` | `1rem 0` | Panel padding. |
+
+## Accessibility
+
+- Follows the WAI-ARIA Tabs pattern.
+- `ArrowRight`/`ArrowLeft` move between tabs; `Home`/`End` jump to first/last.
+- Inactive `TabPanel` elements receive the native `hidden` attribute — not focusable or announced by screen readers.

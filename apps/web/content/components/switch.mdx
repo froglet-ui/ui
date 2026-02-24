@@ -1,0 +1,63 @@
+---
+title: Switch
+description: A toggle switch with role="switch" for on/off semantics.
+---
+
+# Switch
+
+A brandless toggle switch wrapping `<input type="checkbox" role="switch">`. The `role="switch"` attribute overrides the default checkbox ARIA role so screen readers announce the control as a toggle (on/off) rather than a checkbox (checked/unchecked).
+
+## Usage
+
+```tsx
+import { Switch } from '@froglet/ui'
+
+function Example() {
+  const [enabled, setEnabled] = useState(false)
+  return <Switch checked={enabled} onChange={() => setEnabled(!enabled)} />
+}
+
+// Themed
+<Switch
+  className="switch--froglet"
+  checked={enabled}
+  onChange={() => setEnabled(!enabled)}
+/>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|---|---|---|---|
+| `checked` | `boolean` | — | Controlled checked state. |
+| `onChange` | `(e) => void` | `() => {}` | Change handler. |
+| `disabled` | `boolean` | `false` | Disables the switch. |
+| `role` | `string` | `"switch"` | ARIA role. Override to `"checkbox"` to revert screen reader semantics. |
+| `className` | `string` | — | Additional CSS classes. Use to apply a token block. |
+| `ref` | `React.Ref<HTMLInputElement>` | — | Forwarded to the underlying `<input>`. |
+
+## CSS Custom Properties
+
+| Token | Default | Description |
+|---|---|---|
+| `--switch-width` | `2.5rem` | Track width. |
+| `--switch-height` | `1.25rem` | Track height. |
+| `--switch-border-radius` | `9999px` | Track corner rounding (pill). |
+| `--switch-background-color` | `GrayText` | Track color (unchecked). |
+| `--switch-background-color-hover` | _(same as base)_ | Track color (unchecked hover). |
+| `--switch-background-color-checked` | `currentColor` | Track color (checked). |
+| `--switch-background-color-disabled` | `GrayText` | Track color (disabled). |
+| `--switch-thumb-size` | `1rem` | Thumb diameter. |
+| `--switch-thumb-color` | `Canvas` | Thumb fill. |
+| `--switch-thumb-color-disabled` | `Canvas` | Thumb fill (disabled). |
+| `--switch-thumb-offset` | `0.125rem` | Gap between thumb and track edge. |
+| `--switch-outline-width-focus` | `2px` | Focus ring width. |
+| `--switch-outline-color-focus` | `currentColor` | Focus ring color. |
+| `--switch-outline-offset-focus` | `2px` | Focus ring offset. |
+
+## Accessibility
+
+- `role="switch"` marks the control as an on/off toggle. Screen readers announce state as "on" or "off".
+- To revert to standard checkbox semantics, pass `role="checkbox"`.
+- Focus ring uses `:focus-visible` only.
+- A visible label (`<label>` or `aria-label`) is required for screen reader users.

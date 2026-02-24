@@ -1,0 +1,57 @@
+---
+title: Input
+description: A brandless text input supporting all text-type variants.
+---
+
+# Input
+
+A brandless text input component. Accepts all standard HTML `<input>` attributes and works with any text-type variant: `text`, `email`, `password`, `search`, `tel`, `url`, `number`, `date`, `time`, and more.
+
+## Usage
+
+```tsx
+import { Input } from '@froglet/ui'
+
+<Input type="email" placeholder="you@example.com" />
+
+// Themed
+<Input className="input--brand" type="text" placeholder="Enter value..." />
+```
+
+## Props
+
+| Prop | Type | Description |
+|---|---|---|
+| `className` | `string` | Additional CSS classes. Use to apply a token block. |
+| `ref` | `React.Ref<HTMLInputElement>` | Forwarded to the underlying `<input>`. |
+| `...props` | `InputHTMLAttributes<HTMLInputElement>` | All standard input attributes. |
+
+## CSS Custom Properties
+
+| Token | Default | Description |
+|---|---|---|
+| `--input-padding` | `0.5rem 0.75rem` | Inner padding. |
+| `--input-border-width` | `1px` | Border thickness. |
+| `--input-border-style` | `solid` | Border style. |
+| `--input-border-color` | — | Border color (base). |
+| `--input-border-radius` | `0` | Corner radius. |
+| `--input-font-size` | `1rem` | Font size. |
+| `--input-text-color` | — | Text color. |
+| `--input-background-color` | — | Background color. |
+| `--input-text-color-placeholder` | — | Placeholder text color. |
+| `--input-border-color-hover` | — | Border color on hover. |
+| `--input-background-color-hover` | — | Background on hover. |
+| `--input-border-color-focus` | — | Border color on focus. |
+| `--input-outline-width-focus` | `2px` | Outline width on focus. |
+| `--input-outline-color-focus` | — | Outline color on focus. |
+| `--input-outline-offset-focus` | `2px` | Outline offset. |
+| `--input-border-color-disabled` | — | Border color when disabled. |
+| `--input-text-color-disabled` | — | Text color when disabled. |
+| `--input-background-color-disabled` | — | Background when disabled. |
+| `--input-border-color-invalid` | — | Border color on `:invalid`. |
+
+## Accessibility
+
+- Renders as a semantic `<input>` with full keyboard support.
+- Always associate a visible label using a `<label>` element or `aria-label`.
+- Use `required` and `aria-invalid` to communicate validation state.

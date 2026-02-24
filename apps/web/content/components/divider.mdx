@@ -1,0 +1,55 @@
+---
+title: Divider
+description: A brandless horizontal or vertical separator element.
+---
+
+import { Divider } from '@froglet/ui'
+
+# Divider
+
+A brandless separator element wrapping `<hr>`. Supports horizontal and vertical orientations. All visual styling is driven by CSS custom properties.
+
+## Demo
+
+<Divider style={{ '--divider-border-color': 'var(--color-border)' }} />
+
+## Usage
+
+```tsx
+import { Divider } from '@froglet/ui'
+
+// Horizontal (default)
+<Divider />
+
+// Vertical
+<div style={{ display: 'flex', height: '4rem', alignItems: 'center' }}>
+  <span>Left</span>
+  <Divider orientation="vertical" />
+  <span>Right</span>
+</div>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|---|---|---|---|
+| `orientation` | `"horizontal" \| "vertical"` | `"horizontal"` | Visual and semantic orientation. |
+| `className` | `string` | — | Additional CSS classes. |
+| `ref` | `React.Ref<HTMLHRElement>` | — | Forwarded to the underlying `<hr>`. |
+| `...props` | `HTMLAttributes<HTMLHRElement>` | — | All standard global HTML attributes. |
+
+## CSS Custom Properties
+
+| Token | Default | Description |
+|---|---|---|
+| `--divider-border-width` | `1px` | Line thickness. |
+| `--divider-border-style` | `solid` | Line style (`solid`, `dashed`, `dotted`, etc.). |
+| `--divider-border-color` | — | Line color. Renders as `currentColor` when unset. |
+| `--divider-margin` | `1rem 0` | Surrounding space (horizontal). Use `0 1rem` for vertical. |
+| `--divider-width` | `100%` | Width of the horizontal divider. |
+| `--divider-height` | `100%` | Height of the vertical divider. |
+
+## Accessibility
+
+- The `<hr>` element has implicit `role="separator"` with `aria-orientation="horizontal"`.
+- When `orientation="vertical"`, `aria-orientation="vertical"` is set explicitly.

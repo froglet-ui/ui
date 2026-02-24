@@ -1,0 +1,78 @@
+---
+title: Getting Started
+description: Install and use Froglet UI in your React project.
+---
+
+# Getting Started
+
+Froglet UI is a brandless, accessible React component library. Components ship with zero color opinions — all visual styling is driven by CSS custom properties. Theme them in minutes with a few lines of CSS.
+
+## Installation
+
+```bash
+npm install @froglet/ui
+```
+
+## Import styles
+
+Add the stylesheet once at your app's entry point:
+
+```tsx
+import '@froglet/ui/styles'
+```
+
+In Next.js, add this to your `_app.tsx` or `app/layout.tsx`.
+
+## Use a component
+
+```tsx
+import { Button } from '@froglet/ui'
+
+export default function Page() {
+  return <Button type="button">Save changes</Button>
+}
+```
+
+## Add your theme
+
+Components render as plain browser elements until you provide CSS custom properties via a modifier class:
+
+```css
+.button--primary {
+  --button-background-color: #2e8b57;
+  --button-text-color: #ffffff;
+  --button-border-color: #2e8b57;
+  --button-border-radius: 6px;
+  --button-padding: 0.625rem 1.25rem;
+  --button-outline-color-focus: #5eba87;
+}
+```
+
+```tsx
+<Button className="button--primary">Save</Button>
+```
+
+## Token naming convention
+
+All tokens follow the pattern `--{component}-{css-property}-{state}`:
+
+| Example | Meaning |
+|---|---|
+| `--button-background-color` | Base background |
+| `--button-background-color-hover` | Background on hover |
+| `--button-background-color-disabled` | Background when disabled |
+| `--input-outline-color-focus` | Focus ring color |
+
+See the [CSS Composition guide](https://github.com/froglet-ui/ui/blob/main/docs/css-composition.md) for the full convention.
+
+## TypeScript
+
+All component prop interfaces are exported:
+
+```ts
+import type { ButtonProps, InputProps } from '@froglet/ui'
+```
+
+## Components
+
+Froglet UI includes 20+ components covering forms, layout, feedback, and navigation. Browse them in the sidebar.

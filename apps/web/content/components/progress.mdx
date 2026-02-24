@@ -1,0 +1,56 @@
+---
+title: Progress
+description: A brandless progress bar wrapping the native progress element.
+---
+
+import { Progress } from '@froglet/ui'
+
+# Progress
+
+A brandless progress bar wrapping a `<progress>` element. All visual styling — fill color, track color, height, border-radius — is driven by CSS custom properties.
+
+## Demo
+
+<Progress className="progress--primary" value={0.68} max={1} />
+
+## Usage
+
+```tsx
+import { Progress } from '@froglet/ui'
+
+// Determinate — 60% complete
+<Progress value={0.6} max={1} />
+
+// Indeterminate — omit value
+<Progress max={1} />
+
+// Themed
+<Progress className="progress--primary" value={0.75} max={1} />
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|---|---|---|---|
+| `value` | `number` | — | Current progress (0 to `max`). Omit for indeterminate. |
+| `max` | `number` | `1` | Maximum value. |
+| `className` | `string` | — | Additional CSS classes. Use to apply a token block. |
+| `ref` | `React.Ref<HTMLProgressElement>` | — | Forwarded to the underlying `<progress>`. |
+
+## CSS Custom Properties
+
+| Token | Default | Description |
+|---|---|---|
+| `--progress-width` | `100%` | Track width. |
+| `--progress-height` | `0.5rem` | Track height. |
+| `--progress-border-radius` | `9999px` | Track and fill corner rounding. |
+| `--progress-background-color` | `Canvas` | Track (unfilled portion) background. |
+| `--progress-fill-color` | `currentColor` | Fill color. |
+| `--progress-border-width` | `0` | Optional border width on the track. |
+| `--progress-border-style` | `solid` | Border style. |
+| `--progress-border-color` | — | Border color. No border when unset. |
+
+## Notes
+
+- Cross-browser styling uses vendor-prefixed pseudo-elements: `::-webkit-progress-bar` (track), `::-webkit-progress-value` (fill), `::-moz-progress-bar` (fill).
+- Passing no `value` renders the indeterminate state. With `appearance: none`, the native animation is stripped — add a CSS animation via a modifier class if needed.

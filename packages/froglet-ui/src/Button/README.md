@@ -9,7 +9,18 @@ import { Button } from "@froglet/ui";
 
 <Button type="button" onClick={handleClick}>
   Save changes
-</Button>;
+</Button>
+
+// With icon — gap controlled by --button-gap
+<Button className="button--primary">
+  <svg aria-hidden="true" .../>
+  Save
+</Button>
+
+// Icon-only — equal padding collapses to a square
+<Button className="button--primary" aria-label="Save" style={{ '--button-padding': '0.5rem' }}>
+  <svg aria-hidden="true" .../>
+</Button>
 ```
 
 ## Props
@@ -35,6 +46,7 @@ All color properties have no fallback and must be set by the consumer. Structura
 | `--button-border-radius`             | `0`           | Corner radius                       |
 | `--button-font-size`                 | `1rem`        | Font size                           |
 | `--button-padding`                   | `0.5rem 1rem` | Inner padding                       |
+| `--button-gap`                       | `4px`         | Gap between icon and text label     |
 | `--button-background-color-hover`    | —             | Background color on hover           |
 | `--button-text-color-hover`          | —             | Text color on hover                 |
 | `--button-outline-color-focus`       | —             | Focus ring color (`:focus-visible`) |

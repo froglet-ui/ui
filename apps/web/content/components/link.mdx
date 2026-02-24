@@ -1,0 +1,54 @@
+---
+title: Link
+description: A brandless anchor element with full CSS custom property theming.
+---
+
+# Link
+
+A brandless anchor element. No color defaults are applied — the component renders with inherited text color until tokens are provided via a modifier class.
+
+## Usage
+
+```tsx
+import { Link } from '@froglet/ui'
+
+<Link href="https://example.com">Visit Example</Link>
+
+// Themed
+<Link href="https://example.com" className="link--brand">
+  Visit Example
+</Link>
+```
+
+## Props
+
+| Prop | Type | Description |
+|---|---|---|
+| `children` | `ReactNode` | Link content. Supports text, icons, and React nodes. |
+| `className` | `string` | Additional CSS classes. Use to apply a token block. |
+| `ref` | `React.Ref<HTMLAnchorElement>` | Forwarded to the underlying `<a>`. |
+| `...props` | `AnchorHTMLAttributes<HTMLAnchorElement>` | All standard anchor attributes. |
+
+## CSS Custom Properties
+
+| Token | Default | Description |
+|---|---|---|
+| `--link-padding` | `0` | Inner spacing. |
+| `--link-font-family` | `inherit` | Font family. |
+| `--link-font-size` | `inherit` | Font size. |
+| `--link-font-weight` | `inherit` | Font weight. |
+| `--link-text-color` | — | Text color (base). |
+| `--link-text-decoration` | `underline` | Text decoration. |
+| `--link-text-color-hover` | — | Text color on hover. |
+| `--link-text-decoration-hover` | — | Text decoration on hover. |
+| `--link-text-color-active` | — | Text color when active. |
+| `--link-outline-width-focus` | `2px` | Focus outline width. |
+| `--link-outline-color-focus` | `currentColor` | Focus outline color. |
+| `--link-outline-offset-focus` | `2px` | Focus outline offset. |
+| `--link-text-color-visited` | — | Text color for visited links. |
+
+## Accessibility
+
+- Focus ring uses `:focus-visible` only — keyboard users see the ring; pointer users do not.
+- `currentColor` fallback on `--link-outline-color-focus` prevents silently removing the focus ring.
+- Native anchor semantics are preserved: `href`, `target`, `rel`, and all ARIA attributes pass through.

@@ -1,0 +1,407 @@
+/* ==========================================================================
+   Froglet UI — froglet.io global styles
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Fonts
+   -------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------
+   Logo theme switching
+   Nextra adds .dark to <html> — show/hide each variant without JS hydration
+   -------------------------------------------------------------------------- */
+
+.logo-dark {
+  display: none;
+}
+
+.dark .logo-dark {
+  display: block;
+}
+
+.dark .logo-light {
+  display: none;
+}
+
+body {
+  font-family: var(--font-body, 'Nunito', system-ui, sans-serif);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display, 'Atma', cursive);
+}
+
+code,
+pre,
+kbd {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+}
+
+/* --------------------------------------------------------------------------
+   Froglet Design Tokens
+   -------------------------------------------------------------------------- */
+
+:root {
+  /* Site-specific palette */
+  --color-accent: #f97316;
+  --color-accent-hover: #ea6c0a;
+  --color-teal: #06b6d4;
+  --color-teal-hover: #0891b2;
+
+  /* Brand gradient */
+  --gradient-brand: linear-gradient(135deg, #2e8b57 0%, #7c3aed 100%);
+  --gradient-brand-teal: linear-gradient(135deg, #2e8b57 0%, #06b6d4 50%, #7c3aed 100%);
+
+  /* Component library palette (mirrors global.storybook.css) */
+  --color-primary: #2e8b57;
+  --color-primary-hover: #245f45;
+  --color-primary-focus: #5eba87;
+  --color-secondary: #7c3aed;
+  --color-neutral: #4b5563;
+  --color-text: #111827;
+  --color-text-subtle: #6b7280;
+  --color-border: #d1d5db;
+  --color-surface: #ffffff;
+  --color-surface-subtle: #f9fafb;
+
+  /* Shape */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  /* Nextra primary hue override (150 = green) */
+  --nextra-primary-hue: 150deg;
+}
+
+/* Dark mode */
+.dark {
+  --color-surface: #0d1f16;
+  --color-surface-subtle: #152b1e;
+  --color-text: #f9fafb;
+  --color-text-subtle: #9ca3af;
+  --color-border: #2d4a38;
+}
+
+.dark body {
+  background-color: #0d1f16;
+}
+
+/* --------------------------------------------------------------------------
+   Landing Page Layout
+   -------------------------------------------------------------------------- */
+
+.landing-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: var(--color-surface);
+}
+
+.landing-nav__logo {
+  display: flex;
+  align-items: center;
+}
+
+.landing-nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.landing-nav__github {
+  display: flex;
+  align-items: center;
+  color: var(--color-text);
+  transition: color 0.15s ease;
+}
+
+.landing-nav__github:hover {
+  color: var(--color-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Hero Section
+   -------------------------------------------------------------------------- */
+
+.landing-hero {
+  text-align: center;
+  padding: 6rem 2rem 4rem;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.landing-hero__eyebrow {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-xl);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.landing-hero__title {
+  font-family: var(--font-display, 'Atma', cursive);
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 0 0 1.5rem;
+  color: var(--color-text);
+}
+
+.landing-hero__title-gradient {
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.landing-hero__subtitle {
+  font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+  color: var(--color-text-subtle);
+  max-width: 40rem;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+}
+
+.landing-hero__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.landing-hero__install {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1.25rem;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.9375rem;
+  color: var(--color-text-subtle);
+}
+
+.landing-hero__install-prefix {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   Features Strip
+   -------------------------------------------------------------------------- */
+
+.landing-features {
+  padding: 4rem 2rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.landing-features__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1.5rem;
+}
+
+.landing-feature-card {
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.landing-feature-card:hover {
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.08);
+  transform: translateY(-2px);
+}
+
+.landing-feature-card__icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.landing-feature-card__title {
+  font-family: var(--font-display, 'Atma', cursive);
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0 0 0.5rem;
+  color: var(--color-text);
+}
+
+.landing-feature-card__body {
+  font-size: 0.9375rem;
+  color: var(--color-text-subtle);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Component Preview Section
+   -------------------------------------------------------------------------- */
+
+.landing-preview {
+  padding: 4rem 2rem;
+  background: var(--color-surface-subtle);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.landing-preview__inner {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.landing-section-label {
+  font-family: var(--font-display, 'Atma', cursive);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.5rem;
+}
+
+.landing-section-title {
+  font-family: var(--font-display, 'Atma', cursive);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 500;
+  margin: 0 0 1rem;
+  color: var(--color-text);
+}
+
+.landing-section-subtitle {
+  font-size: 1.0625rem;
+  color: var(--color-text-subtle);
+  margin: 0 0 3rem;
+  max-width: 40rem;
+  line-height: 1.6;
+}
+
+.landing-preview__components {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+
+.landing-footer {
+  padding: 3rem 2rem;
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+}
+
+.landing-footer__links {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.landing-footer__link {
+  font-size: 0.9375rem;
+  color: var(--color-text-subtle);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.landing-footer__link:hover {
+  color: var(--color-primary);
+}
+
+.landing-footer__copy {
+  font-size: 0.875rem;
+  color: var(--color-text-subtle);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Froglet UI component overrides for site demo (mirrors Storybook Froglet theme)
+   -------------------------------------------------------------------------- */
+
+.button--primary {
+  --button-background-color: var(--color-primary);
+  --button-background-color-hover: var(--color-primary-hover);
+  --button-text-color: #ffffff;
+  --button-border-color: var(--color-primary);
+  --button-border-color-hover: var(--color-primary-hover);
+  --button-border-radius: var(--radius-sm);
+  --button-padding: 0.625rem 1.25rem;
+  --button-font-size: 1rem;
+  --button-outline-color-focus: var(--color-primary-focus);
+}
+
+.button--secondary {
+  --button-background-color: transparent;
+  --button-background-color-hover: var(--color-surface-subtle);
+  --button-text-color: var(--color-primary);
+  --button-border-color: var(--color-primary);
+  --button-border-color-hover: var(--color-primary-hover);
+  --button-border-radius: var(--radius-sm);
+  --button-padding: 0.625rem 1.25rem;
+  --button-font-size: 1rem;
+  --button-outline-color-focus: var(--color-primary-focus);
+}
+
+.button--ghost {
+  --button-background-color: transparent;
+  --button-background-color-hover: var(--color-surface-subtle);
+  --button-text-color: var(--color-text);
+  --button-border-color: transparent;
+  --button-border-radius: var(--radius-sm);
+  --button-padding: 0.625rem 1.25rem;
+  --button-font-size: 1rem;
+}
+
+.badge--primary {
+  --badge-background-color: color-mix(in srgb, var(--color-primary) 12%, transparent);
+  --badge-text-color: var(--color-primary);
+  --badge-border-radius: var(--radius-xl);
+  --badge-padding: 0.2rem 0.625rem;
+  --badge-font-size: 0.8125rem;
+  --badge-font-weight: 600;
+}
+
+.badge--accent {
+  --badge-background-color: color-mix(in srgb, var(--color-accent) 12%, transparent);
+  --badge-text-color: var(--color-accent);
+  --badge-border-radius: var(--radius-xl);
+  --badge-padding: 0.2rem 0.625rem;
+  --badge-font-size: 0.8125rem;
+  --badge-font-weight: 600;
+}
+
+.alert--info {
+  --alert-background-color: color-mix(in srgb, var(--color-primary) 8%, transparent);
+  --alert-border-color: color-mix(in srgb, var(--color-primary) 30%, transparent);
+  --alert-text-color: var(--color-primary);
+  --alert-border-radius: var(--radius-md);
+  --alert-padding: 1rem 1.25rem;
+  --alert-border-width: 1px;
+  --alert-border-style: solid;
+}
+
+.progress--primary {
+  --progress-height: 8px;
+  --progress-background-color: color-mix(in srgb, var(--color-primary) 15%, transparent);
+  --progress-fill-color: var(--color-primary);
+  --progress-border-radius: var(--radius-xl);
+}

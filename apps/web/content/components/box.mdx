@@ -1,0 +1,50 @@
+---
+title: Box
+description: A generic container with a CSS token surface for borders, background, and shadow.
+---
+
+import { Box } from '@froglet/ui'
+
+# Box
+
+A brandless generic container wrapping a `<div>`. Provides a CSS token surface for borders, background, padding, and shadow. Apply a modifier class to style it.
+
+## Demo
+
+<Box style={{ padding: '1rem', border: '1px solid var(--color-border)', borderRadius: '8px' }}>
+  Content inside a Box.
+</Box>
+
+## Usage
+
+```tsx
+import { Box } from '@froglet/ui'
+
+<Box>Content here.</Box>
+
+// Themed
+<Box className="box--brand">
+  <p>Content here.</p>
+</Box>
+```
+
+## Props
+
+| Prop | Type | Description |
+|---|---|---|
+| `children` | `ReactNode` | Box content. |
+| `className` | `string` | Additional CSS classes. Use to apply a token block. |
+| `ref` | `React.Ref<HTMLDivElement>` | Forwarded to the underlying `<div>`. |
+| `...props` | `HTMLAttributes<HTMLDivElement>` | All standard div attributes. |
+
+## CSS Custom Properties
+
+| Token | Default | Description |
+|---|---|---|
+| `--box-padding` | `0` | Inner spacing. |
+| `--box-background-color` | `transparent` | Background fill. |
+| `--box-border-width` | `1px` | Border width. |
+| `--box-border-style` | `solid` | Border style. |
+| `--box-border-color` | `#e5e7eb` | Border color. |
+| `--box-border-radius` | `4px` | Corner rounding. |
+| `--box-shadow` | `none` | Box shadow. |
