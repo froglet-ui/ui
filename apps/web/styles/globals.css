@@ -89,6 +89,19 @@ kbd {
   background-color: #0d1f16;
 }
 
+/* Eyebrow: #2e8b57 on dark bg gives ~3.81:1 (fails AA for small text).
+   --color-primary-focus (#5eba87) gives ~6.14:1. */
+.dark .landing-hero__eyebrow {
+  color: var(--color-primary-focus);
+  background: color-mix(in srgb, var(--color-primary-focus) 10%, transparent);
+}
+
+/* Alert: same root issue — override text and border for dark mode. */
+.dark .alert--info {
+  --alert-text-color: var(--color-primary-focus);
+  --alert-border-color: color-mix(in srgb, var(--color-primary-focus) 30%, transparent);
+}
+
 /* --------------------------------------------------------------------------
    Landing Page Layout
    -------------------------------------------------------------------------- */
@@ -165,6 +178,14 @@ kbd {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.landing-hero__tagline {
+  font-family: var(--font-display, 'Atma', cursive);
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 500;
+  color: var(--color-text-subtle);
+  margin: 0 0 1.5rem;
 }
 
 .landing-hero__subtitle {

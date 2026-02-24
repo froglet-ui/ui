@@ -2,6 +2,8 @@
 
 Open source, brandless React component library. All visual styling is driven by CSS custom properties — no colors or brand opinions are built in. Bring your own design tokens.
 
+**Docs:** [froglet.io](https://froglet.io)
+
 ## Repository Structure
 
 ```
@@ -9,7 +11,8 @@ ui/
 ├── packages/
 │   └── froglet-ui/     # @froglet/ui — the published npm package
 ├── apps/
-│   └── storybook/      # Component documentation and visual testing
+│   ├── storybook/      # Component documentation and visual testing
+│   └── web/            # froglet.io marketing and docs site
 └── docs/               # CSS composition, modifier pattern, style guide
 ```
 
@@ -17,7 +20,7 @@ ui/
 
 ### Prerequisites
 
-- Node.js ≥ 22 (version pinned in `.nvmrc`)
+- Node.js ≥ 24 (version pinned in `.nvmrc`)
 
 ### Install
 
@@ -53,22 +56,35 @@ Run all commands from the monorepo root. Most are Turbo pipelines that run acros
 
 ## Components
 
-`@froglet/ui` exports 8 components:
+`@froglet/ui` exports 20 components:
 
-| Component       | Element                   | Description                              |
-| --------------- | ------------------------- | ---------------------------------------- |
-| `Button`        | `<button>`                | Interactive button element               |
-| `Checkbox`      | `<input type="checkbox">` | Custom-rendered checkbox                 |
-| `GridContainer` | `<div>`                   | CSS Grid layout container                |
-| `GridItem`      | `<div>`                   | CSS Grid item with span controls         |
-| `Input`         | `<input>`                 | Text-type input (text, email, password…) |
-| `Link`          | `<a>`                     | Anchor element                           |
-| `Radio`         | `<input type="radio">`    | Custom-rendered radio button             |
-| `Select`        | `<select>`                | Dropdown select                          |
-| `Textarea`      | `<textarea>`              | Multi-line text input                    |
+| Component       | Element                    | Description                              |
+| --------------- | -------------------------- | ---------------------------------------- |
+| `Alert`         | `<div role="alert">`       | Contextual feedback messages             |
+| `Badge`         | `<span>`                   | Short status indicators                  |
+| `Box`           | `<div>`                    | Generic layout container                 |
+| `Button`        | `<button>`                 | Interactive button element               |
+| `Checkbox`      | `<input type="checkbox">`  | Custom-rendered checkbox                 |
+| `Collapse`      | `<div>`                    | Show/hide collapsible content            |
+| `Dialog`        | `<dialog>`                 | Modal dialog overlay                     |
+| `Divider`       | `<hr>`                     | Horizontal rule separator                |
+| `GridContainer` | `<div>`                    | CSS Grid layout container                |
+| `GridItem`      | `<div>`                    | CSS Grid item with span controls         |
+| `Input`         | `<input>`                  | Text-type input (text, email, password…) |
+| `Label`         | `<label>`                  | Form field label                         |
+| `Link`          | `<a>`                      | Anchor element                           |
+| `Progress`      | `<div role="progressbar">` | Progress indicator                       |
+| `Radio`         | `<input type="radio">`     | Custom-rendered radio button             |
+| `Select`        | `<select>`                 | Dropdown select                          |
+| `Switch`        | `<button role="switch">`   | Toggle switch                            |
+| `Table`         | `<table>`                  | Semantic data table                      |
+| `Tabs`          | `<div>`                    | Tabbed content panels                    |
+| `Textarea`      | `<textarea>`               | Multi-line text input                    |
+| `Tooltip`       | `<span>`                   | Floating contextual tip                  |
 
 ## Documentation
 
+- [froglet.io](https://froglet.io) — component docs and live demos
 - [CSS Composition](./docs/css-composition.md) — token naming convention
 - [Modifier Classes](./docs/modifiers.md) — how to apply brand tokens via CSS classes
 - [Style Guide](./docs/style-guide.md) — Froglet brand color palette and per-component token reference
@@ -77,6 +93,20 @@ Run all commands from the monorepo root. Most are Turbo pipelines that run acros
 ## CI
 
 Pull requests to `main` run format check, lint, type check, and tests automatically via GitHub Actions.
+
+## Release
+
+This package uses [Changesets](https://github.com/changesets/changesets) for versioning and changelog management.
+
+1. Add a changeset describing what changed:
+   ```bash
+   npx changeset
+   ```
+2. Apply the version bump and update CHANGELOG:
+   ```bash
+   npx changeset version
+   ```
+3. Commit and push, then trigger the **"Publish to npm"** workflow in GitHub Actions.
 
 ## Contributing
 
