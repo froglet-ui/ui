@@ -1,6 +1,8 @@
-import { createRequire } from 'module'
+import coreWebVitals from 'eslint-config-next/core-web-vitals'
 
-const require = createRequire(import.meta.url)
-const coreWebVitals = require('eslint-config-next/core-web-vitals')
+const config = [
+  ...coreWebVitals,
+  { ignores: ['content/**'] },
+]
 
-export default coreWebVitals
+export default config

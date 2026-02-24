@@ -8,7 +8,7 @@
     "clean": "rm -rf .turbo .next node_modules",
     "clean:build": "rm -rf .next",
     "dev": "next dev",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@froglet/ui": "^1.0.0",
